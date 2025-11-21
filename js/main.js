@@ -136,27 +136,27 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Card parallax effect on mouse move
-  const cards = document.querySelectorAll('.card');
-  cards.forEach(card => {
-    card.addEventListener('mousemove', function(e) {
-      const rect = this.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-
-      const rotateX = (y - centerY) / 20;
-      const rotateY = (centerX - x) / 20;
-
-      this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
-    });
-
-    card.addEventListener('mouseleave', function() {
-      this.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
-    });
-  });
+  // Card parallax effect on mouse move - DISABLED (too distracting)
+  // const cards = document.querySelectorAll('.card');
+  // cards.forEach(card => {
+  //   card.addEventListener('mousemove', function(e) {
+  //     const rect = this.getBoundingClientRect();
+  //     const x = e.clientX - rect.left;
+  //     const y = e.clientY - rect.top;
+  //
+  //     const centerX = rect.width / 2;
+  //     const centerY = rect.height / 2;
+  //
+  //     const rotateX = (y - centerY) / 20;
+  //     const rotateY = (centerX - x) / 20;
+  //
+  //     this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+  //   });
+  //
+  //   card.addEventListener('mouseleave', function() {
+  //     this.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+  //   });
+  // });
 });
 
 // Load client logos dynamically (placeholder function)

@@ -329,7 +329,7 @@ strong {
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  /* transform: translateY(-4px); - DISABLED: too distracting */
   box-shadow: var(--shadow-xl);
   border-color: var(--color-accent);
 }
