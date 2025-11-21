@@ -695,6 +695,11 @@ strong {
   .hero .tagline {
     font-size: var(--font-size-xl);
   }
+
+  /* Scale down horizontal logo for mobile */
+  .nav-logo img {
+    height: 40px;
+  }
 }
 
 /* ANIMATIONS */
