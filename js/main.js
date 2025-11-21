@@ -96,34 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
     observer.observe(el);
   });
 
-  // Form validation (if contact form exists)
-  const contactForm = document.querySelector('#contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      // Basic validation
-      const name = this.querySelector('input[name="name"]').value;
-      const email = this.querySelector('input[name="email"]').value;
-      const message = this.querySelector('textarea[name="message"]').value;
-
-      if (!name || !email || !message) {
-        alert('Please fill in all fields');
-        return;
-      }
-
-      // Email validation
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
-        alert('Please enter a valid email address');
-        return;
-      }
-
-      // If validation passes, show success message
-      alert('Thank you for your message! We will get back to you soon.');
-      this.reset();
-    });
-  }
+  // Form validation - REMOVED (contact form removed from site)
 
   // Platform badge hover effects
   const platformBadges = document.querySelectorAll('.platform-badge');
