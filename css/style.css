@@ -696,9 +696,18 @@ strong {
     font-size: var(--font-size-xl);
   }
 
-  /* Scale down horizontal logo for mobile */
+  /* Add padding to hero content on mobile */
+  .hero {
+    padding: var(--space-3xl) var(--space-lg);
+  }
+
+  .hero-content {
+    padding: 0 var(--space-sm);
+  }
+
+  /* Increase logo size for mobile to reduce whitespace */
   .nav-logo img {
-    height: 40px;
+    height: 55px;
   }
 }
 
