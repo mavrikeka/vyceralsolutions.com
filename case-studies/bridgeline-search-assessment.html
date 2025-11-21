@@ -90,83 +90,39 @@
       <div class="challenge-solution">
         <div class="challenge-box">
           <h3>The Challenge</h3>
-          <p style="margin-top: 1rem; color: var(--color-dark);">eCommerce companies rarely have objective assessments of their own search quality. Without independent evaluation, they can't identify whether poor search performance is costing them revenue—and vendors selling search optimization solutions struggle to demonstrate value before engagement.</p>
+          <p style="margin-top: 1rem; color: var(--color-dark);">Prospects don't know their search has problems—manual testing doesn't scale, and sales teams need objective evidence to create urgency before initial outreach.</p>
 
-          <h4 style="margin-top: 1.5rem;">Core Sales & Prospecting Challenges:</h4>
           <ul style="color: var(--color-dark); line-height: 1.8; margin-top: 1rem;">
-            <li><strong>Lack of Awareness:</strong> Prospects don't know their search has problems—they need objective evidence before considering solutions</li>
-            <li><strong>Manual Assessment Doesn't Scale:</strong> Sales teams can't manually test every prospect's search functionality across query variations before initial outreach</li>
-            <li><strong>Subjective vs. Objective Evaluation:</strong> Without systematic testing methodology, it's difficult to demonstrate search quality gaps with credibility</li>
-            <li><strong>No Value Demonstration Tool:</strong> Sales reps need concrete, prospect-specific evidence to create urgency and justify engagement</li>
-            <li><strong>Time-Intensive Qualification:</strong> Manually evaluating search quality requires hours of testing, documentation, and analysis per prospect</li>
+            <li><strong>Awareness gap:</strong> Prospects need objective evidence of search quality issues before considering solutions</li>
+            <li><strong>Manual assessment doesn't scale:</strong> Hours required to test, document, and analyze each prospect's search quality</li>
+            <li><strong>No value demonstration tool:</strong> Reps lack concrete, prospect-specific evidence to justify engagement</li>
           </ul>
 
-          <p style="margin-top: 1.5rem; color: var(--color-gray); font-style: italic;"><strong>The Opportunity:</strong> What if search quality assessments could be automated and delivered as professional reports—transforming from manual bottleneck to scalable sales qualification tool?</p>
+          <p style="margin-top: 1.5rem; color: var(--color-gray); font-style: italic;"><strong>The Opportunity:</strong> Automated assessments with professional reports transform search quality evaluation from manual bottleneck to scalable sales qualification tool.</p>
         </div>
 
         <div class="solution-box">
           <h3>The Solution</h3>
-          <p style="margin-top: 1rem; color: var(--color-dark);">An <strong>automated search quality assessment pipeline</strong> that evaluates eCommerce websites across six query variation types, scores results, and generates professional HTML reports for sales qualification and value demonstration.</p>
+          <p style="margin-top: 1rem; color: var(--color-dark);">Automated search quality assessment pipeline that evaluates websites across six query types, scores results, and generates professional HTML reports for sales qualification.</p>
 
-          <h4 style="margin-top: 1.5rem;">Automated Assessment Workflow:</h4>
+          <h4 style="margin-top: 1.5rem;">Business Outcomes:</h4>
+          <ul style="color: var(--color-dark); line-height: 1.8; margin-top: 1rem;">
+            <li><strong>90% assessment time saved</strong> — Evaluation automated from hours of manual testing to minutes</li>
+            <li><strong>Scalable qualification</strong> — Assess unlimited prospects without manual testing bottlenecks</li>
+            <li><strong>Objective value demonstration</strong> — Professional reports with color-coded scores create urgency before first conversation</li>
+            <li><strong>Higher engagement rates</strong> — Prospect-specific findings resonate better than generic pitches</li>
+          </ul>
 
-          <div style="margin-top: 1rem;">
-            <h5 style="color: var(--color-dark); margin-bottom: 0.5rem; margin-top: 1rem;">1. Website Identification & Search Pattern Discovery (Clay)</h5>
-            <ul style="color: var(--color-gray); font-size: 0.875rem; line-height: 1.6;">
-              <li>Target list of eCommerce websites managed in Clay database</li>
-              <li>Each website URL passed to MindStudio for automated analysis</li>
-            </ul>
+          <h4 style="margin-top: 1.5rem;">Strategic Approach:</h4>
+          <ul style="color: var(--color-gray); line-height: 1.8; margin-top: 1rem;">
+            <li>Four-agent pipeline (Clay + MindStudio + SalesLoft): scrape search patterns → generate 6 query variations → execute & score (1-5 scale) → professional HTML report</li>
+            <li>Six query types tested: standard, abbreviated, alternative phrasing, non-standard, misspelled, brand-specific</li>
+            <li>Color-coded scoring (Green: 5-4, Yellow: 3, Red: 2-1) visualizes gaps and prioritizes prospects with critical issues</li>
+            <li>Reports stored in Clay, deployed via SalesLoft with personalized outreach referencing specific findings</li>
+          </ul>
 
-            <h5 style="color: var(--color-dark); margin-bottom: 0.5rem; margin-top: 1.5rem;">2. Web Scraping & Search URL Pattern Recognition (MindStudio Agent 1)</h5>
-            <ul style="color: var(--color-gray); font-size: 0.875rem; line-height: 1.6;">
-              <li>MindStudio agent scrapes website to locate search functionality</li>
-              <li>Identifies search URL pattern and query parameter structure</li>
-              <li>Extracts key product categories and terminology from site content</li>
-            </ul>
-
-            <h5 style="color: var(--color-dark); margin-bottom: 0.5rem; margin-top: 1.5rem;">3. Multi-Variation Search Query Generation (MindStudio Agent 2)</h5>
-            <ul style="color: var(--color-gray); font-size: 0.875rem; line-height: 1.6;">
-              <li><strong>Standard Terminology:</strong> Common product names (e.g., "wireless headphones")</li>
-              <li><strong>Abbreviated Terminology:</strong> Shortened versions (e.g., "wireless hdphn")</li>
-              <li><strong>Alternative Phrasing:</strong> Synonyms and variations (e.g., "bluetooth earbuds")</li>
-              <li><strong>Non-Standard Terminology:</strong> Industry jargon or colloquialisms</li>
-              <li><strong>Misspelled Queries:</strong> Common typos (e.g., "wirless headphones")</li>
-              <li><strong>Brand-Specific Searches:</strong> Named product searches (e.g., "Sony WH-1000XM4")</li>
-            </ul>
-
-            <h5 style="color: var(--color-dark); margin-bottom: 0.5rem; margin-top: 1.5rem;">4. Search Execution & Results Analysis (MindStudio Agent 3)</h5>
-            <ul style="color: var(--color-gray); font-size: 0.875rem; line-height: 1.6;">
-              <li>Executes all 6 search query variations against the website</li>
-              <li>Captures and analyzes search results for each query type</li>
-              <li>Evaluates result relevance on 1-5 scale:
-                <ul style="margin-top: 0.5rem;">
-                  <li>5 = Perfect: All results highly relevant, correct prioritization</li>
-                  <li>4 = Strong: Most results relevant with minor issues</li>
-                  <li>3 = Acceptable: Mix of relevant and irrelevant results</li>
-                  <li>2 = Poor: Many irrelevant results, poor ranking</li>
-                  <li>1 = Failed: No relevant results or search error</li>
-                </ul>
-              </li>
-              <li>Identifies specific issues: missing synonyms, poor ranking, inability to handle typos, etc.</li>
-            </ul>
-
-            <h5 style="color: var(--color-dark); margin-bottom: 0.5rem; margin-top: 1.5rem;">5. Professional HTML Report Generation (MindStudio Agent 4)</h5>
-            <ul style="color: var(--color-gray); font-size: 0.875rem; line-height: 1.6;">
-              <li>Converts analysis into branded, professional HTML report</li>
-              <li>Color-coded sections: Green (5-4), Yellow (3), Red (2-1)</li>
-              <li>Executive summary highlighting critical gaps</li>
-              <li>Detailed findings for each query type with specific recommendations</li>
-              <li>Comparative benchmarking against industry standards</li>
-            </ul>
-
-            <h5 style="color: var(--color-dark); margin-bottom: 0.5rem; margin-top: 1.5rem;">6. Sales Integration & Follow-Up (Clay + SalesLoft)</h5>
-            <ul style="color: var(--color-gray); font-size: 0.875rem; line-height: 1.6;">
-              <li>Report stored as URL in Clay for sales rep access</li>
-              <li>Prospects with critical gaps (multiple red/yellow scores) prioritized in SalesLoft sequences</li>
-              <li>Personalized outreach references specific search quality issues found</li>
-              <li>Report attached to initial emails as value demonstration</li>
-            </ul>
-          </div>
+          <p style="margin-top: 1.5rem; color: var(--color-gray); font-style: italic;"><strong>The Learning:</strong> Value-first selling requires objective, prospect-specific evidence delivered before initial outreach. Automated assessment tools transform generic pitching into consultative qualification.</p>
+        </div>
 
           <h4 style="margin-top: 2rem;">Key Outcomes:</h4>
           <div style="margin-top: 1rem; padding: 1.5rem; background: rgba(59, 130, 246, 0.1); border-radius: 0.5rem;">
