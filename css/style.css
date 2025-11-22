@@ -314,6 +314,8 @@ strong {
   justify-content: center;
   text-align: center;
   padding: var(--space-3xl) 0;
+  padding-top: 120px;
+  /* Account for fixed nav */
   position: relative;
   overflow: hidden;
   margin-top: 0;
@@ -888,6 +890,8 @@ strong {
 
   .hero {
     padding: var(--space-2xl) var(--space-lg);
+    padding-top: 100px;
+    /* Account for fixed nav on mobile */
     min-height: auto;
   }
 
