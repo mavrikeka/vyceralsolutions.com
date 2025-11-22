@@ -804,15 +804,39 @@ strong {
 .case-study-header {
   padding: 140px 0 var(--space-2xl);
   /* Top padding clears fixed nav */
-  background: var(--color-light-gray);
+  background: #0F172A;
+  /* Match hero dark blue */
   text-align: center;
-  border-bottom: 1px solid var(--color-border);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gradient background effects */
+.case-study-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(30, 64, 175, 0.05) 100%);
+  z-index: 0;
+}
+
+.case-study-header .container {
+  position: relative;
+  z-index: 1;
 }
 
 .case-study-header h1 {
   font-size: var(--font-size-4xl);
   max-width: 900px;
   margin: var(--space-md) auto;
+  color: var(--color-white);
+}
+
+.case-study-header .tagline {
+  color: var(--color-gray) !important;
 }
 
 .case-study-meta {
@@ -840,7 +864,7 @@ strong {
 
 .meta-item span:last-child {
   font-weight: 600;
-  color: var(--color-dark);
+  color: var(--color-white);
 }
 
 /* RESPONSIVE DESIGN */
