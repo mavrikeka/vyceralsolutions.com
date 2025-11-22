@@ -757,6 +757,92 @@ strong {
   font-size: 1.25rem;
 }
 
+/* RESULTS GRID */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.result-card {
+  text-align: center;
+  padding: var(--space-lg);
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base);
+}
+
+.result-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent-light);
+}
+
+.result-card h4 {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: var(--space-xs);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.result-card p {
+  font-weight: 600;
+  color: var(--color-dark);
+  font-size: 0.875rem;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* CASE STUDY HEADER */
+.case-study-header {
+  padding: 140px 0 var(--space-2xl);
+  /* Top padding clears fixed nav */
+  background: var(--color-light-gray);
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.case-study-header h1 {
+  font-size: var(--font-size-4xl);
+  max-width: 900px;
+  margin: var(--space-md) auto;
+}
+
+.case-study-meta {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.meta-item span:first-child {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-gray);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.meta-item span:last-child {
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
 /* RESPONSIVE DESIGN */
 @media (max-width: 1024px) {
   :root {
@@ -795,7 +881,8 @@ strong {
   .grid-2,
   .grid-3,
   .grid-4,
-  .challenge-solution {
+  .challenge-solution,
+  .results-grid {
     grid-template-columns: 1fr;
   }
 
