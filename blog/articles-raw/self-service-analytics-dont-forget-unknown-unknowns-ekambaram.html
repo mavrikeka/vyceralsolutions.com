@@ -1,0 +1,169 @@
+<html>
+<head>
+  <title>Self Service Analytics - Don't forget about the "Unknown Unknowns"</title>
+  <style>
+    body {
+      margin: 0 auto;
+      width: 744px;
+      font-family: Source Serif Pro, serif;
+      line-height: 32px;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.7);
+      font-size: 21px;
+    }
+    h1, h2, h3 {
+      font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+    }
+    h1 a, h1 a:visited {
+      color: inherit;
+      text-decoration: none;
+    }
+    h1 {
+      line-height: 48px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 42px;
+      margin: 32px 0 20px;
+    }
+    h2 {
+      line-height: 32px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 26px;
+      margin: 28px 0;
+    }
+    h3 {
+      line-height: 28px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 21px;
+      margin: 24px 0;
+    }
+    p {
+      margin: 32px 0;
+    }
+    .created, .published {
+      color: rgba(0, 0, 0, 0.55);
+      font-size: 15px;
+      line-height: 15px;
+      margin: 20px 0;
+    }
+    .created + .published {
+      margin-top: -12px;
+    }
+    blockquote {
+      font-family: Georgia, Source Serif Pro, serif;
+      font-style: italic;
+      font-size: 24px;
+      line-height: 36px;
+      margin: 48px 120px;
+      text-align: center;
+    }
+    a {
+      word-wrap: break-word;
+      outline: none;
+      text-decoration: none;
+      background-color: transparent;
+      border: 0;
+      color: #008CC9;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    a:visited {
+      color: #8C68CB;
+    }
+    .center {
+      text-align: center;
+    }
+    iframe {
+      display: block;
+      margin: 44px auto;
+    }
+    *:not(pre) + pre, pre:first-of-type {
+      margin-top: 32px;
+      padding-top: 32px;
+    }
+    pre:only-of-type {
+      margin: 32px 0;
+      padding: 32px;
+    }
+    pre {
+      background: #F3F6F8;
+      overflow-x: auto;
+      display: block;
+      font-size: 13px;
+      font-family: monospace;
+      line-height: 13px;
+      padding: 0 32px 32px;
+      white-space: pre;
+    }
+    a.embedded {
+      background: #F3F6F8;
+      display: block;
+      padding: 32px;
+      margin: 32px 0;
+    }
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+    .slate-image-embed__resize-full-width img {
+      width: 100%;
+    }
+    .series-logo {
+      width: 48px;
+      height: 48px;
+      box-sizing: border-box;
+      background-clip: content-box;
+      border: 4px solid transparent;
+      border-radius: 6px;
+      object-fit: scale-down;
+      float: left;
+    }
+    .series-title {
+      font-size: 16px;
+      font-weight: 600;
+      vertical-align: top;
+    }
+    .series-description {
+      color: rgba(0,0,0,.6);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    div {
+      margin: 32px 0;
+    }
+  </style>
+</head>
+<body>
+    <img src="https://media.licdn.com/mediaC4E12AQG7DBOFsC4tNQ" alt="" title="" />
+      <h1><a href="https://www.linkedin.com/pulse/self-service-analytics-dont-forget-unknown-unknowns-ekambaram">Self Service Analytics - Don't forget about the "Unknown Unknowns"</a></h1>
+    <p class="created">Created on 2016-04-12 13:04</p>
+  <p class="published">Published on 2016-04-12 14:39</p>
+  <div>
+  <p>Recently a colleague of mine shared a dashboard around job trends and it highlighted something that organizations and vendors tend to miss when it comes to self-service analytics - The "<strong>Unknown Unknowns</strong>".</p> 
+  <p>When we look at analytics and the data that is needed to support that analytics, it falls into 3 categories -</p> 
+  <p>"<strong>Known Knowns</strong>", "<strong>Known Unknowns</strong>" and the "<strong>Unknown Unknowns</strong>".</p> 
+  <p>The "K<strong>nown Knowns</strong>" represent the analytics that is done to answer the questions we know we need the answers for and dashboards are a great way to represent them. Going back to the example of the dashboard my colleague shared (see below), it answered the question - "How are jobs trending for self service analytics companies on Indeed.com".</p> 
+  <div class="slate-resizable-image-embed slate-image-embed__resize-full-width"> 
+   <img data-media-urn="urn:li:digitalmediaAsset:C4E12AQGkoEhd0IyuBg" src="https://media.licdn.com/dms/image/v2/C4E12AQGkoEhd0IyuBg/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1520242741963?e=1765411200&amp;v=beta&amp;t=ZAHHgYZtTzGFxFK7Pb6CR_OpCCRWK8N_VAjz4UZ55-8"> 
+  </div> 
+  <p>The "Known Unknowns" represent the questions that I know you might ask but I can't represent all of them on a dashboard, so I will give you some interactivity in the dashboard (filters / selections etc.) to answer other potential questions you might ask. I still have to pre-define these filters and selections so I need to know what these potential new questions will be.</p> 
+  <p>When the above dashboard was shared, another colleague was curious about how 'Traditional BI' companies fared. Now this wasn't a question that was answered by the above dashboard (and that is the downside of a static dashboard - they answer pre-defined questions), but Indeed had provided an easy way for a business user to create&nbsp; their own filters. So it was easy to go to Indeed.com and do some new analysis that answered this next question.</p> 
+  <div class="slate-resizable-image-embed slate-image-embed__resize-full-width"> 
+   <img data-media-urn="urn:li:digitalmediaAsset:C4E12AQGwj5wCJ7phgg" src="https://media.licdn.com/dms/image/v2/C4E12AQGwj5wCJ7phgg/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1520172668085?e=1765411200&amp;v=beta&amp;t=SKLm5ZQ71jEdEgJc7ly7-bs3ddUpaZ-_42s5wH2uNtU"> 
+  </div> 
+  <p>As we can see from the above, Dashboards are great when the domain of the questions is known. I can answer some pre-defined questions - "Known Knowns" and provide some flexibility to answer other questions I know you might ask - "Known Unknowns". But what about the "Unknown Unknowns"? The questions I don't know you are going to ask? How do I design for this? How do I address this need for "Ad Hoc" analysis?</p> 
+  <p>Coming back to our above example, when I looked at the above analysis I had some more questions - and this is what great dashboards do, they invite you to ask more questions. Questions you did not know you had, until you saw the dashboard. Wonder how salaries for jobs in these technologies are trending over time? Are Tableau specialists making more money than Cognos developers? Wonder how this trend plays out across different geographies - India vs US vs Europe? Are Traditional BI developers making less money today than they made 4 years ago? Now these are just my "<strong>Unknown Unknown</strong>" questions. If 100 people looked at this dashboard, they would approach it from other perspectives that were interesting to them and there would be 100x "<strong>Unknown Unknown</strong>" questions.</p> 
+  <p>I had written an earlier post about <a href="https://www.linkedin.com/pulse/reports-dashboards-ad-hoc-analysis-data-curiosity-vikram-ekambaram" target="_blank">Data Curiosity</a> in organizations and the importance of allowing people to ask and answer these "<strong>Unknown Unknown</strong>" questions and doing their own Ad-Hoc analysis. As Jeff Bezos recently said - <em>"One area where I think we are especially distinctive is failure," he wrote. "I believe we are the best place in the world to fail (we have plenty of practice!), and failure and invention are inseparable twins. To invent you have to experiment, and if you know in advance that it's going to work, it's not an experiment."</em> If you want to innovate you need to support a culture of curiosity and experimentation.</p> 
+  <p>Coming back to my question about trend across geographies or salary trends - to answer this I need new data. My dataset which was designed to answer the "<strong>Knowns</strong>" did not include salary or geography data. So I need to go get this new data. Once I have the new data, I can then do my ad-hoc analysis. Since there are 100x possible questions how do we handle this potential deluge of data requests? </p> 
+  <p>The answer lies in the people, process and technology - the process that has to be followed has to be agile, iterative and collaborative. If it takes 3 weeks to get me the above data I will not do any new analysis. Also, since I don't know what the questions are till I see the dashboard, asking me to document my requirements upfront won't work. This requires it to be a collaborative process rather than the traditional waterfall process.</p> 
+  <p>We also need technology that supports this new agility. Tools for agile data preparation (so I can meet the new data requests) and tools for ad hoc analysis that a business user can use to ask any question he has of the data.If your tools don't support agility and empower end users, they will not work. </p> 
+  <p>Lastly, the roles in organizations have to change. You need 'data' people that can get the data to the business users in an agile / secure / governed manner and the business has to take on more ownership of their own analysis.</p> 
+  <p>Which brings me to the title of this presentation - Why do organizations ignore the "<strong>Unknown Unknowns</strong>" when selecting a Self Service Analytics technology? Why do they assume that the analysis that business users are doing today in Excel are outside their jurisdiction? Answering the "<strong>Unknown Unknowns</strong>" is how business users experiment with data and exercise their data curiosity muscle.</p>
+ 
+</div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<html>
+<head>
+  <title>GenAI, Security and Privacy</title>
+  <style>
+    body {
+      margin: 0 auto;
+      width: 744px;
+      font-family: Source Serif Pro, serif;
+      line-height: 32px;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.7);
+      font-size: 21px;
+    }
+    h1, h2, h3 {
+      font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+    }
+    h1 a, h1 a:visited {
+      color: inherit;
+      text-decoration: none;
+    }
+    h1 {
+      line-height: 48px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 42px;
+      margin: 32px 0 20px;
+    }
+    h2 {
+      line-height: 32px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 26px;
+      margin: 28px 0;
+    }
+    h3 {
+      line-height: 28px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 21px;
+      margin: 24px 0;
+    }
+    p {
+      margin: 32px 0;
+    }
+    .created, .published {
+      color: rgba(0, 0, 0, 0.55);
+      font-size: 15px;
+      line-height: 15px;
+      margin: 20px 0;
+    }
+    .created + .published {
+      margin-top: -12px;
+    }
+    blockquote {
+      font-family: Georgia, Source Serif Pro, serif;
+      font-style: italic;
+      font-size: 24px;
+      line-height: 36px;
+      margin: 48px 120px;
+      text-align: center;
+    }
+    a {
+      word-wrap: break-word;
+      outline: none;
+      text-decoration: none;
+      background-color: transparent;
+      border: 0;
+      color: #008CC9;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    a:visited {
+      color: #8C68CB;
+    }
+    .center {
+      text-align: center;
+    }
+    iframe {
+      display: block;
+      margin: 44px auto;
+    }
+    *:not(pre) + pre, pre:first-of-type {
+      margin-top: 32px;
+      padding-top: 32px;
+    }
+    pre:only-of-type {
+      margin: 32px 0;
+      padding: 32px;
+    }
+    pre {
+      background: #F3F6F8;
+      overflow-x: auto;
+      display: block;
+      font-size: 13px;
+      font-family: monospace;
+      line-height: 13px;
+      padding: 0 32px 32px;
+      white-space: pre;
+    }
+    a.embedded {
+      background: #F3F6F8;
+      display: block;
+      padding: 32px;
+      margin: 32px 0;
+    }
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+    .slate-image-embed__resize-full-width img {
+      width: 100%;
+    }
+    .series-logo {
+      width: 48px;
+      height: 48px;
+      box-sizing: border-box;
+      background-clip: content-box;
+      border: 4px solid transparent;
+      border-radius: 6px;
+      object-fit: scale-down;
+      float: left;
+    }
+    .series-title {
+      font-size: 16px;
+      font-weight: 600;
+      vertical-align: top;
+    }
+    .series-description {
+      color: rgba(0,0,0,.6);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    div {
+      margin: 32px 0;
+    }
+  </style>
+</head>
+<body>
+    <img class="series-logo" src="https://media.licdn.com/dms/image/v2/D5612AQFH1Y48wdQAcg/series-logo_image-shrink_300_300/series-logo_image-shrink_300_300/0/1706721636826?e=1765411200&v=beta&t=MHFxhOnQitlwkoxnOEBehX-CrxSWcBOJP0Jnd7Mv7Ps" />
+    <h3>
+      <span class="series-title">GenAI for Go-To-Market teams</span>
+      </br>
+      <span class="series-description">Best practices for GTM teams on leveraging GenAI to hack your productivity</span>
+    </h3>
+    <img src="https://media.licdn.com/mediaD4E12AQEtqk8uPIATig" alt="" title="" />
+      <h1><a href="https://www.linkedin.com/pulse/genai-security-privacy-vikram-ekambaram-w2oae">GenAI, Security and Privacy</a></h1>
+    <p class="created">Created on 2024-08-12 16:40</p>
+  <p class="published">Published on 2024-08-13 13:00</p>
+  <div><p>This has been a long overdue article and it comes up in every customer conversation I have around GenAI. Since a lot of the use cases I deal with are people using GenAI against their documents, there is a real concern about security. They don't want their documents to be used by the LLM vendors to train on.</p><p>Then there was <a href="https://www.linkedin.com/posts/cgivre_i-just-returned-from-blackhat-in-vegas-and-activity-7227707934074425345-FfMJ/" target="_blank">this post</a> about GenAI being discussed at the <a href="https://www.blackhat.com/us-24/" target="_blank">Black Hat conference</a> and that kept me up for a bit as statements like - </p><p><em>Gen AI cannot be used to secure Gen AI.</em></p><p><em>Gen AI is a very immature technology, and despite that companies are going all in without a clear understanding of the risks.</em></p><p><em>Nobody and I mean nobody knows how to secure it.</em></p><p>make me ask myself, am I being naive? Am I leading people down the wrong path (to be fair, I am very very very small cog in the big AI wheel that is leading people down the path).</p><p>I'll address both in layman's terms and hoping others who have a stronger security background will correct any misstatements I make.</p><ol><li><p><strong>If I use GenAI against my document, will this now be used to train the LLM -</strong></p></li></ol><p>Here is a visual that I find useful -</p><p></p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQHrtFNQk3xDvg" src="https://media.licdn.com/dms/image/v2/D4E12AQHrtFNQk3xDvg/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1723483423102?e=1765411200&amp;v=beta&amp;t=mwWEo9Ie0hzge76kZL2XsvLCMzxwR6cJtRfrHp14UgA"><figcaption></figcaption></figure><p><strong>Bottom Left -</strong> The one option you should not be doing is using the free version of ChatGPT and upload private documents. This is the least secure option but it is the least expensive option, so I understand why people do it.</p><p><strong>Top Left -</strong> If you use the ChatGPT Team/Enterprise or the API, <a href="https://openai.com/enterprise-privacy/" target="_blank">OpenAI is very clear</a> that they do not use your data to train the model. Similarly with <a href="https://support.anthropic.com/en/articles/9267385-what-is-the-data-relationship-between-anthropic-the-customer-and-the-user" target="_blank">Anthropic</a>. <em>"Anthropic does not use the data to train generative models.". "We do not use your ChatGPT Team, ChatGPT Enterprise, or API data, inputs, and outputs for training our models.". </em></p><p>Despite this, a lot of people want a higher level of security. I think the reason is - <em>Do they trust Anthropic or OpenAI?</em> These are multi-billion dollar companies that depend on this level of trust, but these are also early stage startups.</p><p><strong>Top Middle -</strong> If you want a higher level of security, you can use <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/data-protection.html" target="_blank">Anthropic on Amazon Bedrock</a> or <a href="https://learn.microsoft.com/en-us/legal/cognitive-services/openai/data-privacy" target="_blank">OpenAI on Azure</a>. Again the language is pretty clear - <em>"Amazon Bedrock doesn't store or log your prompts and completions. Amazon Bedrock doesn't use your prompts and completions to train any AWS models and doesn't distribute them to third parties.". </em></p><p>If you want some more security you can access <a href="https://aws.amazon.com/bedrock/llama/" target="_blank">Llama</a> (an open source model) on Amazon Bedrock and thus remove OpenAI from the mix.</p><p>In this case, it comes down to - do you trust Amazon or Microsoft. Considering all the other data we trust them with, why would this be any different. One thing I did find out is that there is a bit of a difference in the same model hosted by these providers vs what they natively host. I don't have empirical evidence, but it seems this way.</p><p><strong>Top Right -</strong> If you want even more security, you can deploy your own open source LLM (Llama from Meta or Mistral). This will require you to have technical resources to set these models up, manage the hardware etc. So this is not a trivial decision. </p><p>The question facing most of my customers is they don't have the technical resources to go to the more secure options. That being said, if you are in this boat and want a no-code/low-code and secure GenAI option, check out <a href="http://www.anyquest.ai" target="_blank">www.anyquest.ai</a>. </p><p><strong>2. What about the - <em>nobody knows how to secure GenAI and we are going to be in a world of trouble.</em></strong></p><p>This is a deeper discussion and there is a lot more nuance and understanding that is needed. I will also say that I am not extremely knowledgeable about this topic but I will give my layman's understanding and how I am thinking about this.</p><p>Here is my framework -</p><p></p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQEoa7KYGbg9AA" src="https://media.licdn.com/dms/image/v2/D4E12AQEoa7KYGbg9AA/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1723484032489?e=1765411200&amp;v=beta&amp;t=KNbmVG5OfaI9BTle_DqfYPS-Ki9NXhkFUgMJCYfDSps"><figcaption></figcaption></figure><p>Firstly, I think about the underlying data being used by the LLM. If it is public data (doing account research on web data or person research using LinkedIn data), I don't think there is any reason to worry about security. All that data is already in the LLM (I am going to keep this away from ethics and focus on security).</p><p>If it is private data (your call transcripts, your CRM data, your knowledge base etc.), the question that becomes critical is how is this being secured. Here you have 2 options -</p><ol><li><p>Control the security through the LLM via prompt guardrails. Let us say that I've built an application that allows users to ask questions off of a knowledge base of documents. I've uploaded all documents (including some sensitive ones about performance reviews that I only want some people to view). If I am implementing this security in my prompt, then this opens up security issues via <a href="https://www.ibm.com/topics/prompt-injection" target="_blank">prompt injection</a>. Basically someone can add stuff to the prompt that could go around my security guardrails and potentially get access to this data. There are examples of <a href="https://finance.yahoo.com/news/researchers-way-easily-bypass-guardrails-183009628.html" target="_blank">this</a> and people will keep trying to get around any <a href="https://www.upworthy.com/prankster-tricks-a-gm-dealership-chatbot-to-sell-him-a-76000-chevy-tahoe-for-1-rp2" target="_blank">guardrail based</a> limitations. </p></li><li><p>If the security is being handled at the application layer, then we have much less to worry about. E.g with the knowledge base of documents example, instead of having one big knowledge base that anyone can ask questions from, I might have smaller knowledge bases that are accessible with specific UI and the UI controls who accesses which knowledge base. This does require more work and more thought. For example, <a href="http://www.anyquest.ai" target="_blank">www.anyquest.ai</a> has a concept of workspaces, each workspace has its own security and you can point each workspace to it's own content repository.</p></li></ol><p>The other axis to think about this is who is accessing the GenAI application.</p><p></p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQE98D0DEcTT0w" src="https://media.licdn.com/dms/image/v2/D4E12AQE98D0DEcTT0w/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1723484823819?e=1765411200&amp;v=beta&amp;t=GpQqfJkqGfbRo3Cu2hMaOVo3lgFpAwC41hZZqz398tw"><figcaption></figcaption></figure><p>If it is mostly an application used by internal users, you have less to worry about. Your risk is from an internal bad actor. Someone wants to access performance reviews and they are not supposed to. This gets you thinking about the use case and security should be considered always.</p><p>If you are building a public GenAI application (e.g. public chatbot, public agent) you have to be extremely careful as there are bad actors out there who will try and exploit any loophole. <a target="_blank" href="https://www.linkedin.com/in/ACoAAADEBSABq7c14BzYY4sBlsOpBU7FD-v89Q8?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAADEBSABq7c14BzYY4sBlsOpBU7FD-v89Q8">Sanchita Sur</a> was kind enough to educate me about this some time back.</p><p>I think as GenAI agents become more popular, they will be the ones we have to be most careful and worried about as they have power to execute workflows and a public agent can be manipulated. Now you don't just have to worry about sensitive data, you have to worry about malicious actors doing malicious work.</p><p>So how do I feel - all my use cases are internal only for internal users. So this has absolutely reduced my concerns as we have a lot more control. Secondly, most of my use cases leverage 3rd party tools like <a href="http://www.anyquest.ai" target="_blank">www.anyquest.ai</a> as a layer around the APIs, so there is an extra level of security built in. AnyQuest does security at rest, security in motion and it uses the APIs to make the calls. Lastly, I can control security at the application level with Workspaces.</p><p>Overall, I am glad that I read the post about Blackhat as it made me dig a bit deeper into a topic I needed to get deeper into. Thanks to <a target="_blank" href="https://www.linkedin.com/in/cherevik?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAAGn6gB-qKKUUKhJhOzDmXjT3EQXjg0yqs">Dmitri Tcherevik</a> for taking the time to go through some of this with me.</p></div>
+</body>
+</html>

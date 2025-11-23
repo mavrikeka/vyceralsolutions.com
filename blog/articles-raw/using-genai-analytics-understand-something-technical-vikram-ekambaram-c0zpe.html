@@ -1,0 +1,153 @@
+<html>
+<head>
+  <title>Using GenAI for Analytics + using GenAI to understand something technical </title>
+  <style>
+    body {
+      margin: 0 auto;
+      width: 744px;
+      font-family: Source Serif Pro, serif;
+      line-height: 32px;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.7);
+      font-size: 21px;
+    }
+    h1, h2, h3 {
+      font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+    }
+    h1 a, h1 a:visited {
+      color: inherit;
+      text-decoration: none;
+    }
+    h1 {
+      line-height: 48px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 42px;
+      margin: 32px 0 20px;
+    }
+    h2 {
+      line-height: 32px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 26px;
+      margin: 28px 0;
+    }
+    h3 {
+      line-height: 28px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 21px;
+      margin: 24px 0;
+    }
+    p {
+      margin: 32px 0;
+    }
+    .created, .published {
+      color: rgba(0, 0, 0, 0.55);
+      font-size: 15px;
+      line-height: 15px;
+      margin: 20px 0;
+    }
+    .created + .published {
+      margin-top: -12px;
+    }
+    blockquote {
+      font-family: Georgia, Source Serif Pro, serif;
+      font-style: italic;
+      font-size: 24px;
+      line-height: 36px;
+      margin: 48px 120px;
+      text-align: center;
+    }
+    a {
+      word-wrap: break-word;
+      outline: none;
+      text-decoration: none;
+      background-color: transparent;
+      border: 0;
+      color: #008CC9;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    a:visited {
+      color: #8C68CB;
+    }
+    .center {
+      text-align: center;
+    }
+    iframe {
+      display: block;
+      margin: 44px auto;
+    }
+    *:not(pre) + pre, pre:first-of-type {
+      margin-top: 32px;
+      padding-top: 32px;
+    }
+    pre:only-of-type {
+      margin: 32px 0;
+      padding: 32px;
+    }
+    pre {
+      background: #F3F6F8;
+      overflow-x: auto;
+      display: block;
+      font-size: 13px;
+      font-family: monospace;
+      line-height: 13px;
+      padding: 0 32px 32px;
+      white-space: pre;
+    }
+    a.embedded {
+      background: #F3F6F8;
+      display: block;
+      padding: 32px;
+      margin: 32px 0;
+    }
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+    .slate-image-embed__resize-full-width img {
+      width: 100%;
+    }
+    .series-logo {
+      width: 48px;
+      height: 48px;
+      box-sizing: border-box;
+      background-clip: content-box;
+      border: 4px solid transparent;
+      border-radius: 6px;
+      object-fit: scale-down;
+      float: left;
+    }
+    .series-title {
+      font-size: 16px;
+      font-weight: 600;
+      vertical-align: top;
+    }
+    .series-description {
+      color: rgba(0,0,0,.6);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    div {
+      margin: 32px 0;
+    }
+  </style>
+</head>
+<body>
+    <img class="series-logo" src="https://media.licdn.com/dms/image/v2/D5612AQFH1Y48wdQAcg/series-logo_image-shrink_300_300/series-logo_image-shrink_300_300/0/1706721636826?e=1765411200&v=beta&t=MHFxhOnQitlwkoxnOEBehX-CrxSWcBOJP0Jnd7Mv7Ps" />
+    <h3>
+      <span class="series-title">GenAI for Go-To-Market teams</span>
+      </br>
+      <span class="series-description">Best practices for GTM teams on leveraging GenAI to hack your productivity</span>
+    </h3>
+    <img src="https://media.licdn.com/mediaD4E12AQEEEeu-LU3MDw" alt="" title="" />
+      <h1><a href="https://www.linkedin.com/pulse/using-genai-analytics-understand-something-technical-vikram-ekambaram-c0zpe">Using GenAI for Analytics + using GenAI to understand something technical </a></h1>
+    <p class="created">Created on 2024-10-15 14:50</p>
+  <p class="published">Published on 2024-10-16 14:00</p>
+  <div><p>A few months ago I had posted about GenAI for Data Analytics and the challenges of using something probabilistic to return something deterministic. Here are the 2 articles -<a href="https://linkedin.com/pulse/chatgpt-data-analysis-vikram-ekambaram-sy0he/" target="_blank"> Link 1 </a>and <a href="https://www.linkedin.com/pulse/using-chatgpt-data-analysis-2-vikram-ekambaram-hldbe" target="_blank">Link 2</a>. For the most part, I have stayed away from GenAI on structured data but I am getting on a call with a dear friend and former colleague <a target="_blank" href="https://www.linkedin.com/in/johncjensen?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAAcUFsBA1uwC4Vjrw35adrSF7LngJE0wDw">John Jensen</a> today to talk about <a href="https://www.zenlytic.com/" target="_blank">Zenlytic</a>. I do feel that GenAI on Structured Data will unlock a ton of new applications and was curious to learn more before my meeting. </p><p>I came across a case study on how Pinterest was using GenAI to do Text to SQL, written by <a target="_blank" href="https://www.linkedin.com/in/lewiswalkerai?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAA2tUDoBo5fY2XjjyNNEH9PClEWHjbdL9_Q">Lewis Walker ➲</a> that was quite illuminating. They talked about how they went from 40% accuracy to 90% accuracy by moving from just LLM to LLM + RAG. For those interested, here are a couple diagrams that talk about their approach.</p><p></p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQEvmULDCEE2ew" src="https://media.licdn.com/dms/image/v2/D4E12AQEvmULDCEE2ew/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1729004293827?e=1765411200&amp;v=beta&amp;t=Vv5qZHSekKtMUbJojT5c-CPKKr3MFB7JQS1AVWizOpM"><figcaption></figcaption></figure><p>Here is the text that describes the approach</p><p></p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQGqQhoIdZuigg" src="https://media.licdn.com/dms/image/v2/D4E12AQGqQhoIdZuigg/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1729005699645?e=1765411200&amp;v=beta&amp;t=lw7wWq4g_JL1d_4hdV3Yr17D6CONHcpIZ0RnpgxwbVE"><figcaption></figcaption></figure><p>Here is the 2nd approach -</p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQFlEoPFE6Ej2g" src="https://media.licdn.com/dms/image/v2/D4E12AQFlEoPFE6Ej2g/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1729004313254?e=1765411200&amp;v=beta&amp;t=5SfoQpb0SR5LnMrGvsYxJ7j7nYQsJR97Nn1qYF77rGk"><figcaption></figcaption></figure><p>Here is the text describing the approach</p><p></p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQGSMeevVAbQ3g" src="https://media.licdn.com/dms/image/v2/D4E12AQGSMeevVAbQ3g/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1729005741617?e=1765411200&amp;v=beta&amp;t=wCrAfrCG_cGPLkctHhOiKs68a_wuSRjrTNK5hgQWWg0"><figcaption></figcaption></figure><p>While this case study gave me a high level understanding of the approach, I was not sure I completely understood it. I am a learn by examples kind of person. If someone gives me an example I can really understand the topic. But the case study did not have an example. So I asked GenAI to explain this to me with examples.</p><p>This is the output it came up with - <a href="https://docs.google.com/document/d/1JRwWGjShq4NXzupOC3xLki_q_nMQFhJ7Nrung-0kCgo/edit?usp=sharing" target="_blank">https://docs.google.com/document/d/1JRwWGjShq4NXzupOC3xLki_q_nMQFhJ7Nrung-0kCgo/edit?usp=sharing</a></p><p>This was very helpful as it really broke down the process in a way I could understand it. What is fascinating is that the author of the case study gave me some information and then GenAI was able to uses it's knowledge to extrapolate and expand on it.</p><p>I've always wondered how Text to SQL works and seeing some of the code examples also helped a lot.</p><p>So next time someone talks about using LLMs to generate SQL queries, I can be much more knowledgeable and also, now I will always use GenAI to explain things to me with examples.</p><p>The question still remains - if it is 90% accurate, what happens with the 10% errors? Another question for GenAI.</p></div>
+</body>
+</html>

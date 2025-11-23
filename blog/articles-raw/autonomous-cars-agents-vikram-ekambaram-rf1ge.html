@@ -1,0 +1,153 @@
+<html>
+<head>
+  <title>Autonomous Cars and Autonomous Agents</title>
+  <style>
+    body {
+      margin: 0 auto;
+      width: 744px;
+      font-family: Source Serif Pro, serif;
+      line-height: 32px;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.7);
+      font-size: 21px;
+    }
+    h1, h2, h3 {
+      font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+    }
+    h1 a, h1 a:visited {
+      color: inherit;
+      text-decoration: none;
+    }
+    h1 {
+      line-height: 48px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 42px;
+      margin: 32px 0 20px;
+    }
+    h2 {
+      line-height: 32px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 26px;
+      margin: 28px 0;
+    }
+    h3 {
+      line-height: 28px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 21px;
+      margin: 24px 0;
+    }
+    p {
+      margin: 32px 0;
+    }
+    .created, .published {
+      color: rgba(0, 0, 0, 0.55);
+      font-size: 15px;
+      line-height: 15px;
+      margin: 20px 0;
+    }
+    .created + .published {
+      margin-top: -12px;
+    }
+    blockquote {
+      font-family: Georgia, Source Serif Pro, serif;
+      font-style: italic;
+      font-size: 24px;
+      line-height: 36px;
+      margin: 48px 120px;
+      text-align: center;
+    }
+    a {
+      word-wrap: break-word;
+      outline: none;
+      text-decoration: none;
+      background-color: transparent;
+      border: 0;
+      color: #008CC9;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    a:visited {
+      color: #8C68CB;
+    }
+    .center {
+      text-align: center;
+    }
+    iframe {
+      display: block;
+      margin: 44px auto;
+    }
+    *:not(pre) + pre, pre:first-of-type {
+      margin-top: 32px;
+      padding-top: 32px;
+    }
+    pre:only-of-type {
+      margin: 32px 0;
+      padding: 32px;
+    }
+    pre {
+      background: #F3F6F8;
+      overflow-x: auto;
+      display: block;
+      font-size: 13px;
+      font-family: monospace;
+      line-height: 13px;
+      padding: 0 32px 32px;
+      white-space: pre;
+    }
+    a.embedded {
+      background: #F3F6F8;
+      display: block;
+      padding: 32px;
+      margin: 32px 0;
+    }
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+    .slate-image-embed__resize-full-width img {
+      width: 100%;
+    }
+    .series-logo {
+      width: 48px;
+      height: 48px;
+      box-sizing: border-box;
+      background-clip: content-box;
+      border: 4px solid transparent;
+      border-radius: 6px;
+      object-fit: scale-down;
+      float: left;
+    }
+    .series-title {
+      font-size: 16px;
+      font-weight: 600;
+      vertical-align: top;
+    }
+    .series-description {
+      color: rgba(0,0,0,.6);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    div {
+      margin: 32px 0;
+    }
+  </style>
+</head>
+<body>
+    <img class="series-logo" src="https://media.licdn.com/dms/image/v2/D5612AQFH1Y48wdQAcg/series-logo_image-shrink_300_300/series-logo_image-shrink_300_300/0/1706721636826?e=1765411200&v=beta&t=MHFxhOnQitlwkoxnOEBehX-CrxSWcBOJP0Jnd7Mv7Ps" />
+    <h3>
+      <span class="series-title">GenAI for Go-To-Market teams</span>
+      </br>
+      <span class="series-description">Best practices for GTM teams on leveraging GenAI to hack your productivity</span>
+    </h3>
+    <img src="https://media.licdn.com/mediaD4E12AQHkLbBZCgGU7Q" alt="" title="" />
+      <h1><a href="https://www.linkedin.com/pulse/autonomous-cars-agents-vikram-ekambaram-rf1ge">Autonomous Cars and Autonomous Agents</a></h1>
+    <p class="created">Created on 2024-11-01 00:56</p>
+  <p class="published">Published on 2024-11-08 15:00</p>
+  <div><p>In the AI world, Agents are all the buzz recently. If 2023 was the year of ChatGPT and CoPilots then 2024 is turning out to be the year of AI Agents. It is probably useful to define agents and I picked this one from <a href="https://aws.amazon.com/what-is/ai-agents/" target="_blank">AWS</a>.</p><blockquote><p>An artificial intelligence (AI) agent is a software program that can interact with its environment, collect data, and use the data to perform self-determined tasks to meet predetermined goals. Humans set goals, but an AI agent independently chooses the best actions it needs to perform to achieve those goals.</p></blockquote><p>Salesforce announced AgentForce, Microsoft is talking about agents, Hubspot released <a href="http://Agent.ai" target="_blank">Agent.ai</a>, Brett Taylor ex Salesforce is building <a href="http://Sierra.ai" target="_blank">Sierra.ai</a> (Agent OS). Marc Benioff talked about ‘<a href="https://fortune.com/2024/09/05/salesforce-ceo-marc-benioff-ai-agents-agentforce-dreamforce-gen-ai-era/" target="_blank">hard pivot’ to autonomous AI agents</a>', supposedly he even joked about renaming Salesforce to Agentforce.</p><p>Needless to say in true Silicon Valley bravado, the hype is off the charts. </p><p>Before we get to the autonomous cars part of this post, it is good to take a step back and talk about why agents are a big deal. From a purely money standpoint, the billions of dollars spent on LLMs will need to show 100's of billions of dollars of revenue and the reality is that this level of monetization is not going to come from ChatGPT/CoPilots/Assistants that leverage just LLMs. The latest news is that <a href="https://9to5mac.com/2024/11/07/microsoft-just-learned-its-lesson-about-overcharging-for-ai-features/" target="_blank">Microsoft is not charging</a> for CoPilot standalone and instead bundling it in.</p><blockquote><p>It’s been nine months since we introduced consumers to Copilot in our Microsoft 365 apps via Copilot Pro. We’ve spent that time adding new features, improving performance, and listening carefully to customer feedback. Based on that feedback, we’re making Copilot part of our Microsoft 365 Personal and Family subscriptions.</p></blockquote><p>The reality is that to solve real business problems in addition to the LLMs there are a few more pieces needed - integrations to systems, aligning to user workflows, tying in to AI/ML models and automation. Let's take a simple business need in Sales. You run a webinar and you want to send a personalized follow up email to each attendee. GenAI can generate the email, but to personalize it, it needs data about the attendee and this data sits in existing systems (not in the LLM). Secondly, it doesn't help anyone if there is a standalone process to send this personalized email. We need to tie it to a sequence in a Sales Engagement Platform so the salesperson does not have to go to yet another interface / product. Lastly, if I need to send personalized outreach to 100 attendees, I need a repeatable scalable process. ChatGPT/CoPilot is not the solution. Enter Agents.</p><p>Agents have access to tools that can talk to systems, they can orchestrate multiple steps in a process and chain them all together to do a piece of work. Agents can be executed from email / slack and other interfaces, so it fits into existing workflows. Lastly, the agents also have access to the LLMs to do tasks the LLMs are great at and use AI/ML models where needed.</p><p>Today there are tools like <a href="http://Agent.ai" target="_blank">Agent.ai</a> and <a href="http://AnyQuest.ai" target="_blank">AnyQuest.ai</a> that you can use to build your own agents. You need a human to configure all the steps that the agent will take but the end user can now just use the agent to do work. If you want to see an agent in action check out the <a href="http://Agent.ai" target="_blank">Agent.ai</a> marketplace of you can 'hire' this agent I built that generates personalized emails to an executive - <a href="https://agent.ai/agent/i1mbpqvg11x6z4z6" target="_blank">https://agent.ai/agent/i1mbpqvg11x6z4z6</a>.</p><p>The challenge is the promise of 'Autonomous' agents. If you believe the hype, we will have these very soon and we will all live in a world with a bunch of autonomous agents doing work for us. Personally, I am not sure how long it will take to have autonomous agents. Is the hype here similar to Elon Musk's <a href="https://jalopnik.com/elon-musk-tesla-self-driving-cars-anniversary-autopilot-1850432357" target="_blank">self driving car </a>comments. I agree with <a target="_blank" href="https://www.linkedin.com/in/eilonreshef?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAAMSqQBMDtYbq_16sFfTHV-Y_u710RgIQI">Eilon Reshef</a> and his post - <a href="https://www.forbes.com/councils/forbestechcouncil/2024/09/11/ai-agents-arent-yet-enterprise-ready-they-need-more-human-guidance/" target="_blank">AI Agents Aren't Yet Enterprise-Ready—They Need More Human Guidance</a>.</p><p>So coming to autonomous cars - Tesla recently made the Full Self Driving feature available for 30 days for free and I decided to really test it out. It is great, it is a lot of fun and it works almost all the time, but here is the problem - it does not work all the time. Here are just a few reasons, a human will have to step in -</p><ol><li><p>It does not recognize potholes and anyone who has driven a Tesla know those tires are not cheap.</p></li><li><p>It does not work in bad rainy weather (haven't tried in snow).</p></li><li><p>It did not stop at a stop sign because there was a big truck that was parked that the sign was hidden behind.</p></li><li><p>It does not change the speed when the speed limit changes. This was a weird one and I think it might be a bug but if I was going 55 mph and the speed limit changes to 40, it would stay at 55 and vice versa.</p></li><li><p>It recognizes the speed limit using its cameras. So if there is a sign with a posted speed limit, that is how it determines what the speed limit is. As you can imagine this is not alway accurate. I have an on-ramp to get on a highway and it thinks the speed limit on the on-ramp is 55 MPH and it goes from 0-55 really fast. If I get to road and there is no speed limit sign, it uses the speed limit from the previous road.</p></li><li><p>I have a few curvy roads and it takes those turns really fast and there were more than a couple times where I was too nervous that it would hit the guardrail. What if I trusted it and it did hit the guardrail? Will Tesla pay for the damages? This insurance question is very real.</p></li><li><p>The other day, I was in a bit of a hurry and we were in slow traffic and if I had relied on FSD I would have been late. Supposedly <a href="https://futurism.com/the-byte/waymo-expensive-slower-taxis" target="_blank">Waymo's are slower</a> than human driven cars.</p></li></ol><p>There are probably a few more, but the reality is that even though it is 98% there, that 2% makes a big difference. Firstly, it is not autonomous. I need to keep paying attention, so it does not replace the driver. Secondly, if I completely trust it and there is an accident, who is liable. Thirdly, the reason Waymo's are able to drive in SF autonomously is because each street has been manually mapped. This does not scale for the entire country.</p><p>My experience in building agents has been the same. They are great but they make mistakes and while I see tremendous value in agents with humans in the loop, we are a long ways away from autonomous agents. The biggest challenge is going to be the data that these agents rely on. Organizational data is messy and this is going to be one reason it is going to take us a long long time to have agents we can completely trust. Secondly, GenAI is probabilistic and by definition it lacks consistency. How will this translate into running autonomously at scale is to be seen. A lot of guardrails will have to be put in place. </p><p>Bottomline, I feel people will be disappointed in GenAI not because it isn't amazing, it is just that we are setting such high and unreasonable expectations that people are going to be disappointed when it is not as magical as we've been promised. I think we are doing Agents a big disservice by assuming that 'Autonomy' is a key ingredient to being an Agent while the reality is that Agents with humans in the loop can be tremendously useful. But if you promise autonomous self-driving cars and you give me Tesla's FSD, you will disappoint me, because you set the bar so high.</p></div>
+</body>
+</html>

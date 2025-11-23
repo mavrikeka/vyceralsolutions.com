@@ -1,0 +1,153 @@
+<html>
+<head>
+  <title>Using GenAI for quick research</title>
+  <style>
+    body {
+      margin: 0 auto;
+      width: 744px;
+      font-family: Source Serif Pro, serif;
+      line-height: 32px;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.7);
+      font-size: 21px;
+    }
+    h1, h2, h3 {
+      font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+    }
+    h1 a, h1 a:visited {
+      color: inherit;
+      text-decoration: none;
+    }
+    h1 {
+      line-height: 48px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 42px;
+      margin: 32px 0 20px;
+    }
+    h2 {
+      line-height: 32px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 26px;
+      margin: 28px 0;
+    }
+    h3 {
+      line-height: 28px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 21px;
+      margin: 24px 0;
+    }
+    p {
+      margin: 32px 0;
+    }
+    .created, .published {
+      color: rgba(0, 0, 0, 0.55);
+      font-size: 15px;
+      line-height: 15px;
+      margin: 20px 0;
+    }
+    .created + .published {
+      margin-top: -12px;
+    }
+    blockquote {
+      font-family: Georgia, Source Serif Pro, serif;
+      font-style: italic;
+      font-size: 24px;
+      line-height: 36px;
+      margin: 48px 120px;
+      text-align: center;
+    }
+    a {
+      word-wrap: break-word;
+      outline: none;
+      text-decoration: none;
+      background-color: transparent;
+      border: 0;
+      color: #008CC9;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    a:visited {
+      color: #8C68CB;
+    }
+    .center {
+      text-align: center;
+    }
+    iframe {
+      display: block;
+      margin: 44px auto;
+    }
+    *:not(pre) + pre, pre:first-of-type {
+      margin-top: 32px;
+      padding-top: 32px;
+    }
+    pre:only-of-type {
+      margin: 32px 0;
+      padding: 32px;
+    }
+    pre {
+      background: #F3F6F8;
+      overflow-x: auto;
+      display: block;
+      font-size: 13px;
+      font-family: monospace;
+      line-height: 13px;
+      padding: 0 32px 32px;
+      white-space: pre;
+    }
+    a.embedded {
+      background: #F3F6F8;
+      display: block;
+      padding: 32px;
+      margin: 32px 0;
+    }
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+    .slate-image-embed__resize-full-width img {
+      width: 100%;
+    }
+    .series-logo {
+      width: 48px;
+      height: 48px;
+      box-sizing: border-box;
+      background-clip: content-box;
+      border: 4px solid transparent;
+      border-radius: 6px;
+      object-fit: scale-down;
+      float: left;
+    }
+    .series-title {
+      font-size: 16px;
+      font-weight: 600;
+      vertical-align: top;
+    }
+    .series-description {
+      color: rgba(0,0,0,.6);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    div {
+      margin: 32px 0;
+    }
+  </style>
+</head>
+<body>
+    <img class="series-logo" src="https://media.licdn.com/dms/image/v2/D5612AQFH1Y48wdQAcg/series-logo_image-shrink_300_300/series-logo_image-shrink_300_300/0/1706721636826?e=1765411200&v=beta&t=MHFxhOnQitlwkoxnOEBehX-CrxSWcBOJP0Jnd7Mv7Ps" />
+    <h3>
+      <span class="series-title">GenAI for Go-To-Market teams</span>
+      </br>
+      <span class="series-description">Best practices for GTM teams on leveraging GenAI to hack your productivity</span>
+    </h3>
+    <img src="https://media.licdn.com/mediaD4E12AQFYQThU4f5GSA" alt="" title="" />
+      <h1><a href="https://www.linkedin.com/pulse/using-genai-quick-research-vikram-ekambaram-gpaxe">Using GenAI for quick research</a></h1>
+    <p class="created">Created on 2024-03-27 14:30</p>
+  <p class="published">Published on 2024-03-28 13:00</p>
+  <div><p>Nothing I am going to state here is earth shattering and hopefully most folks are already doing this. In the work I am doing, I tend to have a calls with a lot of founders (typically for startups and scaleup). Often not necessarily household name companies.</p><p>My typical process for the first call is to go to the company website and do some research on what they do, what products do they offer, who are their competitors (so I can place them in the right category). Then I check out who their executives are and lastly I like to search for any open roles they are hiring for.</p><p>This process takes me about 15-30 mins between the searching, processing and understanding. So the question is - can using GenAI save me time?</p><p>So I decided to do a good old fashioned bake off - I decided to ask this question of the following tools -</p><ol><li><p><a href="http://Perplexity.ai" target="_blank">Perplexity.ai</a></p></li><li><p>Google Gemini</p></li><li><p>Keymate Custom GPT (this is a custom GPT that allows ChatGPT to search the web. So it circumvents the limitation that the LLM only has data till April 2023).</p></li><li><p>AnyQuest (still in beta) - This is a platform that allows me to configure a workflow that once it is setup, I can just run the next time.</p></li></ol><p>This is the question I posed to each of them - </p><p><strong>You are an expert researcher. Please visit </strong><a href="http://Tribyl.com" target="_blank"><strong>Tribyl.com</strong></a><strong> website and search other sources on the web and please answer - what does </strong><a href="http://Tribyl.com" target="_blank"><strong>Tribyl.com</strong></a><strong> do, who are the key executives, what is their background, what products or services do they offer, who are some companies that compete with them, what is their category and what roles are they hiring for.</strong></p><p>The results - <a href="https://docs.google.com/document/d/1lnjjf_gN9hCbLlTunsuKovDEk18wYfAUbmqTMGmPhmM/edit?usp=sharing" target="_blank">Link Here</a> if you want to see the outputs.</p><p><strong>Gemini</strong> - Failed. I assume this is because it does not have up to date data. This was the response.</p><p><em>I accessed the web and simulated an expert researcher's approach, but unfortunately, there's still no clear information about </em><a href="http://Tribyl.com" target="_blank"><em>Tribyl.com</em></a><em>. </em></p><p><strong>Perplexity</strong> - Weird. It gave me a good overview of what the company does, it listed some of the products but not all, it found a list of competitors (which were actually more interesting that what <a href="https://www.g2.com/products/tribyl/competitors/alternatives" target="_blank">G2</a> had) but it could not find the executive names. The other thing that was weird is that Perplexity did not go to the company website but got it's information from other sources.</p><p><strong>Keymate Custom GPT</strong> - Partial. It gave a good company overview, listed out all the products, what category they are in but could not find the executives or competitors.</p><p><strong>AnyQuest</strong> - Best among the lot. This is still in beta and I have early access to their software and it is a platform to design any GenAI application but it gave the most robust output and actually got all the questions answered.</p><p>What this tells me is that the quality of the output is still suspect. Each of them respond in different ways to the same question, even though some questions should have the same answer - e.g. Who are the executives. </p><p>What I like about AnyQuest is that I get full control of tweaking it till I get the right response. The others are more of a black box and if they are off, there is not much for me to do.</p><p>Here are some sample outputs -</p><p><strong>Perplexity</strong></p><p>Tribyl is a company developing a buyer intelligence platform that provides data and insights to help businesses better understand their customers and prospects. </p><p><strong>KeyMate</strong></p><ul><li><p>Tribyl aims to eliminate guesswork, opinions, and manual data collection in sales and marketing strategies.</p></li><li><p>It offers a platform that helps businesses understand why customers are buying and expanding, tailored by Ideal Customer Profile (ICP), stage, and Persona.</p></li><li><p>The platform aligns Go-To-Market (GTM) execution with what's converting to revenue and measures the impact, thus promising 15-20% higher revenue growth for organizations with dynamic customer journey alignment.</p></li></ul><p>AnyQuest</p><pre></pre></div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<html>
+<head>
+  <title>Using ChatGPT for Data Analysis #2</title>
+  <style>
+    body {
+      margin: 0 auto;
+      width: 744px;
+      font-family: Source Serif Pro, serif;
+      line-height: 32px;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.7);
+      font-size: 21px;
+    }
+    h1, h2, h3 {
+      font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+    }
+    h1 a, h1 a:visited {
+      color: inherit;
+      text-decoration: none;
+    }
+    h1 {
+      line-height: 48px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 42px;
+      margin: 32px 0 20px;
+    }
+    h2 {
+      line-height: 32px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 26px;
+      margin: 28px 0;
+    }
+    h3 {
+      line-height: 28px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 21px;
+      margin: 24px 0;
+    }
+    p {
+      margin: 32px 0;
+    }
+    .created, .published {
+      color: rgba(0, 0, 0, 0.55);
+      font-size: 15px;
+      line-height: 15px;
+      margin: 20px 0;
+    }
+    .created + .published {
+      margin-top: -12px;
+    }
+    blockquote {
+      font-family: Georgia, Source Serif Pro, serif;
+      font-style: italic;
+      font-size: 24px;
+      line-height: 36px;
+      margin: 48px 120px;
+      text-align: center;
+    }
+    a {
+      word-wrap: break-word;
+      outline: none;
+      text-decoration: none;
+      background-color: transparent;
+      border: 0;
+      color: #008CC9;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    a:visited {
+      color: #8C68CB;
+    }
+    .center {
+      text-align: center;
+    }
+    iframe {
+      display: block;
+      margin: 44px auto;
+    }
+    *:not(pre) + pre, pre:first-of-type {
+      margin-top: 32px;
+      padding-top: 32px;
+    }
+    pre:only-of-type {
+      margin: 32px 0;
+      padding: 32px;
+    }
+    pre {
+      background: #F3F6F8;
+      overflow-x: auto;
+      display: block;
+      font-size: 13px;
+      font-family: monospace;
+      line-height: 13px;
+      padding: 0 32px 32px;
+      white-space: pre;
+    }
+    a.embedded {
+      background: #F3F6F8;
+      display: block;
+      padding: 32px;
+      margin: 32px 0;
+    }
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+    .slate-image-embed__resize-full-width img {
+      width: 100%;
+    }
+    .series-logo {
+      width: 48px;
+      height: 48px;
+      box-sizing: border-box;
+      background-clip: content-box;
+      border: 4px solid transparent;
+      border-radius: 6px;
+      object-fit: scale-down;
+      float: left;
+    }
+    .series-title {
+      font-size: 16px;
+      font-weight: 600;
+      vertical-align: top;
+    }
+    .series-description {
+      color: rgba(0,0,0,.6);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    div {
+      margin: 32px 0;
+    }
+  </style>
+</head>
+<body>
+    <img class="series-logo" src="https://media.licdn.com/dms/image/v2/D5612AQFH1Y48wdQAcg/series-logo_image-shrink_300_300/series-logo_image-shrink_300_300/0/1706721636826?e=1765411200&v=beta&t=MHFxhOnQitlwkoxnOEBehX-CrxSWcBOJP0Jnd7Mv7Ps" />
+    <h3>
+      <span class="series-title">GenAI for Go-To-Market teams</span>
+      </br>
+      <span class="series-description">Best practices for GTM teams on leveraging GenAI to hack your productivity</span>
+    </h3>
+    <img src="https://media.licdn.com/mediaD4E12AQEDLzk13FgtRw" alt="" title="" />
+      <h1><a href="https://www.linkedin.com/pulse/using-chatgpt-data-analysis-2-vikram-ekambaram-hldbe">Using ChatGPT for Data Analysis #2</a></h1>
+    <p class="created">Created on 2024-06-11 20:14</p>
+  <p class="published">Published on 2024-06-13 14:00</p>
+  <div><p>I had written an earlier post about using <a href="https://www.linkedin.com/pulse/chatgpt-data-analysis-vikram-ekambaram-sy0he" target="_blank">ChatGPT for Data Analysis</a> where I was trying to rationalize the probabilistic nature of ChatGPT (I get different answers when I ask the same question) with the deterministic nature of data analysis (Average of 4+6 = 5. Doesn't matter how many time I ask this question). </p><p>In that post I had broken down how data analysis is done in ChatGPT Data Analyst and how it is leveraging python for the deterministic part. That being said, the probabilistic nature of GenAI can introduce errors and In this post, I wanted to take an example and see the results for myself so I can understand the guardrails.</p><p>I googled for sample data and got this <a href="https://www.contextures.com/xlsampledata01.html#data" target="_blank">link</a> to some sales data. I downloaded this into excel and asked my first question -</p><p><strong><em>Please review the attached excel and explain what this data set is about</em></strong></p><p>The first response was -</p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQESa1WA1KYW1A" src="https://media.licdn.com/dms/image/v2/D4E12AQESa1WA1KYW1A/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1721182250001?e=1765411200&amp;v=beta&amp;t=RPEYw55E7kGkrHoHYDwcFMZY8z1GH0EKBlLmAfal9Rs"><figcaption>Response 1</figcaption></figure><p>When I asked the question again the response was - </p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQG3uO28z23yTg" src="https://media.licdn.com/dms/image/v2/D4E12AQG3uO28z23yTg/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1721182505870?e=1765411200&amp;v=beta&amp;t=aItBZfAUMaQKNR1J2jg0B3GIR17WqpideB7wf8AwX7k"><figcaption>Response 2</figcaption></figure><p>This is a good example of how ChatGPT combines deterministic responses with probabilistic responses. The column names (deterministic - python) did not change (as I would hope) but all the text around it (probabilistic - GenAI) while similar changes.</p><p>Then I asked it a 3rd time and this was the result -</p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQEoBBR6ZdqUrw" src="https://media.licdn.com/dms/image/v2/D4E12AQEoBBR6ZdqUrw/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1721188975994?e=1765411200&amp;v=beta&amp;t=5wDC1masQf_H1XanC8ZuE2oaIqbCNuJ3aeiwnaq21Pk"><figcaption>Response 3</figcaption></figure><p>Overall, I am ok with these responses. While all 3 are different, they are accurate and I get the point. That being said, the one place where error can creep in is in the descriptions of each field name. My data set did not have any descriptors of the field names.</p><p>Rep - <em>"The sales representative responsible for the sale is recorded in this column. This information can be used to evaluate the performance of individual sales reps and to provide targeted feedback or incentives."</em></p><p>While this is probably accurate, one can see how a hallucination could be a problem here. Those of us who have worked at enterprises know how field names aren't always the most descriptive.</p><p>Then I asked it - <strong><em>"what is the sales per rep per year with year on columns and rep on rows"</em></strong></p><p>These were the responses -</p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQFUlj-Oly-Ulw" src="https://media.licdn.com/dms/image/v2/D4E12AQFUlj-Oly-Ulw/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1721170342343?e=1765411200&amp;v=beta&amp;t=Ko2mP93Bc9c2kHJr6XJqmBIKGqbJzDxDwY-RW0ZwW8U"><figcaption>Response 1</figcaption></figure><p></p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQEesgTZ5eUWoQ" src="https://media.licdn.com/dms/image/v2/D4E12AQEesgTZ5eUWoQ/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1721172472921?e=1765411200&amp;v=beta&amp;t=XHoanbVEoAkqcfyFjE-FXZN0n3-X_6KWk7lMpT8WQiA"><figcaption>Response 2</figcaption></figure><p>So how is it doing the deterministic part? It is running python code -</p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQHyxbZ3E6KPwQ" src="https://media.licdn.com/dms/image/v2/D4E12AQHyxbZ3E6KPwQ/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1721183796169?e=1765411200&amp;v=beta&amp;t=_mTEVtQcPBIkBTAjr_X6QqwfVX7SmGPTqNuz3LTnTPM"><figcaption>Understanding the data structure</figcaption></figure><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQHbDSYUofmw_A" src="https://media.licdn.com/dms/image/v2/D4E12AQHbDSYUofmw_A/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1721170196535?e=1765411200&amp;v=beta&amp;t=YH96mMOCdhAKj3IleX5N7rCzgzxdAtCbp_Gx_ZHo48U"><figcaption>Sales by rep per year</figcaption></figure><p>So what assumptions did GenAI make based on my prompt? The prompt was - <strong><em>"what is the sales per rep per year with year on columns and rep on rows".</em></strong></p><p>It had to translate what I meant by "Sales", "Rep", "Year". It was smart enough to know that Sales = 'Total' and Rep = 'Rep' and Year = 'Year from the Order Date' field.</p><p>What if I had meant Sales as in total number of units sold? I would have to change the prompt to - "<strong><em>what is the sales in units per rep per year with year on columns and rep on rows"</em></strong></p><p>This is no different than what I would do in Tableau. Drag and drop the Total field and if I wanted Units, I'd drag that field over.</p><p>When I asked it to generate sales in units per rep per year it generated this code -</p><p># Calculate total units sold per rep per year</p><p><em>units_per_rep_per_year = df.pivot_table(index='Rep', columns='Year', values='Units', aggfunc='sum')</em></p><p><em>tools.display_dataframe_to_user(name="Units Sold Per Rep Per Year", dataframe=units_per_rep_per_year)</em></p><p><em># Display the result</em></p><p><em>units_per_rep_per_year</em></p><p>Somehow it knew how to translate my query into these attributes - <em>index='Rep', columns='Year', values='Units', aggfunc='sum' </em>in the function <em>df.pivot_table.</em></p><p>In my next post I will see if I can figure out what errors could creep in in the code generation piece of this black box.</p></div>
+</body>
+</html>

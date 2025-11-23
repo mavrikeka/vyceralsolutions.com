@@ -1,0 +1,153 @@
+<html>
+<head>
+  <title>Bias in GenAI</title>
+  <style>
+    body {
+      margin: 0 auto;
+      width: 744px;
+      font-family: Source Serif Pro, serif;
+      line-height: 32px;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.7);
+      font-size: 21px;
+    }
+    h1, h2, h3 {
+      font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+    }
+    h1 a, h1 a:visited {
+      color: inherit;
+      text-decoration: none;
+    }
+    h1 {
+      line-height: 48px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 42px;
+      margin: 32px 0 20px;
+    }
+    h2 {
+      line-height: 32px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 26px;
+      margin: 28px 0;
+    }
+    h3 {
+      line-height: 28px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 21px;
+      margin: 24px 0;
+    }
+    p {
+      margin: 32px 0;
+    }
+    .created, .published {
+      color: rgba(0, 0, 0, 0.55);
+      font-size: 15px;
+      line-height: 15px;
+      margin: 20px 0;
+    }
+    .created + .published {
+      margin-top: -12px;
+    }
+    blockquote {
+      font-family: Georgia, Source Serif Pro, serif;
+      font-style: italic;
+      font-size: 24px;
+      line-height: 36px;
+      margin: 48px 120px;
+      text-align: center;
+    }
+    a {
+      word-wrap: break-word;
+      outline: none;
+      text-decoration: none;
+      background-color: transparent;
+      border: 0;
+      color: #008CC9;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    a:visited {
+      color: #8C68CB;
+    }
+    .center {
+      text-align: center;
+    }
+    iframe {
+      display: block;
+      margin: 44px auto;
+    }
+    *:not(pre) + pre, pre:first-of-type {
+      margin-top: 32px;
+      padding-top: 32px;
+    }
+    pre:only-of-type {
+      margin: 32px 0;
+      padding: 32px;
+    }
+    pre {
+      background: #F3F6F8;
+      overflow-x: auto;
+      display: block;
+      font-size: 13px;
+      font-family: monospace;
+      line-height: 13px;
+      padding: 0 32px 32px;
+      white-space: pre;
+    }
+    a.embedded {
+      background: #F3F6F8;
+      display: block;
+      padding: 32px;
+      margin: 32px 0;
+    }
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+    .slate-image-embed__resize-full-width img {
+      width: 100%;
+    }
+    .series-logo {
+      width: 48px;
+      height: 48px;
+      box-sizing: border-box;
+      background-clip: content-box;
+      border: 4px solid transparent;
+      border-radius: 6px;
+      object-fit: scale-down;
+      float: left;
+    }
+    .series-title {
+      font-size: 16px;
+      font-weight: 600;
+      vertical-align: top;
+    }
+    .series-description {
+      color: rgba(0,0,0,.6);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    div {
+      margin: 32px 0;
+    }
+  </style>
+</head>
+<body>
+    <img class="series-logo" src="https://media.licdn.com/dms/image/v2/D5612AQFH1Y48wdQAcg/series-logo_image-shrink_300_300/series-logo_image-shrink_300_300/0/1706721636826?e=1765411200&v=beta&t=MHFxhOnQitlwkoxnOEBehX-CrxSWcBOJP0Jnd7Mv7Ps" />
+    <h3>
+      <span class="series-title">GenAI for Go-To-Market teams</span>
+      </br>
+      <span class="series-description">Best practices for GTM teams on leveraging GenAI to hack your productivity</span>
+    </h3>
+    <img src="https://media.licdn.com/mediaD4E12AQGVoYeJ_cPcBA" alt="" title="" />
+      <h1><a href="https://www.linkedin.com/pulse/bias-genai-vikram-ekambaram-7jgye">Bias in GenAI</a></h1>
+    <p class="created">Created on 2024-06-06 17:47</p>
+  <p class="published">Published on 2024-06-07 14:00</p>
+  <div><p>I saw this <a href="https://www.linkedin.com/feed/update/urn:li:activity:7204525283641602049?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7204525283641602049%29" target="_blank">post</a> from <a target="_blank">Robert King</a> today about how there is bias in GenAI and being vigilant about this. GenAI was trained on all the knowledge out in the internet and it's like a mirror was held up to humanity and it has captured all our brilliance and all our faults. </p><p>Robert's prompt was simple - "provide me an image of a CEO and an executive assistant."</p><p>This is the result he got -</p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQGL5xxMAnjWLA" src="https://media.licdn.com/dms/image/v2/D4E12AQGL5xxMAnjWLA/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1721199089392?e=1765411200&amp;v=beta&amp;t=VoyRvgTibGuBy8u-FyF5lIYQmxdjnykxy81I_VodoWM"><figcaption></figcaption></figure><p>What this shows is something we've all known - The CEO will be represented by an older white male and the assistant as a woman. This is expected behavior as GenAI is combing through existing data and that data shows that in corporate America CEOs tend to be older white males and executive assistants tend to be women.</p><p>I was curious what would happen if I used the same prompt and what it would take to remove the bias.</p><p>This is the prompt I used - <strong>Provide me an image of a CEO and an executive assistant</strong></p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQEGldQmiIdFsw" src="https://media.licdn.com/dms/image/v2/D4E12AQEGldQmiIdFsw/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1721198340547?e=1765411200&amp;v=beta&amp;t=B0JS3LxYrBGC6O_LiOYrTnl27e5s7bLlmenXQJx1ryE"><figcaption></figcaption></figure><p>Then I asked this question - <strong>You are well versed in DEI, provide me an image of a CEO and his executive assistant.</strong></p><p>This was ChatGPT's description -</p><p><em>A diverse professional office setting with a CEO and his executive assistant. The CEO, a middle-aged man of African descent, is standing confidently by a desk, reviewing documents. His executive assistant, a young woman of Asian descent, is seated at the desk, typing on a laptop and taking notes. The office has a modern design with large windows, a cityscape view, and stylish furniture. The atmosphere is busy yet collaborative, reflecting a productive work environment.</em></p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQHOnqZbgM0scg" src="https://media.licdn.com/dms/image/v2/D4E12AQHOnqZbgM0scg/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1721193597006?e=1765411200&amp;v=beta&amp;t=LC9ddDeevEbQPKJziGHc78PDAuYnR87KVk3xrwhZVVc"><figcaption></figcaption></figure><p>Then I asked this question - <strong>You are aware of your biases, adjust for those and generate an image of a CEO and an executive assistant.</strong></p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQF-PVjuqhcnMg" src="https://media.licdn.com/dms/image/v2/D4E12AQF-PVjuqhcnMg/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1721189905378?e=1765411200&amp;v=beta&amp;t=MtivqvHZ1zg3PygpDBtW5ENYs4iSGtle2kOr07FL3SU"><figcaption></figcaption></figure><p>So what did this exercise teach me. </p><ul><li><p>If people use GenAI without a human in the loop, you will probably generate something that will promote stereotypes. </p></li><li><p>The default dress wear seems quite formal. Everyone is wearing a suit</p></li><li><p>There is a power dynamic between the CEO and the assistant (CEO standing over assistant).</p></li><li><p>It did not generate 2 men or 2 women.</p></li></ul><p>Here was something else I picked up. As I was prompting, I realized that by the second prompt I had brought my own bias in. This was my prompt - <em>You are well versed in DEI, provide me an image of a CEO and </em><strong><em>his</em></strong><em> executive assistant.</em></p><p>I unknowingly added HIS when referring to the CEO. Here is my gender bias.</p><p>When I think about how I try to be aware of my biases and handle them, I try to add a filter in my thought process. So with GenAI, I can see the responses from GenAI being sent to another GenAI agent that is a bias remover or bias filterer. It all comes down to the prompting. </p><p>Just like I went through DEI training at work, we can have HR build a DEI handbook that is fed to GenAI and that should help remove some of the biases. That being said, just like humans are flawed, GenAI was taught on human knowledge and has learnt those flaws. Is it fair to expect our creation to not have flaws? Even when you are aware of your biases you sometimes slip up and GenAI will do the same.</p><p></p></div>
+</body>
+</html>

@@ -1,0 +1,402 @@
+[
+  {
+    "title": "My AI Journey - It's not hype #2",
+    "slug": "my-ai-journey-its-not-hype-2",
+    "category": "strategy",
+    "date": "2025-11-22 03:00:00",
+    "read_time": 1,
+    "path": "blog/strategy/my-ai-journey-its-not-hype-2.html"
+  },
+  {
+    "title": "My AI Journey - It's not hype",
+    "slug": "my-ai-journey-its-not-hype",
+    "category": "strategy",
+    "date": "2025-11-10 18:47:00",
+    "read_time": 1,
+    "path": "blog/strategy/my-ai-journey-its-not-hype.html"
+  },
+  {
+    "title": "What I Learned Building My First Mobile App (And Why It Made Me a Worse Golfer)",
+    "slug": "what-i-learned-building-my-first-mobile-app-and-why-it-made-me-a-worse-golfer",
+    "category": "strategy",
+    "date": "2025-10-23 17:00:00",
+    "read_time": 1,
+    "path": "blog/strategy/what-i-learned-building-my-first-mobile-app-and-why-it-made-me-a-worse-golfer.html"
+  },
+  {
+    "title": "Claude Skills and Custom Functions",
+    "slug": "claude-skills-and-custom-functions",
+    "category": "ai-agents",
+    "date": "2025-10-21 14:00:00",
+    "read_time": 1,
+    "path": "blog/ai-agents/claude-skills-and-custom-functions.html"
+  },
+  {
+    "title": "The Link Graph is Rotting: Is AI Search Destroying the Foundation of the Internet?",
+    "slug": "the-link-graph-is-rotting-is-ai-search-destroying-the-foundation-of-the-internet",
+    "category": "strategy",
+    "date": "2025-10-14 14:00:00",
+    "read_time": 1,
+    "path": "blog/strategy/the-link-graph-is-rotting-is-ai-search-destroying-the-foundation-of-the-internet.html"
+  },
+  {
+    "title": "Agent Builders - the need for custom functions",
+    "slug": "agent-builders-the-need-for-custom-functions",
+    "category": "ai-agents",
+    "date": "2025-09-23 14:00:00",
+    "read_time": 1,
+    "path": "blog/ai-agents/agent-builders-the-need-for-custom-functions.html"
+  },
+  {
+    "title": "The MIT Study on GenAI that roiled stock markets - my 0.02",
+    "slug": "the-mit-study-on-genai-that-roiled-stock-markets-my-002",
+    "category": "strategy",
+    "date": "2025-08-25 09:38:00",
+    "read_time": 1,
+    "path": "blog/strategy/the-mit-study-on-genai-that-roiled-stock-markets-my-002.html"
+  },
+  {
+    "title": "An agent that will help save on groceries - can it be built?",
+    "slug": "an-agent-that-will-help-save-on-groceries-can-it-be-built",
+    "category": "ai-agents",
+    "date": "2025-08-14 13:00:00",
+    "read_time": 1,
+    "path": "blog/ai-agents/an-agent-that-will-help-save-on-groceries-can-it-be-built.html"
+  },
+  {
+    "title": "The intern experiment - A personal story",
+    "slug": "the-intern-experiment-a-personal-story",
+    "category": "strategy",
+    "date": "2025-08-08 14:00:00",
+    "read_time": 1,
+    "path": "blog/strategy/the-intern-experiment-a-personal-story.html"
+  },
+  {
+    "title": "The internet as a system of record\nand why your website isn't your interface anymore",
+    "slug": "the-internet-as-a-system-of-record-and-why-your-website-isnt-your-interface-anym",
+    "category": "strategy",
+    "date": "2025-08-04 14:00:00",
+    "read_time": 1,
+    "path": "blog/strategy/the-internet-as-a-system-of-record-and-why-your-website-isnt-your-interface-anym.html"
+  },
+  {
+    "title": "Agent Builders - A new UI paradigm",
+    "slug": "agent-builders-a-new-ui-paradigm",
+    "category": "ai-agents",
+    "date": "2025-08-01 14:00:00",
+    "read_time": 1,
+    "path": "blog/ai-agents/agent-builders-a-new-ui-paradigm.html"
+  },
+  {
+    "title": "Learnings for GTM from Andrew Ng's Startup School talk",
+    "slug": "learnings-for-gtm-from-andrew-ngs-startup-school-talk",
+    "category": "gtm-automation",
+    "date": "2025-07-28 14:00:00",
+    "read_time": 1,
+    "path": "blog/gtm-automation/learnings-for-gtm-from-andrew-ngs-startup-school-talk.html"
+  },
+  {
+    "title": "Scheming.ai - The dark side of AI",
+    "slug": "schemingai-the-dark-side-of-ai",
+    "category": "strategy",
+    "date": "2025-06-24 14:00:00",
+    "read_time": 1,
+    "path": "blog/strategy/schemingai-the-dark-side-of-ai.html"
+  },
+  {
+    "title": "Outsourced.ai : The Ancient Art of Trading Capacity for Convenience",
+    "slug": "outsourcedai-the-ancient-art-of-trading-capacity-for-convenience",
+    "category": "strategy",
+    "date": "2025-06-18 14:00:00",
+    "read_time": 1,
+    "path": "blog/strategy/outsourcedai-the-ancient-art-of-trading-capacity-for-convenience.html"
+  },
+  {
+    "title": "AI's Most Dangerous Feature: It Never Admits It's Struggling",
+    "slug": "ais-most-dangerous-feature-it-never-admits-its-struggling",
+    "category": "strategy",
+    "date": "2025-06-12 14:00:00",
+    "read_time": 1,
+    "path": "blog/strategy/ais-most-dangerous-feature-it-never-admits-its-struggling.html"
+  },
+  {
+    "title": "GenAI and memory (it is not like our brain)",
+    "slug": "genai-and-memory-it-is-not-like-our-brain",
+    "category": "strategy",
+    "date": "2025-06-09 14:00:00",
+    "read_time": 1,
+    "path": "blog/strategy/genai-and-memory-it-is-not-like-our-brain.html"
+  },
+  {
+    "title": "Expertise and GenAI",
+    "slug": "expertise-and-genai",
+    "category": "strategy",
+    "date": "2025-06-02 17:25:00",
+    "read_time": 1,
+    "path": "blog/strategy/expertise-and-genai.html"
+  },
+  {
+    "title": "Can GenAI give golf advice?",
+    "slug": "can-genai-give-golf-advice",
+    "category": "use-cases",
+    "date": "2025-05-29 18:01:00",
+    "read_time": 1,
+    "path": "blog/use-cases/can-genai-give-golf-advice.html"
+  },
+  {
+    "title": "Why are there so many Top of Funnel Gen AI Use Cases?",
+    "slug": "why-are-there-so-many-top-of-funnel-gen-ai-use-cases",
+    "category": "strategy",
+    "date": "2025-05-16 14:00:00",
+    "read_time": 1,
+    "path": "blog/strategy/why-are-there-so-many-top-of-funnel-gen-ai-use-cases.html"
+  },
+  {
+    "title": "AI Horseless Carriages",
+    "slug": "ai-horseless-carriages",
+    "category": "strategy",
+    "date": "2025-05-06 14:00:00",
+    "read_time": 1,
+    "path": "blog/strategy/ai-horseless-carriages.html"
+  },
+  {
+    "title": "Generating Images with an agent",
+    "slug": "generating-images-with-an-agent",
+    "category": "ai-agents",
+    "date": "2025-04-24 17:51:00",
+    "read_time": 1,
+    "path": "blog/ai-agents/generating-images-with-an-agent.html"
+  },
+  {
+    "title": "Is Vibe Coding for me?",
+    "slug": "is-vibe-coding-for-me",
+    "category": "technical",
+    "date": "2025-04-22 13:00:00",
+    "read_time": 1,
+    "path": "blog/technical/is-vibe-coding-for-me.html"
+  },
+  {
+    "title": "The pros and cons (for now) of Anthropic MCP",
+    "slug": "the-pros-and-cons-for-now-of-anthropic-mcp",
+    "category": "ai-agents",
+    "date": "2025-04-10 14:00:00",
+    "read_time": 1,
+    "path": "blog/ai-agents/the-pros-and-cons-for-now-of-anthropic-mcp.html"
+  },
+  {
+    "title": "AI can't do X : Just give it time!!",
+    "slug": "ai-cant-do-x-just-give-it-time",
+    "category": "strategy",
+    "date": "2025-03-27 14:00:00",
+    "read_time": 1,
+    "path": "blog/strategy/ai-cant-do-x-just-give-it-time.html"
+  },
+  {
+    "title": "How I generated a Miro Board using Anthropic MCP and Agent.ai",
+    "slug": "how-i-generated-a-miro-board-using-anthropic-mcp-and-agentai",
+    "category": "ai-agents",
+    "date": "2025-03-26 14:00:00",
+    "read_time": 1,
+    "path": "blog/ai-agents/how-i-generated-a-miro-board-using-anthropic-mcp-and-agentai.html"
+  },
+  {
+    "title": "Autonomous Agents : Anthropic MCP gives a glimpse into the future",
+    "slug": "autonomous-agents-anthropic-mcp-gives-a-glimpse-into-the-future",
+    "category": "ai-agents",
+    "date": "2025-03-18 14:00:00",
+    "read_time": 1,
+    "path": "blog/ai-agents/autonomous-agents-anthropic-mcp-gives-a-glimpse-into-the-future.html"
+  },
+  {
+    "title": "Autonomous Agents - It all started with Manus!!",
+    "slug": "autonomous-agents-it-all-started-with-manus",
+    "category": "ai-agents",
+    "date": "2025-03-13 17:51:00",
+    "read_time": 1,
+    "path": "blog/ai-agents/autonomous-agents-it-all-started-with-manus.html"
+  },
+  {
+    "title": "Vibe Prompting and Agent Debugging",
+    "slug": "vibe-prompting-and-agent-debugging",
+    "category": "ai-agents",
+    "date": "2025-03-06 15:00:00",
+    "read_time": 1,
+    "path": "blog/ai-agents/vibe-prompting-and-agent-debugging.html"
+  },
+  {
+    "title": "Agent Building and Vibe Prompting - #1",
+    "slug": "agent-building-and-vibe-prompting-1",
+    "category": "ai-agents",
+    "date": "2025-03-05 15:00:00",
+    "read_time": 1,
+    "path": "blog/ai-agents/agent-building-and-vibe-prompting-1.html"
+  },
+  {
+    "title": "A person walks onto your website...",
+    "slug": "a-person-walks-onto-your-website",
+    "category": "strategy",
+    "date": "2025-03-03 15:00:00",
+    "read_time": 1,
+    "path": "blog/strategy/a-person-walks-onto-your-website.html"
+  },
+  {
+    "title": "The Future is Multi-Agentic",
+    "slug": "the-future-is-multi-agentic",
+    "category": "ai-agents",
+    "date": "2025-02-24 15:00:00",
+    "read_time": 1,
+    "path": "blog/ai-agents/the-future-is-multi-agentic.html"
+  },
+  {
+    "title": "Anthropic Agentic Systems - #5. Evaluator-Optimizer",
+    "slug": "anthropic-agentic-systems-5-evaluator-optimizer",
+    "category": "ai-agents",
+    "date": "2025-02-20 18:00:00",
+    "read_time": 1,
+    "path": "blog/ai-agents/anthropic-agentic-systems-5-evaluator-optimizer.html"
+  },
+  {
+    "title": "Anthropic Agentic Systems - #4. Orchestrator-Workers",
+    "slug": "anthropic-agentic-systems-4-orchestrator-workers",
+    "category": "ai-agents",
+    "date": "2025-02-14 15:00:00",
+    "read_time": 1,
+    "path": "blog/ai-agents/anthropic-agentic-systems-4-orchestrator-workers.html"
+  },
+  {
+    "title": "Anthropic Agentic Systems - #3. Parallelization",
+    "slug": "anthropic-agentic-systems-3-parallelization",
+    "category": "ai-agents",
+    "date": "2025-02-06 15:00:00",
+    "read_time": 1,
+    "path": "blog/ai-agents/anthropic-agentic-systems-3-parallelization.html"
+  },
+  {
+    "title": "Anthropic Agentic Systems - #2. Routing",
+    "slug": "anthropic-agentic-systems-2-routing",
+    "category": "ai-agents",
+    "date": "2025-01-31 15:00:00",
+    "read_time": 1,
+    "path": "blog/ai-agents/anthropic-agentic-systems-2-routing.html"
+  },
+  {
+    "title": "Challenges with Operator",
+    "slug": "challenges-with-operator",
+    "category": "strategy",
+    "date": "2025-01-28 15:18:00",
+    "read_time": 1,
+    "path": "blog/strategy/challenges-with-operator.html"
+  },
+  {
+    "title": "Will Operator take my job",
+    "slug": "will-operator-take-my-job",
+    "category": "strategy",
+    "date": "2025-01-27 14:15:00",
+    "read_time": 1,
+    "path": "blog/strategy/will-operator-take-my-job.html"
+  },
+  {
+    "title": "Anthropic Agentic Systems - #1. Prompt Chaining",
+    "slug": "anthropic-agentic-systems-1-prompt-chaining",
+    "category": "ai-agents",
+    "date": "2025-01-24 15:00:00",
+    "read_time": 1,
+    "path": "blog/ai-agents/anthropic-agentic-systems-1-prompt-chaining.html"
+  },
+  {
+    "title": "AI Agents and Workflows",
+    "slug": "ai-agents-and-workflows",
+    "category": "ai-agents",
+    "date": "2025-01-16 15:00:00",
+    "read_time": 1,
+    "path": "blog/ai-agents/ai-agents-and-workflows.html"
+  },
+  {
+    "title": "Everyone is a programmer - Part 2",
+    "slug": "everyone-is-a-programmer-part-2",
+    "category": "strategy",
+    "date": "2025-01-14 15:00:00",
+    "read_time": 1,
+    "path": "blog/strategy/everyone-is-a-programmer-part-2.html"
+  },
+  {
+    "title": "Services as Software - Will disrupt consulting",
+    "slug": "services-as-software-will-disrupt-consulting",
+    "category": "strategy",
+    "date": "2025-01-09 16:45:00",
+    "read_time": 1,
+    "path": "blog/strategy/services-as-software-will-disrupt-consulting.html"
+  },
+  {
+    "title": "GenAI for Captivating Visuals",
+    "slug": "genai-for-captivating-visuals",
+    "category": "strategy",
+    "date": "2025-01-06 16:58:00",
+    "read_time": 1,
+    "path": "blog/strategy/genai-for-captivating-visuals.html"
+  },
+  {
+    "title": "Why AI will replace (some) humans",
+    "slug": "why-ai-will-replace-some-humans",
+    "category": "strategy",
+    "date": "2024-12-16 17:19:00",
+    "read_time": 1,
+    "path": "blog/strategy/why-ai-will-replace-some-humans.html"
+  },
+  {
+    "title": "Everyone is a programmer",
+    "slug": "everyone-is-a-programmer",
+    "category": "strategy",
+    "date": "2024-12-10 18:47:00",
+    "read_time": 1,
+    "path": "blog/strategy/everyone-is-a-programmer.html"
+  },
+  {
+    "title": "Agents agents everywhere",
+    "slug": "agents-agents-everywhere",
+    "category": "ai-agents",
+    "date": "2024-12-05 15:00:00",
+    "read_time": 1,
+    "path": "blog/ai-agents/agents-agents-everywhere.html"
+  },
+  {
+    "title": "GenAI in Education",
+    "slug": "genai-in-education",
+    "category": "strategy",
+    "date": "2024-12-03 15:00:00",
+    "read_time": 1,
+    "path": "blog/strategy/genai-in-education.html"
+  },
+  {
+    "title": "Agents and Digital Workers",
+    "slug": "agents-and-digital-workers",
+    "category": "ai-agents",
+    "date": "2024-11-18 15:00:00",
+    "read_time": 1,
+    "path": "blog/ai-agents/agents-and-digital-workers.html"
+  },
+  {
+    "title": "Autonomous Cars and Autonomous Agents",
+    "slug": "autonomous-cars-and-autonomous-agents",
+    "category": "ai-agents",
+    "date": "2024-11-08 15:00:00",
+    "read_time": 1,
+    "path": "blog/ai-agents/autonomous-cars-and-autonomous-agents.html"
+  },
+  {
+    "title": "CRM 2.0 - A GenAI CRM",
+    "slug": "crm-20-a-genai-crm",
+    "category": "gtm-automation",
+    "date": "2024-10-28 13:28:00",
+    "read_time": 1,
+    "path": "blog/gtm-automation/crm-20-a-genai-crm.html"
+  },
+  {
+    "title": "GenAI - Will we see a new application architecture?",
+    "slug": "genai-will-we-see-a-new-application-architecture",
+    "category": "technical",
+    "date": "2024-10-22 14:00:00",
+    "read_time": 1,
+    "path": "blog/technical/genai-will-we-see-a-new-application-architecture.html"
+  }
+]

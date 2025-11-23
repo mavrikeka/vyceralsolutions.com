@@ -1,0 +1,402 @@
+[
+  {
+    "title": "My AI Journey - It's not hype #2",
+    "date": "2025-11-22T03:00:00",
+    "category": "strategy",
+    "read_time": 1,
+    "word_count": 8,
+    "source_file": "my-ai-journey-its-hype-2-vikram-ekambaram-2m4ae.html"
+  },
+  {
+    "title": "My AI Journey - It's not hype",
+    "date": "2025-11-10T18:47:00",
+    "category": "strategy",
+    "read_time": 1,
+    "word_count": 7,
+    "source_file": "my-ai-journey-its-hype-vikram-ekambaram-6u8ze.html"
+  },
+  {
+    "title": "What I Learned Building My First Mobile App (And Why It Made Me a Worse Golfer)",
+    "date": "2025-10-23T17:00:00",
+    "category": "strategy",
+    "read_time": 1,
+    "word_count": 16,
+    "source_file": "what-i-learned-building-my-first-mobile-app-why-made-me-ekambaram-jwtne.html"
+  },
+  {
+    "title": "Claude Skills and Custom Functions",
+    "date": "2025-10-21T14:00:00",
+    "category": "ai-agents",
+    "read_time": 1,
+    "word_count": 5,
+    "source_file": "claude-skills-custom-functions-vikram-ekambaram-zh3ze.html"
+  },
+  {
+    "title": "The Link Graph is Rotting: Is AI Search Destroying the Foundation of the Internet?",
+    "date": "2025-10-14T14:00:00",
+    "category": "strategy",
+    "read_time": 1,
+    "word_count": 14,
+    "source_file": "link-graph-rotting-ai-search-destroying-foundation-vikram-ekambaram-mwuge.html"
+  },
+  {
+    "title": "Agent Builders - the need for custom functions",
+    "date": "2025-09-23T14:00:00",
+    "category": "ai-agents",
+    "read_time": 1,
+    "word_count": 8,
+    "source_file": "agent-builders-need-custom-functions-vikram-ekambaram-zxn3e.html"
+  },
+  {
+    "title": "The MIT Study on GenAI that roiled stock markets - my 0.02",
+    "date": "2025-08-25T09:38:00",
+    "category": "strategy",
+    "read_time": 1,
+    "word_count": 12,
+    "source_file": "2025-08-25 09:38:08.0-The MIT Study on GenAI that roiled stock markets - my 0.02.html"
+  },
+  {
+    "title": "An agent that will help save on groceries - can it be built?",
+    "date": "2025-08-14T13:00:00",
+    "category": "ai-agents",
+    "read_time": 1,
+    "word_count": 13,
+    "source_file": "agent-help-save-groceries-can-built-vikram-ekambaram-lx6oe.html"
+  },
+  {
+    "title": "The intern experiment - A personal story",
+    "date": "2025-08-08T14:00:00",
+    "category": "strategy",
+    "read_time": 1,
+    "word_count": 7,
+    "source_file": "intern-experiment-personal-story-vikram-ekambaram-tyzpe.html"
+  },
+  {
+    "title": "The internet as a system of record\nand why your website isn't your interface anymore",
+    "date": "2025-08-04T14:00:00",
+    "category": "strategy",
+    "read_time": 1,
+    "word_count": 15,
+    "source_file": "internet-system-record-why-your-website-isnt-anymore-vikram-ekambaram-4ewwe.html"
+  },
+  {
+    "title": "Agent Builders - A new UI paradigm",
+    "date": "2025-08-01T14:00:00",
+    "category": "ai-agents",
+    "read_time": 1,
+    "word_count": 7,
+    "source_file": "agent-builders-new-ui-paradigm-vikram-ekambaram-p7c2c.html"
+  },
+  {
+    "title": "Learnings for GTM from Andrew Ng's Startup School talk",
+    "date": "2025-07-28T14:00:00",
+    "category": "gtm-automation",
+    "read_time": 1,
+    "word_count": 9,
+    "source_file": "learnings-gtm-from-andrew-ngs-startup-school-talk-vikram-ekambaram-ss5ne.html"
+  },
+  {
+    "title": "Scheming.ai - The dark side of AI",
+    "date": "2025-06-24T14:00:00",
+    "category": "strategy",
+    "read_time": 1,
+    "word_count": 7,
+    "source_file": "schemingai-dark-side-ai-vikram-ekambaram-otube.html"
+  },
+  {
+    "title": "Outsourced.ai : The Ancient Art of Trading Capacity for Convenience",
+    "date": "2025-06-18T14:00:00",
+    "category": "strategy",
+    "read_time": 1,
+    "word_count": 10,
+    "source_file": "outsourcedai-ancient-art-trading-capacity-convenience-ekambaram-usjve.html"
+  },
+  {
+    "title": "AI's Most Dangerous Feature: It Never Admits It's Struggling",
+    "date": "2025-06-12T14:00:00",
+    "category": "strategy",
+    "read_time": 1,
+    "word_count": 9,
+    "source_file": "ais-most-dangerous-feature-never-admits-its-vikram-ekambaram-kmvdc.html"
+  },
+  {
+    "title": "GenAI and memory (it is not like our brain)",
+    "date": "2025-06-09T14:00:00",
+    "category": "strategy",
+    "read_time": 1,
+    "word_count": 9,
+    "source_file": "genai-memory-like-our-brain-vikram-ekambaram-kvi9e.html"
+  },
+  {
+    "title": "Expertise and GenAI",
+    "date": "2025-06-02T17:25:00",
+    "category": "strategy",
+    "read_time": 1,
+    "word_count": 3,
+    "source_file": "2025-06-02 17:25:45.0-Expertise and GenAI.html"
+  },
+  {
+    "title": "Can GenAI give golf advice?",
+    "date": "2025-05-29T18:01:00",
+    "category": "use-cases",
+    "read_time": 1,
+    "word_count": 5,
+    "source_file": "can-genai-give-golf-advice-vikram-ekambaram-zvqde.html"
+  },
+  {
+    "title": "Why are there so many Top of Funnel Gen AI Use Cases?",
+    "date": "2025-05-16T14:00:00",
+    "category": "strategy",
+    "read_time": 1,
+    "word_count": 12,
+    "source_file": "why-so-many-top-funnel-gen-ai-use-cases-vikram-ekambaram-kglee.html"
+  },
+  {
+    "title": "AI Horseless Carriages",
+    "date": "2025-05-06T14:00:00",
+    "category": "strategy",
+    "read_time": 1,
+    "word_count": 3,
+    "source_file": "ai-horseless-carriages-vikram-ekambaram-vgeae.html"
+  },
+  {
+    "title": "Generating Images with an agent",
+    "date": "2025-04-24T17:51:00",
+    "category": "ai-agents",
+    "read_time": 1,
+    "word_count": 5,
+    "source_file": "generating-infographics-agent-vikram-ekambaram-sot8e.html"
+  },
+  {
+    "title": "Is Vibe Coding for me?",
+    "date": "2025-04-22T13:00:00",
+    "category": "technical",
+    "read_time": 1,
+    "word_count": 5,
+    "source_file": "vibe-coding-me-vikram-ekambaram-spaee.html"
+  },
+  {
+    "title": "The pros and cons (for now) of Anthropic MCP",
+    "date": "2025-04-10T14:00:00",
+    "category": "ai-agents",
+    "read_time": 1,
+    "word_count": 9,
+    "source_file": "pros-cons-now-anthropic-mcp-vikram-ekambaram-svuue.html"
+  },
+  {
+    "title": "AI can't do X : Just give it time!!",
+    "date": "2025-03-27T14:00:00",
+    "category": "strategy",
+    "read_time": 1,
+    "word_count": 9,
+    "source_file": "ai-cant-do-x-just-give-time-vikram-ekambaram-dy0be.html"
+  },
+  {
+    "title": "How I generated a Miro Board using Anthropic MCP and Agent.ai",
+    "date": "2025-03-26T14:00:00",
+    "category": "ai-agents",
+    "read_time": 1,
+    "word_count": 11,
+    "source_file": "how-i-generated-miro-board-using-anthropic-mcp-vikram-ekambaram-btvue.html"
+  },
+  {
+    "title": "Autonomous Agents : Anthropic MCP gives a glimpse into the future",
+    "date": "2025-03-18T14:00:00",
+    "category": "ai-agents",
+    "read_time": 1,
+    "word_count": 11,
+    "source_file": "autonomous-agents-anthropic-mcp-gives-glimpse-future-vikram-ekambaram-gcvfc.html"
+  },
+  {
+    "title": "Autonomous Agents - It all started with Manus!!",
+    "date": "2025-03-13T17:51:00",
+    "category": "ai-agents",
+    "read_time": 1,
+    "word_count": 8,
+    "source_file": "all-started-manus-vikram-ekambaram-pxlpe.html"
+  },
+  {
+    "title": "Vibe Prompting and Agent Debugging",
+    "date": "2025-03-06T15:00:00",
+    "category": "ai-agents",
+    "read_time": 1,
+    "word_count": 5,
+    "source_file": "vibe-prompting-agent-debugging-vikram-ekambaram-0yfce.html"
+  },
+  {
+    "title": "Agent Building and Vibe Prompting - #1",
+    "date": "2025-03-05T15:00:00",
+    "category": "ai-agents",
+    "read_time": 1,
+    "word_count": 7,
+    "source_file": "agent-building-vibe-prompting-1-vikram-ekambaram-pdmwe.html"
+  },
+  {
+    "title": "A person walks onto your website...",
+    "date": "2025-03-03T15:00:00",
+    "category": "strategy",
+    "read_time": 1,
+    "word_count": 6,
+    "source_file": "person-walks-onto-your-website-vikram-ekambaram-jhsoe.html"
+  },
+  {
+    "title": "The Future is Multi-Agentic",
+    "date": "2025-02-24T15:00:00",
+    "category": "ai-agents",
+    "read_time": 1,
+    "word_count": 4,
+    "source_file": "future-multi-agentic-vikram-ekambaram-j165e.html"
+  },
+  {
+    "title": "Anthropic Agentic Systems - #5. Evaluator-Optimizer",
+    "date": "2025-02-20T18:00:00",
+    "category": "ai-agents",
+    "read_time": 1,
+    "word_count": 6,
+    "source_file": "anthropic-agentic-systems-5-evaluator-optimizer-vikram-ekambaram-suknc.html"
+  },
+  {
+    "title": "Anthropic Agentic Systems - #4. Orchestrator-Workers",
+    "date": "2025-02-14T15:00:00",
+    "category": "ai-agents",
+    "read_time": 1,
+    "word_count": 6,
+    "source_file": "anthropic-agentic-systems-4-orchestrator-workers-vikram-ekambaram-5ltie.html"
+  },
+  {
+    "title": "Anthropic Agentic Systems - #3. Parallelization",
+    "date": "2025-02-06T15:00:00",
+    "category": "ai-agents",
+    "read_time": 1,
+    "word_count": 6,
+    "source_file": "anthropic-agentic-systems-3-parallelization-vikram-ekambaram-mlbke.html"
+  },
+  {
+    "title": "Anthropic Agentic Systems - #2. Routing",
+    "date": "2025-01-31T15:00:00",
+    "category": "ai-agents",
+    "read_time": 1,
+    "word_count": 6,
+    "source_file": "anthropic-agentic-systems-2-routing-vikram-ekambaram-cmxvc.html"
+  },
+  {
+    "title": "Challenges with Operator",
+    "date": "2025-01-28T15:18:00",
+    "category": "strategy",
+    "read_time": 1,
+    "word_count": 3,
+    "source_file": "challenges-operator-vikram-ekambaram-jjbye.html"
+  },
+  {
+    "title": "Will Operator take my job",
+    "date": "2025-01-27T14:15:00",
+    "category": "strategy",
+    "read_time": 1,
+    "word_count": 5,
+    "source_file": "operator-take-my-job-vikram-ekambaram-dgmve.html"
+  },
+  {
+    "title": "Anthropic Agentic Systems - #1. Prompt Chaining",
+    "date": "2025-01-24T15:00:00",
+    "category": "ai-agents",
+    "read_time": 1,
+    "word_count": 7,
+    "source_file": "anthropic-agentic-systems-1-prompt-chaining-vikram-ekambaram-pjn5e.html"
+  },
+  {
+    "title": "AI Agents and Workflows",
+    "date": "2025-01-16T15:00:00",
+    "category": "ai-agents",
+    "read_time": 1,
+    "word_count": 4,
+    "source_file": "ai-agents-workflows-vikram-ekambaram-qipee.html"
+  },
+  {
+    "title": "Everyone is a programmer - Part 2",
+    "date": "2025-01-14T15:00:00",
+    "category": "strategy",
+    "read_time": 1,
+    "word_count": 7,
+    "source_file": "everyone-programmer-part-2-vikram-ekambaram-v8yee.html"
+  },
+  {
+    "title": "Services as Software - Will disrupt consulting",
+    "date": "2025-01-09T16:45:00",
+    "category": "strategy",
+    "read_time": 1,
+    "word_count": 7,
+    "source_file": "services-software-disrupt-consulting-vikram-ekambaram-4dmoe.html"
+  },
+  {
+    "title": "GenAI for Captivating Visuals",
+    "date": "2025-01-06T16:58:00",
+    "category": "strategy",
+    "read_time": 1,
+    "word_count": 4,
+    "source_file": "genai-captivating-visuals-vikram-ekambaram-l5h4f.html"
+  },
+  {
+    "title": "Why AI will replace (some) humans",
+    "date": "2024-12-16T17:19:00",
+    "category": "strategy",
+    "read_time": 1,
+    "word_count": 6,
+    "source_file": "2024-12-16 17:19:29.0-Why AI will replace (some) humans.html"
+  },
+  {
+    "title": "Everyone is a programmer",
+    "date": "2024-12-10T18:47:00",
+    "category": "strategy",
+    "read_time": 1,
+    "word_count": 4,
+    "source_file": "everyone-programmer-vikram-ekambaram-xhave.html"
+  },
+  {
+    "title": "Agents agents everywhere",
+    "date": "2024-12-05T15:00:00",
+    "category": "ai-agents",
+    "read_time": 1,
+    "word_count": 3,
+    "source_file": "agents-everywhere-vikram-ekambaram-zzxye.html"
+  },
+  {
+    "title": "GenAI in Education",
+    "date": "2024-12-03T15:00:00",
+    "category": "strategy",
+    "read_time": 1,
+    "word_count": 3,
+    "source_file": "genai-education-vikram-ekambaram-c1cxe.html"
+  },
+  {
+    "title": "Agents and Digital Workers",
+    "date": "2024-11-18T15:00:00",
+    "category": "ai-agents",
+    "read_time": 1,
+    "word_count": 4,
+    "source_file": "agents-digital-workers-vikram-ekambaram-jsmde.html"
+  },
+  {
+    "title": "Autonomous Cars and Autonomous Agents",
+    "date": "2024-11-08T15:00:00",
+    "category": "ai-agents",
+    "read_time": 1,
+    "word_count": 5,
+    "source_file": "autonomous-cars-agents-vikram-ekambaram-rf1ge.html"
+  },
+  {
+    "title": "CRM 2.0 - A GenAI CRM",
+    "date": "2024-10-28T13:28:00",
+    "category": "gtm-automation",
+    "read_time": 1,
+    "word_count": 6,
+    "source_file": "crm-20-genai-vikram-ekambaram-sqtye.html"
+  },
+  {
+    "title": "GenAI - Will we see a new application architecture?",
+    "date": "2024-10-22T14:00:00",
+    "category": "technical",
+    "read_time": 1,
+    "word_count": 9,
+    "source_file": "genai-we-see-new-application-architecture-vikram-ekambaram-mztoe.html"
+  }
+]

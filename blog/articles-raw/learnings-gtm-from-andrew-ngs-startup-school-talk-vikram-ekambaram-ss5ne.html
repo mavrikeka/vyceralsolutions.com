@@ -1,0 +1,153 @@
+<html>
+<head>
+  <title>Learnings for GTM from Andrew Ng's Startup School talk</title>
+  <style>
+    body {
+      margin: 0 auto;
+      width: 744px;
+      font-family: Source Serif Pro, serif;
+      line-height: 32px;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.7);
+      font-size: 21px;
+    }
+    h1, h2, h3 {
+      font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+    }
+    h1 a, h1 a:visited {
+      color: inherit;
+      text-decoration: none;
+    }
+    h1 {
+      line-height: 48px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 42px;
+      margin: 32px 0 20px;
+    }
+    h2 {
+      line-height: 32px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 26px;
+      margin: 28px 0;
+    }
+    h3 {
+      line-height: 28px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 21px;
+      margin: 24px 0;
+    }
+    p {
+      margin: 32px 0;
+    }
+    .created, .published {
+      color: rgba(0, 0, 0, 0.55);
+      font-size: 15px;
+      line-height: 15px;
+      margin: 20px 0;
+    }
+    .created + .published {
+      margin-top: -12px;
+    }
+    blockquote {
+      font-family: Georgia, Source Serif Pro, serif;
+      font-style: italic;
+      font-size: 24px;
+      line-height: 36px;
+      margin: 48px 120px;
+      text-align: center;
+    }
+    a {
+      word-wrap: break-word;
+      outline: none;
+      text-decoration: none;
+      background-color: transparent;
+      border: 0;
+      color: #008CC9;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    a:visited {
+      color: #8C68CB;
+    }
+    .center {
+      text-align: center;
+    }
+    iframe {
+      display: block;
+      margin: 44px auto;
+    }
+    *:not(pre) + pre, pre:first-of-type {
+      margin-top: 32px;
+      padding-top: 32px;
+    }
+    pre:only-of-type {
+      margin: 32px 0;
+      padding: 32px;
+    }
+    pre {
+      background: #F3F6F8;
+      overflow-x: auto;
+      display: block;
+      font-size: 13px;
+      font-family: monospace;
+      line-height: 13px;
+      padding: 0 32px 32px;
+      white-space: pre;
+    }
+    a.embedded {
+      background: #F3F6F8;
+      display: block;
+      padding: 32px;
+      margin: 32px 0;
+    }
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+    .slate-image-embed__resize-full-width img {
+      width: 100%;
+    }
+    .series-logo {
+      width: 48px;
+      height: 48px;
+      box-sizing: border-box;
+      background-clip: content-box;
+      border: 4px solid transparent;
+      border-radius: 6px;
+      object-fit: scale-down;
+      float: left;
+    }
+    .series-title {
+      font-size: 16px;
+      font-weight: 600;
+      vertical-align: top;
+    }
+    .series-description {
+      color: rgba(0,0,0,.6);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    div {
+      margin: 32px 0;
+    }
+  </style>
+</head>
+<body>
+    <img class="series-logo" src="https://media.licdn.com/dms/image/v2/D5612AQFH1Y48wdQAcg/series-logo_image-shrink_300_300/series-logo_image-shrink_300_300/0/1706721636826?e=1765411200&v=beta&t=MHFxhOnQitlwkoxnOEBehX-CrxSWcBOJP0Jnd7Mv7Ps" />
+    <h3>
+      <span class="series-title">GenAI for Go-To-Market teams</span>
+      </br>
+      <span class="series-description">Best practices for GTM teams on leveraging GenAI to hack your productivity</span>
+    </h3>
+    <img src="https://media.licdn.com/mediaD4E12AQHAbmJGDIjiLw" alt="" title="" />
+      <h1><a href="https://www.linkedin.com/pulse/learnings-gtm-from-andrew-ngs-startup-school-talk-vikram-ekambaram-ss5ne">Learnings for GTM from Andrew Ng's Startup School talk</a></h1>
+    <p class="created">Created on 2025-07-25 19:56</p>
+  <p class="published">Published on 2025-07-28 14:00</p>
+  <div><p>About a month ago Andrew Ng delivered a <a href="https://www.youtube.com/watch?v=RNJCfif1dPY" target="_blank">talk at The Startup School</a> in San Francisco. <strong>Startup School is Y Combinator's free online course</strong> designed to teach people how to start startups, leveraging YC's 15+ years of knowledge and experience. </p><p>Andrew Ng is the Managing General Partner of AI Fund (a $175M venture studio), founder/CEO of Landing AI, founder of <a href="http://DeepLearning.AI" target="_blank">DeepLearning.AI</a>, chairman/co-founder of Coursera, and Stanford adjunct professor. He's a globally recognized AI leader with experience at Google Brain and as Chief Scientist at Baidu.</p><p>The key theme he highlighted -</p><blockquote><p>Execution speed is highly correlated with startup success</p></blockquote><p>He also listed out key strategies for speed </p><ul><li><p>Work with Concrete Ideas - Ideas that are detailed enough that engineers can immediately build them.  </p></li><li><p>Leverage AI Coding Assistance - AI coding tools can help you prototype 10X faster.</p></li><li><p>Focus on Product Management - As we need rapid feedback mechanisms to shape product decisions.</p></li></ul><p>In case you are wondering what this has to do with GTM, this is exactly what I see when working with clients looking to leverage Gen AI in GTM. Especially those that have taken the plunge and are reaping the benefits.</p><ul><li><p>Work with Concrete Ideas - My most successful clients, are not spending months doing expensive assessments with consulting firms to build out a list of use cases. They are looking at their business strategy, identifying the key tactics and then asking the question - How can I leverage AI to deliver to these tactics? Will it help me do more with less? Will it help me generate more business outcomes. Examples are, leveraging AI to look at their website visitors, determine if they are an ICP fit, determine highly personalized outreach (landing page, personalized videos etc.) and use this for outreach at scale - do this with less people and at a scale that drives more leads to the top of the funnel.</p></li><li><p>Leverage AI Coding Assistance - While my GTM clients do not use AI coding assistants, they are leveraging tools like <a href="http://Clay.com" target="_blank">Clay.com</a>, <a href="http://Agent.ai" target="_blank">Agent.ai</a>, <a href="http://AnyQuest.com" target="_blank">AnyQuest.com</a> etc. to accelerate their GTM initiatives. This then helps them rapidly prototype. Research at scale, personalized landing pages, personalized messaging etc. The tools you use will either significantly speed up your projects or slow them down. FYI - Just using ChatGPT will not give you the gains you are looking for.</p></li><li><p>Focus on Product Management - This ties to having an iterative approach in GTM, similar to product development. No one can guarantee that the AI based approach they are leveraging will work (as it is a new way of doing things). That being said, my most successful clients, treat these as business experiments and run campaigns, look at the data and iterate. If something does not work, we get together and look at the data and come up with a new hypothesis to test and since we have an AI driven GTM Engine, we can do this quickly.</p></li></ul><p>Personally why I feel this is even more relevant to GTM than product development -</p><ol><li><p><strong>Lower switching costs</strong>: Changing a sales sequence is easier than rebuilding code</p></li><li><p><strong>Faster feedback loops</strong>: Customer responses come in hours/days vs. weeks for product features</p></li><li><p><strong>More building blocks available</strong>: Email tools, social platforms, CRM integrations, content generators.</p></li><li><p><strong>Higher tolerance for "quick and dirty"</strong>: Marketing campaigns can be imperfect; you learn and iterate.</p></li></ol><p>I will leave you with this statement -</p><blockquote><p>Execution speed is highly correlated with GTM success</p></blockquote><p>What are you waiting for?</p></div>
+</body>
+</html>

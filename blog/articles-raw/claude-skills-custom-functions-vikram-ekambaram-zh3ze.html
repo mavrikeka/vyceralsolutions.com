@@ -1,0 +1,153 @@
+<html>
+<head>
+  <title>Claude Skills and Custom Functions</title>
+  <style>
+    body {
+      margin: 0 auto;
+      width: 744px;
+      font-family: Source Serif Pro, serif;
+      line-height: 32px;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.7);
+      font-size: 21px;
+    }
+    h1, h2, h3 {
+      font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+    }
+    h1 a, h1 a:visited {
+      color: inherit;
+      text-decoration: none;
+    }
+    h1 {
+      line-height: 48px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 42px;
+      margin: 32px 0 20px;
+    }
+    h2 {
+      line-height: 32px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 26px;
+      margin: 28px 0;
+    }
+    h3 {
+      line-height: 28px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 21px;
+      margin: 24px 0;
+    }
+    p {
+      margin: 32px 0;
+    }
+    .created, .published {
+      color: rgba(0, 0, 0, 0.55);
+      font-size: 15px;
+      line-height: 15px;
+      margin: 20px 0;
+    }
+    .created + .published {
+      margin-top: -12px;
+    }
+    blockquote {
+      font-family: Georgia, Source Serif Pro, serif;
+      font-style: italic;
+      font-size: 24px;
+      line-height: 36px;
+      margin: 48px 120px;
+      text-align: center;
+    }
+    a {
+      word-wrap: break-word;
+      outline: none;
+      text-decoration: none;
+      background-color: transparent;
+      border: 0;
+      color: #008CC9;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    a:visited {
+      color: #8C68CB;
+    }
+    .center {
+      text-align: center;
+    }
+    iframe {
+      display: block;
+      margin: 44px auto;
+    }
+    *:not(pre) + pre, pre:first-of-type {
+      margin-top: 32px;
+      padding-top: 32px;
+    }
+    pre:only-of-type {
+      margin: 32px 0;
+      padding: 32px;
+    }
+    pre {
+      background: #F3F6F8;
+      overflow-x: auto;
+      display: block;
+      font-size: 13px;
+      font-family: monospace;
+      line-height: 13px;
+      padding: 0 32px 32px;
+      white-space: pre;
+    }
+    a.embedded {
+      background: #F3F6F8;
+      display: block;
+      padding: 32px;
+      margin: 32px 0;
+    }
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+    .slate-image-embed__resize-full-width img {
+      width: 100%;
+    }
+    .series-logo {
+      width: 48px;
+      height: 48px;
+      box-sizing: border-box;
+      background-clip: content-box;
+      border: 4px solid transparent;
+      border-radius: 6px;
+      object-fit: scale-down;
+      float: left;
+    }
+    .series-title {
+      font-size: 16px;
+      font-weight: 600;
+      vertical-align: top;
+    }
+    .series-description {
+      color: rgba(0,0,0,.6);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    div {
+      margin: 32px 0;
+    }
+  </style>
+</head>
+<body>
+    <img class="series-logo" src="https://media.licdn.com/dms/image/v2/D5612AQFH1Y48wdQAcg/series-logo_image-shrink_300_300/series-logo_image-shrink_300_300/0/1706721636826?e=1765411200&v=beta&t=MHFxhOnQitlwkoxnOEBehX-CrxSWcBOJP0Jnd7Mv7Ps" />
+    <h3>
+      <span class="series-title">GenAI for Go-To-Market teams</span>
+      </br>
+      <span class="series-description">Best practices for GTM teams on leveraging GenAI to hack your productivity</span>
+    </h3>
+    <img src="https://media.licdn.com/mediaD4E12AQHwH3XSTL4UPw" alt="" title="" />
+      <h1><a href="https://www.linkedin.com/pulse/claude-skills-custom-functions-vikram-ekambaram-zh3ze">Claude Skills and Custom Functions</a></h1>
+    <p class="created">Created on 2025-10-20 15:59</p>
+  <p class="published">Published on 2025-10-21 14:00</p>
+  <div><p>A few weeks ago, I had written about the need for <a href="https://www.linkedin.com/pulse/agent-builders-need-custom-functions-vikram-ekambaram-zxn3e" target="_blank">Agent Builder</a> platforms to allow builders to execute custom functions. The reason was pretty simple, while the LLMs are like an extremely versatile Swiss army knife that can do many different things, they are often not the right tool for the job. That being said, because they are so accessible, as an agent builder we end up using them to do inefficient and expensive things.</p><p>Here are some examples I had shared, of things that an LLM can do but using custom python code might be faster and cheaper -</p><ol><li><p>Parse this Excel file and extract all email addresses</p></li><li><p>Take these 100 product descriptions and standardize the format</p></li><li><p>Here's the scraped content of an HTML page, extract just the article content and remove navigation/ads.</p></li><li><p>Transform this complex JSON object to match our database schema</p></li><li><p>Convert this Markdown text to HTML with proper formatting </p></li></ol><p>Working with agent builder platforms that have allowed me to execute my own custom functions via Serverless functions or other means have been a game changer. I've dropped the cost of agent execution and shaved off minutes from my agent execution time.</p><p>Last week, Anthropic released a beta feature called <a href="https://www.anthropic.com/news/skills" target="_blank">Claude Skills</a>. When I first heard about it, I did not dig deep into it as I assume I knew what this functionality would do. Basically more structured context engineering. You define skills in structured way and Anthropic would add it to the prompt and allow you to use different skills for different tasks. Today I use custom instructions in a Claude Project and I have different folders for different custom instructions. Skills tackles that need, which I thought was pretty cool but I wasn't too excited about it. It seemed like an incremental innovation.</p><p>Over the weekend I finally got to dig deeper into Skills and then I realized that Anthropic was basically allowing me to execute custom code as part of my prompts. They would spin up a VM (Virtual Machine) for my chat session and load any custom code I define in my skill and run that in the VM. So if I want to parse and excel file and extract all email addresses, I could write python code and load it as a skill and Anthropic would execute that deterministically, thus giving me much more control on how I worked with excel files. It gives me repeatability and consistency of execution.</p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQE_E5h_AHnnGg" src="https://media.licdn.com/dms/image/v2/D4E12AQE_E5h_AHnnGg/article-inline_image-shrink_1500_2232/B4EZoCYk9TJ0AU-/0/1760976590317?e=1765411200&amp;v=beta&amp;t=_L3yZaioTVnQoadLUZeL7xK3RFdxNwyx7kEL-g2PDIk"><figcaption></figcaption></figure><p>I am constantly blown away by Anthropic's innovations - MCP, Claude Code and now Skills are each a new way of doing things in this world of agentic AI and they are just so simple and intuitive. </p><p>So we will go from a marketplace of MCP servers to a marketplace of Skills. You want to fill out a PDF there will be a skill for that, you want to create a PPT with your design and branding there will be a skill for that. I am very curious to see where this all ends up.</p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQGMF0JKv1Ub_g" src="https://media.licdn.com/dms/image/v2/D4E12AQGMF0JKv1Ub_g/article-inline_image-shrink_1500_2232/B4EZoCaJ10KgAU-/0/1760977002879?e=1765411200&amp;v=beta&amp;t=gujD5zDiEWj0faBNdWCnWJVwTVq2qlsI_5pG6k87_T4"><figcaption></figcaption></figure><p>I am also curious how this pattern will be implemented in Agent Building tools. The big difference seems to be that in the case of Anthropic, Claude is the agent orchestration layer. It figures out autonomously what MCP server to connect to, what Skills to load and it executes the work. In the case of Agent Builders, you define the workflow and the agent platforms conduct the orchestration. They have their own integrations (in lieu of MCP) and they have the ability to run Serverless functions in lieu of Skills, but it is fascinating to see how quickly the LLM vendors are adding functionality to close the gaps (and redefine how Agentic AI works).</p><p><strong>Where This Gets Really Interesting</strong></p><p>As I've been thinking through the implications of Skills, a few questions keep coming up that I don't have answers to yet.</p><p><strong>The Agent Stack Question</strong></p><p>I've been building agents in both paradigms now - the explicit workflow design of agent builders and the autonomous orchestration of Claude. For deterministic, business-critical workflows (like the examples I shared earlier - standardizing formats, schema transformations), which approach do I actually want?</p><p>Option A: Explicit control in Agent Building tools where I design every step of the flow</p><p>Option B: Claude autonomously figuring it out via Skills</p><p>My gut tells me the answer is both. Use agent builders for the workflow skeleton - the high-level business process that needs to be predictable and auditable. But have a "Claude with Skills" node for the messy, ambiguous parts where the edge cases are too numerous to pre-program. Wonder how Agent Builder platforms will expose Claude Skills.</p><p><strong>The Debuggability Challenge</strong></p><p>Here's what worries me about Skills: when Claude autonomously decides to use a skill, reads some files, executes some code, and uses the output in its reasoning... and something goes wrong, how do I debug that?</p><p>In my agent builder workflows, I can trace the exact flow. I can see which node failed, what the inputs were, what the outputs should have been. With Skills, Claude is the black box orchestrator making decisions I don't directly control.</p><p>I haven't figured out yet how to maintain observability when moving logic into Skills. This feels like a real gap for production use cases.</p><p><strong>The Cost Equation</strong></p><p>I mentioned earlier how custom functions dropped my costs and execution time. But with Skills, the math changes.</p><p>With Skills, I'm billed per session-hour. The Skills themselves execute deterministic code (cheap and fast), but Claude still needs to reason about when to use them (expensive tokens).</p><p>So the cost model becomes: Container time + LLM reasoning tokens</p><p>In my agent builders it's: Serverless execution + LLM generation tokens</p><p>I'm genuinely curious whether Skills actually save money or just shift where the cost shows up. </p><p>The big caveat with Skills (and this is also the case with MCP) is privacy and security. If you are using 3rd party Skills, you are giving that 3rd party the ability to run code and this opens up vulnerabilities.</p><p>The Skills marketplace will need:</p><ul><li><p>Code signing/verification</p></li><li><p>Sandboxing levels</p></li><li><p>Permission granularity</p></li><li><p>Audit trails</p></li></ul><p>Has anyone used or built any Skills?</p><p></p></div>
+</body>
+</html>

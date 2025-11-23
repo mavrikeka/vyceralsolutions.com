@@ -1,0 +1,153 @@
+<html>
+<head>
+  <title>Vibe Prompting and Agent Debugging</title>
+  <style>
+    body {
+      margin: 0 auto;
+      width: 744px;
+      font-family: Source Serif Pro, serif;
+      line-height: 32px;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.7);
+      font-size: 21px;
+    }
+    h1, h2, h3 {
+      font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+    }
+    h1 a, h1 a:visited {
+      color: inherit;
+      text-decoration: none;
+    }
+    h1 {
+      line-height: 48px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 42px;
+      margin: 32px 0 20px;
+    }
+    h2 {
+      line-height: 32px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 26px;
+      margin: 28px 0;
+    }
+    h3 {
+      line-height: 28px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 21px;
+      margin: 24px 0;
+    }
+    p {
+      margin: 32px 0;
+    }
+    .created, .published {
+      color: rgba(0, 0, 0, 0.55);
+      font-size: 15px;
+      line-height: 15px;
+      margin: 20px 0;
+    }
+    .created + .published {
+      margin-top: -12px;
+    }
+    blockquote {
+      font-family: Georgia, Source Serif Pro, serif;
+      font-style: italic;
+      font-size: 24px;
+      line-height: 36px;
+      margin: 48px 120px;
+      text-align: center;
+    }
+    a {
+      word-wrap: break-word;
+      outline: none;
+      text-decoration: none;
+      background-color: transparent;
+      border: 0;
+      color: #008CC9;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    a:visited {
+      color: #8C68CB;
+    }
+    .center {
+      text-align: center;
+    }
+    iframe {
+      display: block;
+      margin: 44px auto;
+    }
+    *:not(pre) + pre, pre:first-of-type {
+      margin-top: 32px;
+      padding-top: 32px;
+    }
+    pre:only-of-type {
+      margin: 32px 0;
+      padding: 32px;
+    }
+    pre {
+      background: #F3F6F8;
+      overflow-x: auto;
+      display: block;
+      font-size: 13px;
+      font-family: monospace;
+      line-height: 13px;
+      padding: 0 32px 32px;
+      white-space: pre;
+    }
+    a.embedded {
+      background: #F3F6F8;
+      display: block;
+      padding: 32px;
+      margin: 32px 0;
+    }
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+    .slate-image-embed__resize-full-width img {
+      width: 100%;
+    }
+    .series-logo {
+      width: 48px;
+      height: 48px;
+      box-sizing: border-box;
+      background-clip: content-box;
+      border: 4px solid transparent;
+      border-radius: 6px;
+      object-fit: scale-down;
+      float: left;
+    }
+    .series-title {
+      font-size: 16px;
+      font-weight: 600;
+      vertical-align: top;
+    }
+    .series-description {
+      color: rgba(0,0,0,.6);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    div {
+      margin: 32px 0;
+    }
+  </style>
+</head>
+<body>
+    <img class="series-logo" src="https://media.licdn.com/dms/image/v2/D5612AQFH1Y48wdQAcg/series-logo_image-shrink_300_300/series-logo_image-shrink_300_300/0/1706721636826?e=1765411200&v=beta&t=MHFxhOnQitlwkoxnOEBehX-CrxSWcBOJP0Jnd7Mv7Ps" />
+    <h3>
+      <span class="series-title">GenAI for Go-To-Market teams</span>
+      </br>
+      <span class="series-description">Best practices for GTM teams on leveraging GenAI to hack your productivity</span>
+    </h3>
+    <img src="https://media.licdn.com/mediaD4E12AQH3dL-Y1BYCWw" alt="" title="" />
+      <h1><a href="https://www.linkedin.com/pulse/vibe-prompting-agent-debugging-vikram-ekambaram-0yfce">Vibe Prompting and Agent Debugging</a></h1>
+    <p class="created">Created on 2025-03-06 13:05</p>
+  <p class="published">Published on 2025-03-06 15:00</p>
+  <div><hr><p><em>Vibe Prompting - A Two Part Series is sponsored by </em><a href="https://agent.ai/?utm_utm_campaign=vyceral&amp;utm_source=newsletter&amp;utm_medium=paidsponsorship&amp;utm_content=vibe-prompting-2" target="_blank"><em>Agent.ai</em></a><em> - Discover, connect with and hire AI agents to do useful things.</em></p><hr><p>This is a follow on to my earlier article on <a href="https://www.linkedin.com/pulse/agent-building-vibe-prompting-1-vikram-ekambaram-pdmwe?utm_utm_campaign=vyceral&amp;utm_source=newsletter&amp;utm_medium=paidsponsorship&amp;utm_content=vibe-prompting-1" target="_blank">Vibe Prompting and Agent Building</a> where I borrowed from Andrej Karpathy's tweet on Vibe Coding.</p><p>While I have found this approach, of leveraging ChatGPT to generate the prompts I use to build my agents extremely useful, it becomes even more valuable to debug my agents. For those that spend a lot of time building agents, getting the agent to generate the output exactly the way you want it, every time is a time consuming process. There is a lot of iteration and trial and error. </p><blockquote><p>Getting my agent 80% working is easy, getting from 80% to 98% requires a lot of blood sweat and tears.</p></blockquote><p>Often you have no idea why the LLM just does not listen to you and this is where Vibe Prompting for debugging is invaluable. The process is quite simple, I take the prompt, the input to the prompt, the output of the execution of the prompt and dump it all into ChatGPT and then have a conversation with ChatGPT on why the output is not what I expected and then ask it to rewrite the prompt to generate the output I want. Then I test it out in ChatGPT and once it looks good I plop it back into <a href="https://agent.ai/?utm_utm_campaign=vyceral&amp;utm_source=newsletter&amp;utm_medium=paidsponsorship&amp;utm_content=vibe-prompting-2" target="_blank">Agent.ai</a></p><p></p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQEZLHbHT2NAAA" src="https://media.licdn.com/dms/image/v2/D4E12AQEZLHbHT2NAAA/article-inline_image-shrink_1500_2232/B4EZVrmlbtGYAU-/0/1741267032846?e=1765411200&amp;v=beta&amp;t=XaiJuSpIKo3y4LWud-0BDFOkd_RVuhQwPUeJPyCuqao"><figcaption>Vibe prompting for debugging agents</figcaption></figure><p>So going back to our earlier example - Building an agent that will analyze any CSV file, I generated all my prompts in ChatGPT then built the agent in <a href="https://agent.ai/?utm_utm_campaign=vyceral&amp;utm_source=newsletter&amp;utm_medium=paidsponsorship&amp;utm_content=vibe-prompting-2" target="_blank">Agent.ai</a> and then ran the agent and as expected it did not work. The output was off. </p><p>So here is how I debug my agents using ChatGPT.</p><p>STEP 1 : My Question to ChatGPT</p><pre></pre><p></p><p>Basically, my prompt is supposed to ask Clarifying Questions about the data set and my version of the prompt was generating extremely generic questions. If I uploaded Fitbit data or P&amp;L data it asked similar questions as opposed to being specific to the data that was. being uploaded.</p><p>STEP 2 : Provide the prompt</p><pre></pre><p>STEP 3 : Share the output that I am not happy with. You can see that the clarifying questions that my prompt generated is too generic. It looks like it is not generating these questions based on the dataset I am uploading.</p><pre></pre><p>STEP 4 : ChatGPT analyzes all this information and then explains to me why the output is off and what should be done to fix it.</p><pre></pre><p>STEP 5 : It generates a new prompt that I then have it rerun.</p><pre></pre><p>STEP 6 : I validate the output and if it looks good. You can how these questions are way more specific to the dataset I uploaded (Manufacturing P&amp;L). Now that I like the output I update it in <a href="https://agent.ai/?utm_utm_campaign=vyceral&amp;utm_source=newsletter&amp;utm_medium=paidsponsorship&amp;utm_content=vibe-prompting-2" target="_blank">Agent.ai</a></p><pre></pre><p>You can see how different this output is from what it had initially generated. </p><blockquote><p>What I have realized is that ChatGPT knows how to talk to ChatGPT (prompting) way better than I know how to talk to ChatGPT, so why not have it come up with the prompt</p></blockquote><p>So how did this all end up -</p><p>Here is a <a href="https://youtu.be/6URfjuwCNgM" target="_blank">video</a> where I go through this entire process.</p><p>Here is the <a href="https://agent.ai/agent/csv_analysis?utm_utm_campaign=vyceral&amp;utm_source=newsletter&amp;utm_medium=paidsponsorship&amp;utm_content=vibe-prompting-2" target="_blank">agent in Agent.ai </a>that you can test.</p><p>This is the <a href="https://www.kaggle.com/datasets/bobnau/daily-website-visitors" target="_blank">dataset from Kaggle</a> that I used.</p><p>Here is an <a href="https://agent.ai/agent/csv_analysis?rid=32b1904bf8094fc4aa7b979e179fde75&amp;utm_utm_campaign=vyceral&amp;utm_source=newsletter&amp;utm_medium=paidsponsorship&amp;utm_content=vibe-prompting-2" target="_blank">output</a><a href="https://agent.ai/agent/csv_analysis?rid=32b1904bf8094fc4aa7b979e179fde75" target="_blank"> </a>that I get when analyzing website visitors (uploaded as CSV).</p><figure><a href="https://agent.ai/agent/csv_analysis?rid=32b1904bf8094fc4aa7b979e179fde75&amp;utm_utm_campaign=vyceral&amp;utm_source=newsletter&amp;utm_medium=paidsponsorship&amp;utm_content=vibe-prompting-2" target="_blank"><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQH3H25yurW_Aw" src="https://media.licdn.com/dms/image/v2/D4E12AQH3H25yurW_Aw/article-inline_image-shrink_1500_2232/B4EZVrqq6KHUAU-/0/1741268103863?e=1765411200&amp;v=beta&amp;t=2ZVUM3e5g2BKgrCtEpiAe-0DFjTaUgex2dCuZ0-SYMg"></a><figcaption></figcaption></figure><p>So my call to action for anyone who has got this far is to go sign up for <a href="https://agent.ai/?utm_utm_campaign=vyceral&amp;utm_source=newsletter&amp;utm_medium=paidsponsorship&amp;utm_content=vibe-prompting-2" target="_blank">Agent.ai</a> and start building some agents using Vibe Prompting. What are you waiting for? ChatGPT will generate all your prompts for you.</p><p></p><figure><a href="https://agent.ai/?utm_utm_campaign=vyceral&amp;utm_source=newsletter&amp;utm_medium=paidsponsorship&amp;utm_content=vibe-prompting-2" target="_blank"><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQEOYysi7FMKKw" src="https://media.licdn.com/dms/image/v2/D4E12AQEOYysi7FMKKw/article-inline_image-shrink_1500_2232/B4EZVrsG4jG0AY-/0/1741268480225?e=1765411200&amp;v=beta&amp;t=JtNVVX9E63er3iUSQLHystD9wsjcf_NBdxEsh2l33BE"></a><figcaption></figcaption></figure><p></p></div>
+</body>
+</html>
