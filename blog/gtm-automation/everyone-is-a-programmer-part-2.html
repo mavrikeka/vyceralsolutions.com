@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A month ago I had posted about my experience working with ChatGPT to build a tax optimizer application with GPT o1 pro, that replaces me needing an expert ...">
+  <title>Everyone is a programmer - Part 2 | Vyceral Solutions</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://b2bjsstore.s3.us-west-2.amazonaws.com/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("1N5W0HM2RYO5");</script>
+  <style>
+    /* Article-specific styles */
+    .article-header {
+      background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-primary) 100%);
+      padding: 4rem 0 3rem;
+      margin-bottom: 3rem;
+    }
+    .article-meta {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      margin-top: 1.5rem;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.875rem;
+    }
+    .article-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .article-content p {
+      margin: 1.5rem 0;
+      line-height: 1.8;
+      color: var(--color-gray);
+    }
+    .article-content h2 {
+      margin: 2.5rem 0 1rem;
+      color: var(--color-dark);
+      font-size: 1.75rem;
+    }
+    .article-content h3 {
+      margin: 2rem 0 1rem;
+      color: var(--color-dark);
+      font-size: 1.25rem;
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--color-accent);
+      padding-left: 1.5rem;
+      margin: 2rem 0;
+      font-style: italic;
+      color: var(--color-dark);
+    }
+    .article-content ul, .article-content ol {
+      margin: 1.5rem 0;
+      padding-left: 2rem;
+      color: var(--color-gray);
+      line-height: 1.8;
+    }
+    .article-content li {
+      margin: 0.5rem 0;
+    }
+    .article-content a {
+      color: var(--color-accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--color-accent);
+    }
+    .article-content pre {
+      background: #F3F6F8;
+      padding: 1.5rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 2rem 0;
+    }
+    .article-footer {
+      max-width: 800px;
+      margin: 4rem auto 0;
+      padding: 2rem;
+      border-top: 1px solid #E5E7EB;
+    }
+    .article-nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .article-nav-link {
+      padding: 1.5rem;
+      background: var(--color-light);
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .article-nav-link:hover {
+      background: white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .article-nav-label {
+      font-size: 0.75rem;
+      color: var(--color-gray);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+    .article-nav-title {
+      color: var(--color-dark);
+      font-weight: 600;
+    }
+    @media (max-width: 768px) {
+      .article-nav {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <img src="../images/logo.png" alt="Vyceral Solutions Logo" onerror="this.style.display='none'">
+      </a>
+      <ul class="nav-menu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../gtm-automation.html" class="nav-link">GTM Automation</a></li>
+        <li><a href="../consulting-transformation.html" class="nav-link">Consulting Transformation</a></li>
+        <li><a href="../case-studies.html" class="nav-link">Case Studies</a></li>
+        <li><a href="../about.html" class="nav-link">About</a></li>
+        <li><a href="../blog.html" class="nav-link">Blog</a></li>
+        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Article Header -->
+  <header class="article-header">
+    <div class="container">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <a href="../blog.html" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.875rem; display: inline-block; margin-bottom: 1rem;">← Back to Blog</a>
+        <span class="badge badge-outline" style="background: rgba(255,255,255,0.1); color: white; border-color: rgba(255,255,255,0.3);">GTM Automation</span>
+        <h1 style="color: white; margin-top: 1rem;">Everyone is a programmer - Part 2</h1>
+        <div class="article-meta">
+          <span>January 14, 2025</span>
+          <span>•</span>
+          <span>4 min read</span>
+          <span>•</span>
+          <span>GenAI in GTM</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Article Content -->
+  <article class="article-content">
+    <p>A month ago I <a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7272321152578949121/" target="_blank">had posted </a>about my experience working with ChatGPT to build a tax optimizer application with GPT o1 pro, that replaces me needing an expert tax person to do tax strategy (I will still need them to file my taxes) - <a href="https://lnkd.in/efqnFHYA" target="_blank">https://lnkd.in/efqnFHYA</a>. It was worth the $200. It actually works and has real logic and calculations.  That experience was eye opening. </p><blockquote><p>I was not sure if it was going to be a one off experience or if this was going to be something I do regularly. </p></blockquote><p>A back story on what I've been doing this last year. I started my consulting firm back in Feb 2024 and at that point, all I knew was that I wanted to get deep into GenAI by applying it to a domain I had expertise in - GTM. Within a week I realized that ChatGPT, Co-pilot, AI assistants, Custom GPTs were not going to be very helpful. There is only so much one can do with LLM data. With no access to web search, tools to access data from other systems, ability to upload documents and use them as a data source - the use cases were non-existent.</p><p></p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQGLHxadkp30RA" src="https://media.licdn.com/dms/image/v2/D4E12AQGLHxadkp30RA/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1736822467878?e=1765411200&amp;v=beta&amp;t=BgTnYBJ43t4fkghT9yDnBG186DrGMtrBTURTAuevN1k"/><figcaption>Like a fish out of water</figcaption></figure><p></p><p>This led me down the path of agents and agentic workflows and evaluating and working with many agent building tools. Initially my work was more around GTM consulting but over time I transitioned and now I primarily do GenAI in GTM and GenAI in general. There are a few tools that I now have in my arsenal that I use regularly - <a href="https://www.anyquest.ai/" target="_blank">AnyQuest</a>, <a href="http://Agent.ai" target="_blank">Agent.ai</a>, <a href="http://Clay.com" target="_blank">Clay.com</a> and I am always looking at Agent builders that are low-code/no-code and targeted at business stakeholders.</p><p>I've built 100s of agents, some for clients, most to learn and some to teach others. What becomes very obvious is that the use cases you can tackle depend on the data you have access to which in turn is dependent on the tools the agent builders give you access to. For example, here are the sources <a href="http://Agent.ai" target="_blank">Agent.ai</a> can pull data from -</p><p></p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQFXwSL85tUFAA" src="https://media.licdn.com/dms/image/v2/D4E12AQFXwSL85tUFAA/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1736822914470?e=1765411200&amp;v=beta&amp;t=OLDeiJfpz8MkVUIrGKeuof1Lq268BmcBwDzOAaVFiHw"/><figcaption><a href="http://Agent.ai" target="_blank">Agent.ai</a> data sources</figcaption></figure><p>Meanwhile Clay being a GTM focused tool has a gazillion integrations - <a href="https://www.clay.com/integrations" target="_blank">https://www.clay.com/integrations</a>. AnyQuest has the ability to add any tool that one wants via PyAQ (e.g. Apollo etc.).</p><p>Considering that all these products have so many choices when it comes to integrations, I had never thought about the need to build my own integration and anytime I had a use case that needed a different integration, I'd stay away from it or do that part of the process manually. </p><p>That being said, each of these tools has the ability to add more integrations via a Web API and other options that requires programming. So naturally I put this under the too hard to solve bucket and moved on to other use cases. </p><p>Till I started playing around with ChatGPT and had it generate code. The other day I had a simple use case. I was building a newsletter agent - you give me your email and a topic of your interest and I will store that in a Google Sheet and then I will have another agent that reads from the Google Sheet, loads the email and topic into a list and then uses an LLM to find the latest news about the topic and then emails you back the results.</p><p>The only challenge was that <a href="http://Agent.ai" target="_blank">Agent.ai</a> did not have a Google Sheet integration. It had an email integration and I was having people submit their email address and topic and I would get an email and then I would manually add this to my Google Sheet. Then I would download the CSV and feed it to my agent to do the rest of the work. This was still a pretty fast workflow and automating something that in the past I could never have done. So I was willing to live with a little inefficiency.</p><p>So first thing about everyone being a programmer, this is a program. We might call it an agent but I built something that took some input, stored in, did some processing and returned a useful output.</p><p>The second thing was that I decided to see if I could expose the data in my Google Sheet as a Web API and then call that Web API from my agent and eliminate the 2 manual steps. So I went to ChatGPT and it gave me step by step instructions and the code to go do this. I deployed the code and then it told me how to test the code and then told me what parameters to pass to <a href="http://Agent.ai" target="_blank">Agent.ai</a> and soon I had my integration working.</p><p>Here is a video for those that are interested - <a href="https://youtu.be/hxXO0VOU3Kg" target="_blank">https://youtu.be/hxXO0VOU3Kg</a></p><p>What I have realized is that being comfortable taking on tasks that require a Web App, Web API, Python code, Node.js etc. without actually having to write the code is extremely liberating and powerful. To be fair these are small snippets of code and not full blown applications but still, it does open my agentic workflows to a whole new set of use cases.</p><p>I am very excited to see what 2025 brings!!!</p><p></p><p></p>
+  </article>
+
+  <!-- Article Footer -->
+  <div class="article-footer">
+    <div class="card" style="text-align: center; padding: 2rem;">
+      <h3>Stay Updated</h3>
+      <p style="margin: 1rem 0 1.5rem;">Follow Vikram on LinkedIn for more insights on GenAI automation and go-to-market strategy.</p>
+      <a href="https://www.linkedin.com/in/vikramekambaram" target="_blank" class="btn btn-primary">Follow on LinkedIn →</a>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="cta-section">
+        <h2>Ready to Transform Your GTM Operations?</h2>
+        <p>Let's discuss how AI agents can automate 60-75% of your manual work.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="../contact.html" class="btn btn-large">Schedule a Consultation</a>
+          <a href="../case-studies.html" class="btn btn-outline btn-large" style="background: transparent; color: white; border-color: white;">View Case Studies</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Vyceral Solutions LLC</h4>
+          <p>Deep Understanding → Tangible Outcomes</p>
+          <p style="margin-top: 1rem;">Transforming B2B go-to-market strategies with Generative AI and intelligent automation.</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Solutions</h4>
+          <ul class="footer-links">
+            <li><a href="../gtm-automation.html">GTM Automation</a></li>
+            <li><a href="../consulting-transformation.html">Consulting Transformation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="../about.html">About Us</a></li>
+            <li><a href="../case-studies.html">Case Studies</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Get in Touch</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:vikram.ekambaram@vyceralsolutions.com">vikram.ekambaram@vyceralsolutions.com</a></li>
+            <li><a href="https://www.linkedin.com/in/vikramekambaram" target="_blank">LinkedIn Profile</a></li>
+            <li><a href="https://www.linkedin.com/newsletters/7158509558993215488" target="_blank">Newsletter (LinkedIn)</a></li>
+            <li style="margin-top: 0.5rem; color: var(--color-gray);">Croton-on-Hudson, NY</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright © 2025 Vyceral Solutions LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

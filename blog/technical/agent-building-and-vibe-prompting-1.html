@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vibe Prompting - A Two Part Series is sponsored by Agent.ai - Discover, connect with and hire AI agents to do useful things.I recently came across a post f...">
+  <title>Agent Building and Vibe Prompting - #1 | Vyceral Solutions</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://b2bjsstore.s3.us-west-2.amazonaws.com/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("1N5W0HM2RYO5");</script>
+  <style>
+    /* Article-specific styles */
+    .article-header {
+      background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-primary) 100%);
+      padding: 4rem 0 3rem;
+      margin-bottom: 3rem;
+    }
+    .article-meta {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      margin-top: 1.5rem;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.875rem;
+    }
+    .article-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .article-content p {
+      margin: 1.5rem 0;
+      line-height: 1.8;
+      color: var(--color-gray);
+    }
+    .article-content h2 {
+      margin: 2.5rem 0 1rem;
+      color: var(--color-dark);
+      font-size: 1.75rem;
+    }
+    .article-content h3 {
+      margin: 2rem 0 1rem;
+      color: var(--color-dark);
+      font-size: 1.25rem;
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--color-accent);
+      padding-left: 1.5rem;
+      margin: 2rem 0;
+      font-style: italic;
+      color: var(--color-dark);
+    }
+    .article-content ul, .article-content ol {
+      margin: 1.5rem 0;
+      padding-left: 2rem;
+      color: var(--color-gray);
+      line-height: 1.8;
+    }
+    .article-content li {
+      margin: 0.5rem 0;
+    }
+    .article-content a {
+      color: var(--color-accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--color-accent);
+    }
+    .article-content pre {
+      background: #F3F6F8;
+      padding: 1.5rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 2rem 0;
+    }
+    .article-footer {
+      max-width: 800px;
+      margin: 4rem auto 0;
+      padding: 2rem;
+      border-top: 1px solid #E5E7EB;
+    }
+    .article-nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .article-nav-link {
+      padding: 1.5rem;
+      background: var(--color-light);
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .article-nav-link:hover {
+      background: white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .article-nav-label {
+      font-size: 0.75rem;
+      color: var(--color-gray);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+    .article-nav-title {
+      color: var(--color-dark);
+      font-weight: 600;
+    }
+    @media (max-width: 768px) {
+      .article-nav {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <img src="../images/logo.png" alt="Vyceral Solutions Logo" onerror="this.style.display='none'">
+      </a>
+      <ul class="nav-menu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../gtm-automation.html" class="nav-link">GTM Automation</a></li>
+        <li><a href="../consulting-transformation.html" class="nav-link">Consulting Transformation</a></li>
+        <li><a href="../case-studies.html" class="nav-link">Case Studies</a></li>
+        <li><a href="../about.html" class="nav-link">About</a></li>
+        <li><a href="../blog.html" class="nav-link">Blog</a></li>
+        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Article Header -->
+  <header class="article-header">
+    <div class="container">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <a href="../blog.html" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.875rem; display: inline-block; margin-bottom: 1rem;">← Back to Blog</a>
+        <span class="badge badge-outline" style="background: rgba(255,255,255,0.1); color: white; border-color: rgba(255,255,255,0.3);">Technical Deep-Dives</span>
+        <h1 style="color: white; margin-top: 1rem;">Agent Building and Vibe Prompting - #1</h1>
+        <div class="article-meta">
+          <span>March 05, 2025</span>
+          <span>•</span>
+          <span>5 min read</span>
+          <span>•</span>
+          <span>GenAI in GTM</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Article Content -->
+  <article class="article-content">
+    <hr/><p><em>Vibe Prompting - A Two Part Series is sponsored by </em><a href="https://agent.ai/?utm_utm_campaign=vyceral&amp;utm_source=newsletter&amp;utm_medium=paidsponsorship&amp;utm_content=vibe-prompting-1" target="_blank"><em>Agent.ai</em></a><em> - Discover, connect with and hire AI agents to do useful things.</em></p><hr/><p><em>I recently came across a post from </em><a href="https://karpathy.ai/" target="_blank"><em>Andrej Karpathy</em></a><em> where he talks about this concept of "Vibe Coding". To paraphrase what he talks about - </em></p><blockquote><p><em>I just see stuff, say stuff, run stuff, and copy paste stuff, and it mostly works. Where you fully give in to the vibes, embrace exponentials, and forget that the code even exists.</em></p></blockquote><figure><a href="https://x.com/karpathy/status/1886192184808149383" target="_blank"><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQFuWD6ZwNeDlg" src="https://media.licdn.com/dms/image/v2/D4E12AQFuWD6ZwNeDlg/article-inline_image-shrink_1000_1488/B4EZVjRUuyHcAQ-/0/1741127241480?e=1765411200&amp;v=beta&amp;t=0WA22xzj4EV2hOR66UndtHdmL6VI2o9Gy00Tl2VVXnw"/></a><figcaption><em>Vibe Coding</em></figcaption></figure><p>This is something I can totally relate to as I have had ChatGPT generate python code, Google AppsScript code etc. and I pretty much follow the same "vibe coding" experience that is described above.</p><p>There is a whole separate discussion we need to have about whether this is making us lazy / dumb. On one hand I am punching above my weight when it comes to coding, but on the other hand I am not learning anything about programming. That being said, I am solving problems that I would never have solved before. So in some ways, I am becoming a really good manager. I am explaining what I want, I validate the output but I am completely delegating the 'doing of the work'.</p><blockquote><p><em>This is "Trust but Verify" in action</em></p></blockquote><p>As I was thinking about Vibe Coding, I realized that when it comes to building agents, I have been following this approach in coming up with prompts. I see a lot of posts that talk about prompt engineering and I strongly feel that 'prompt engineer', as the job that we know today, will go the way of the people who were really good at writing search queries for AltaVista and Yahoo, <strong>before Google came along and let anyone who could type in a question, get the answer they want</strong>.</p><p>Part of the reason I wanted to write this newsletter was because so many people are still writing prompts by hand and I know a lot more people are building agents now (I get this if you have simple prompts, but if you are building agents and you want really good prompts, that is a sub optimal way).</p><p>To make this real, let me share an example of how my "Vibe Prompting" approach works for building agents. The agent I am trying to build is one that will take any CSV as input (P&amp;L, Expenses, Fitbit data) and then analyze it.</p><blockquote><p><em>While I said Prompt Engineer as a job will go away, and people who are writing prompts by hand are taking a sub-optimal approach, I should clarify that while I am still writing prompts, they are not your typical prompts.</em></p></blockquote><p>So here are the prompts I used to build my agent -</p><pre></pre><p>Without going into every detail of what it came back with, here is the high level summary -</p><p><strong><em>Yes, you can build such an agent! The process would involve several key steps:</em></strong></p><ul><li><p><em>Understanding the File Structure and Content</em></p></li><li><p><em>Asking Clarifying Questions</em></p></li><li><p><em>Conducting Analysis</em></p></li><li><p><em>Returning a Detailed Analysis</em></p></li></ul><p>What stood out is that I would have started with Step 2 (if I had come up with the steps).</p><p>Here was my 2nd prompt and I will paste all my prompts (I am not pasting all the responses as they will take up too much space) so you can see how different this is from traditional prompting and it talks to the concept of Vibe Prompting and me having a conversation with ChatGPT to generate the prompts -</p><p>Prompt 2 basically takes the first step in the process that ChatGPT had come up with and Prompt 3 is a clarifying question based on the output of Prompt 2.</p><pre></pre><pre></pre><pre></pre><pre></pre><pre></pre><p>Any time the prompt is a bit off I ask it clarifying questions. I even go back to Prompt 2 later in the process to make a modification.  </p><pre></pre><pre></pre><pre></pre><pre></pre><p>As I review these prompts, what stands out to me is that I am having a conversation with ChatGPT on the job I gave it and I am reviewing the output and asking questions (all those years of learning how to be a coach and not just tell people what to do, are finally paying off) and it gets to agree or disagree with me and when we differ we can have a conversation about our different approaches and we both learn. </p><p>The other learning here is that for someone to build this agent and to use this prompting approach, one needs to be a <strong>subject matter expert</strong>. By looking at the prompt you need to know what the gaps are. I could look at Prompt 3 and know that is should break it up into 2 etc. So the skill one needs is to understand the domain and be a good manager.</p><blockquote><p>Maybe this is overkill if you have simple needs but this approach is especially useful when one is building agents. The reason is because agents are digital workers that need to consistently execute the same task again and again and produce repeatable results. </p></blockquote><p>If we take our example of reading any CSV file and analyzing it in a generic way, there are a series of steps that need to take place and they are all combined together in an agent. Here is the agent in <a href="http://Agent.ai" target="_blank">Agent.ai</a>.</p><p></p><figure><a href="https://agent.ai/?utm_utm_campaign=vyceral&amp;utm_source=newsletter&amp;utm_medium=paidsponsorship&amp;utm_content=vibe-prompting-1" target="_blank"><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQHC18Q6p6Z34A" src="https://media.licdn.com/dms/image/v2/D4E12AQHC18Q6p6Z34A/article-inline_image-shrink_1500_2232/B4EZVjwVqNGgAc-/0/1741135372172?e=1765411200&amp;v=beta&amp;t=9onMXN1cKka3gdz5jK9DqSkuRaJSwOlvMmptaDbyP2M"/></a><figcaption><em>CSV Analyzer Agent</em></figcaption></figure><p>Steps 2, 6, 7 and 9 are the 4 prompts that ChatGPT generated. </p><p>If you want to see the output of any of these prompts, here is what Step 9 (the final prompt) looks like. You will see that ChatGPT does a good job of following prompting best practices (those skills that you learn in prompt engineering classes). If you've seen examples of people who write these elaborate prompts, now you know how they do it -</p><pre></pre><p>This is the first part of the newsletter and in the second part, I will get into how I go about debugging these prompts till I have the output the way I want it. I don't want people thinking that we are done. All we have done is built the initial prototype. The next step is to test the agent with real data and that is when we will go through a whole process of making these prompts even better and targeted.</p><p>So my call to action for anyone who has got this far is to go sign up for <a href="http://Agent.ai" target="_blank">Agent.ai</a> and start building some agents and play around with some vibe prompting.</p><p></p><figure><a href="https://agent.ai/?utm_utm_campaign=vyceral&amp;utm_source=newsletter&amp;utm_medium=paidsponsorship&amp;utm_content=vibe-prompting-1" target="_blank"><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQHG1JRGz6L56A" src="https://media.licdn.com/dms/image/v2/D4E12AQHG1JRGz6L56A/article-inline_image-shrink_1500_2232/B4EZVkdDSzH0AY-/0/1741147092696?e=1765411200&amp;v=beta&amp;t=sLdNrEzzMGtAnoLEtaJAIGy5Xj-T9GQRu0qGpFOto7E"/></a><figcaption></figcaption></figure><p></p>
+  </article>
+
+  <!-- Article Footer -->
+  <div class="article-footer">
+    <div class="card" style="text-align: center; padding: 2rem;">
+      <h3>Stay Updated</h3>
+      <p style="margin: 1rem 0 1.5rem;">Follow Vikram on LinkedIn for more insights on GenAI automation and go-to-market strategy.</p>
+      <a href="https://www.linkedin.com/in/vikramekambaram" target="_blank" class="btn btn-primary">Follow on LinkedIn →</a>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="cta-section">
+        <h2>Ready to Transform Your GTM Operations?</h2>
+        <p>Let's discuss how AI agents can automate 60-75% of your manual work.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="../contact.html" class="btn btn-large">Schedule a Consultation</a>
+          <a href="../case-studies.html" class="btn btn-outline btn-large" style="background: transparent; color: white; border-color: white;">View Case Studies</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Vyceral Solutions LLC</h4>
+          <p>Deep Understanding → Tangible Outcomes</p>
+          <p style="margin-top: 1rem;">Transforming B2B go-to-market strategies with Generative AI and intelligent automation.</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Solutions</h4>
+          <ul class="footer-links">
+            <li><a href="../gtm-automation.html">GTM Automation</a></li>
+            <li><a href="../consulting-transformation.html">Consulting Transformation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="../about.html">About Us</a></li>
+            <li><a href="../case-studies.html">Case Studies</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Get in Touch</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:vikram.ekambaram@vyceralsolutions.com">vikram.ekambaram@vyceralsolutions.com</a></li>
+            <li><a href="https://www.linkedin.com/in/vikramekambaram" target="_blank">LinkedIn Profile</a></li>
+            <li><a href="https://www.linkedin.com/newsletters/7158509558993215488" target="_blank">Newsletter (LinkedIn)</a></li>
+            <li style="margin-top: 0.5rem; color: var(--color-gray);">Croton-on-Hudson, NY</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright © 2025 Vyceral Solutions LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -61,32 +61,33 @@ def extract_article_metadata(file_path):
             pass
 
     # Extract content
-    # Find the main content div (everything after the header)
+    # Find the main content div FIRST before removing anything
     body_content = soup.find('body')
     content_html = ""
 
     if body_content:
-        # Remove the series logo/title section
-        for elem in body_content.find_all(['img'], class_='series-logo'):
-            parent = elem.find_parent()
-            if parent:
-                parent.decompose()
+        # Find the main div with article content (it's usually the last div)
+        all_divs = body_content.find_all('div', recursive=False)
+        content_div = all_divs[-1] if all_divs else None
 
-        # Remove h3 with series info
-        for h3 in body_content.find_all('h3'):
-            if h3.find('span', class_='series-title'):
-                h3.decompose()
-
-        # Remove the main h1 title (we'll add it back in template)
-        for h1 in body_content.find_all('h1'):
-            h1.decompose()
-
-        # Remove date paragraphs
-        for p in body_content.find_all('p', class_=['created', 'published']):
-            p.decompose()
-
-        # Get the remaining content
-        content_html = str(body_content)
+        if content_div:
+            # Get the content from the div
+            content_html = content_div.decode_contents()
+        else:
+            # Fallback: try to find any div
+            content_div = body_content.find('div')
+            if content_div:
+                content_html = content_div.decode_contents()
+            else:
+                # Last resort: get all paragraphs after the h1
+                h1 = body_content.find('h1')
+                if h1:
+                    # Get all siblings after h1
+                    content_parts = []
+                    for sibling in h1.find_next_siblings():
+                        if sibling.name:
+                            content_parts.append(str(sibling))
+                    content_html = '\n'.join(content_parts)
 
     # Categorize based on title and content keywords
     category = categorize_article(title, content_html)
@@ -162,31 +163,11 @@ def generate_article_html(metadata, template):
     # Get category display name
     category_name = CATEGORIES.get(metadata['category'], 'Insights')
 
-    # Clean content HTML - extract just the main content divs/paragraphs
-    soup = BeautifulSoup(metadata['content_html'], 'html.parser')
+    # Content is already cleaned during extraction, just use it
+    content_html = metadata['content_html']
 
-    # Find body tag
-    body = soup.find('body')
-    if body:
-        # Remove all inline styles from body
-        if 'style' in body.attrs:
-            del body['style']
-
-        # Process all tags to remove inline styles and clean up
-        for tag in body.find_all(True):
-            # Remove inline styles
-            if 'style' in tag.attrs:
-                del tag['style']
-
-            # Remove class attributes except for specific ones we want to keep
-            if 'class' in tag.attrs:
-                del tag['class']
-
-        content_html = ''.join(str(child) for child in body.children if child.name)
-    else:
-        content_html = metadata['content_html']
-
-    # Create meta description from first paragraph
+    # Create meta description from content
+    soup = BeautifulSoup(content_html, 'html.parser')
     text_content = soup.get_text()
     first_para = ' '.join(text_content.split()[:30])
     meta_description = first_para[:155] + "..." if len(first_para) > 155 else first_para

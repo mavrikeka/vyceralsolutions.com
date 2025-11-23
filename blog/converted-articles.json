@@ -4,23 +4,23 @@
     "slug": "my-ai-journey-its-not-hype-2",
     "category": "strategy",
     "date": "2025-11-22 03:00:00",
-    "read_time": 1,
+    "read_time": 3,
     "path": "blog/strategy/my-ai-journey-its-not-hype-2.html"
   },
   {
     "title": "My AI Journey - It's not hype",
     "slug": "my-ai-journey-its-not-hype",
-    "category": "strategy",
+    "category": "gtm-automation",
     "date": "2025-11-10 18:47:00",
-    "read_time": 1,
-    "path": "blog/strategy/my-ai-journey-its-not-hype.html"
+    "read_time": 8,
+    "path": "blog/gtm-automation/my-ai-journey-its-not-hype.html"
   },
   {
     "title": "What I Learned Building My First Mobile App (And Why It Made Me a Worse Golfer)",
     "slug": "what-i-learned-building-my-first-mobile-app-and-why-it-made-me-a-worse-golfer",
     "category": "strategy",
     "date": "2025-10-23 17:00:00",
-    "read_time": 1,
+    "read_time": 5,
     "path": "blog/strategy/what-i-learned-building-my-first-mobile-app-and-why-it-made-me-a-worse-golfer.html"
   },
   {
@@ -28,7 +28,7 @@
     "slug": "claude-skills-and-custom-functions",
     "category": "ai-agents",
     "date": "2025-10-21 14:00:00",
-    "read_time": 1,
+    "read_time": 5,
     "path": "blog/ai-agents/claude-skills-and-custom-functions.html"
   },
   {
@@ -36,16 +36,16 @@
     "slug": "the-link-graph-is-rotting-is-ai-search-destroying-the-foundation-of-the-internet",
     "category": "strategy",
     "date": "2025-10-14 14:00:00",
-    "read_time": 1,
+    "read_time": 3,
     "path": "blog/strategy/the-link-graph-is-rotting-is-ai-search-destroying-the-foundation-of-the-internet.html"
   },
   {
     "title": "Agent Builders - the need for custom functions",
     "slug": "agent-builders-the-need-for-custom-functions",
-    "category": "ai-agents",
+    "category": "use-cases",
     "date": "2025-09-23 14:00:00",
-    "read_time": 1,
-    "path": "blog/ai-agents/agent-builders-the-need-for-custom-functions.html"
+    "read_time": 5,
+    "path": "blog/use-cases/agent-builders-the-need-for-custom-functions.html"
   },
   {
     "title": "The MIT Study on GenAI that roiled stock markets - my 0.02",
@@ -60,7 +60,7 @@
     "slug": "an-agent-that-will-help-save-on-groceries-can-it-be-built",
     "category": "ai-agents",
     "date": "2025-08-14 13:00:00",
-    "read_time": 1,
+    "read_time": 6,
     "path": "blog/ai-agents/an-agent-that-will-help-save-on-groceries-can-it-be-built.html"
   },
   {
@@ -68,23 +68,23 @@
     "slug": "the-intern-experiment-a-personal-story",
     "category": "strategy",
     "date": "2025-08-08 14:00:00",
-    "read_time": 1,
+    "read_time": 6,
     "path": "blog/strategy/the-intern-experiment-a-personal-story.html"
   },
   {
     "title": "The internet as a system of record\nand why your website isn't your interface anymore",
     "slug": "the-internet-as-a-system-of-record-and-why-your-website-isnt-your-interface-anym",
-    "category": "strategy",
+    "category": "technical",
     "date": "2025-08-04 14:00:00",
-    "read_time": 1,
-    "path": "blog/strategy/the-internet-as-a-system-of-record-and-why-your-website-isnt-your-interface-anym.html"
+    "read_time": 4,
+    "path": "blog/technical/the-internet-as-a-system-of-record-and-why-your-website-isnt-your-interface-anym.html"
   },
   {
     "title": "Agent Builders - A new UI paradigm",
     "slug": "agent-builders-a-new-ui-paradigm",
     "category": "ai-agents",
     "date": "2025-08-01 14:00:00",
-    "read_time": 1,
+    "read_time": 4,
     "path": "blog/ai-agents/agent-builders-a-new-ui-paradigm.html"
   },
   {
@@ -92,39 +92,39 @@
     "slug": "learnings-for-gtm-from-andrew-ngs-startup-school-talk",
     "category": "gtm-automation",
     "date": "2025-07-28 14:00:00",
-    "read_time": 1,
+    "read_time": 3,
     "path": "blog/gtm-automation/learnings-for-gtm-from-andrew-ngs-startup-school-talk.html"
   },
   {
     "title": "Scheming.ai - The dark side of AI",
     "slug": "schemingai-the-dark-side-of-ai",
-    "category": "strategy",
+    "category": "use-cases",
     "date": "2025-06-24 14:00:00",
-    "read_time": 1,
-    "path": "blog/strategy/schemingai-the-dark-side-of-ai.html"
+    "read_time": 4,
+    "path": "blog/use-cases/schemingai-the-dark-side-of-ai.html"
   },
   {
     "title": "Outsourced.ai : The Ancient Art of Trading Capacity for Convenience",
     "slug": "outsourcedai-the-ancient-art-of-trading-capacity-for-convenience",
     "category": "strategy",
     "date": "2025-06-18 14:00:00",
-    "read_time": 1,
+    "read_time": 3,
     "path": "blog/strategy/outsourcedai-the-ancient-art-of-trading-capacity-for-convenience.html"
   },
   {
     "title": "AI's Most Dangerous Feature: It Never Admits It's Struggling",
     "slug": "ais-most-dangerous-feature-it-never-admits-its-struggling",
-    "category": "strategy",
+    "category": "technical",
     "date": "2025-06-12 14:00:00",
-    "read_time": 1,
-    "path": "blog/strategy/ais-most-dangerous-feature-it-never-admits-its-struggling.html"
+    "read_time": 4,
+    "path": "blog/technical/ais-most-dangerous-feature-it-never-admits-its-struggling.html"
   },
   {
     "title": "GenAI and memory (it is not like our brain)",
     "slug": "genai-and-memory-it-is-not-like-our-brain",
     "category": "strategy",
     "date": "2025-06-09 14:00:00",
-    "read_time": 1,
+    "read_time": 5,
     "path": "blog/strategy/genai-and-memory-it-is-not-like-our-brain.html"
   },
   {
@@ -138,65 +138,65 @@
   {
     "title": "Can GenAI give golf advice?",
     "slug": "can-genai-give-golf-advice",
-    "category": "use-cases",
+    "category": "gtm-automation",
     "date": "2025-05-29 18:01:00",
-    "read_time": 1,
-    "path": "blog/use-cases/can-genai-give-golf-advice.html"
+    "read_time": 4,
+    "path": "blog/gtm-automation/can-genai-give-golf-advice.html"
   },
   {
     "title": "Why are there so many Top of Funnel Gen AI Use Cases?",
     "slug": "why-are-there-so-many-top-of-funnel-gen-ai-use-cases",
-    "category": "strategy",
+    "category": "gtm-automation",
     "date": "2025-05-16 14:00:00",
-    "read_time": 1,
-    "path": "blog/strategy/why-are-there-so-many-top-of-funnel-gen-ai-use-cases.html"
+    "read_time": 6,
+    "path": "blog/gtm-automation/why-are-there-so-many-top-of-funnel-gen-ai-use-cases.html"
   },
   {
     "title": "AI Horseless Carriages",
     "slug": "ai-horseless-carriages",
-    "category": "strategy",
+    "category": "ai-agents",
     "date": "2025-05-06 14:00:00",
-    "read_time": 1,
-    "path": "blog/strategy/ai-horseless-carriages.html"
+    "read_time": 4,
+    "path": "blog/ai-agents/ai-horseless-carriages.html"
   },
   {
     "title": "Generating Images with an agent",
     "slug": "generating-images-with-an-agent",
-    "category": "ai-agents",
+    "category": "technical",
     "date": "2025-04-24 17:51:00",
-    "read_time": 1,
-    "path": "blog/ai-agents/generating-images-with-an-agent.html"
+    "read_time": 3,
+    "path": "blog/technical/generating-images-with-an-agent.html"
   },
   {
     "title": "Is Vibe Coding for me?",
     "slug": "is-vibe-coding-for-me",
-    "category": "technical",
+    "category": "ai-agents",
     "date": "2025-04-22 13:00:00",
-    "read_time": 1,
-    "path": "blog/technical/is-vibe-coding-for-me.html"
+    "read_time": 5,
+    "path": "blog/ai-agents/is-vibe-coding-for-me.html"
   },
   {
     "title": "The pros and cons (for now) of Anthropic MCP",
     "slug": "the-pros-and-cons-for-now-of-anthropic-mcp",
     "category": "ai-agents",
     "date": "2025-04-10 14:00:00",
-    "read_time": 1,
+    "read_time": 7,
     "path": "blog/ai-agents/the-pros-and-cons-for-now-of-anthropic-mcp.html"
   },
   {
     "title": "AI can't do X : Just give it time!!",
     "slug": "ai-cant-do-x-just-give-it-time",
-    "category": "strategy",
+    "category": "use-cases",
     "date": "2025-03-27 14:00:00",
-    "read_time": 1,
-    "path": "blog/strategy/ai-cant-do-x-just-give-it-time.html"
+    "read_time": 2,
+    "path": "blog/use-cases/ai-cant-do-x-just-give-it-time.html"
   },
   {
     "title": "How I generated a Miro Board using Anthropic MCP and Agent.ai",
     "slug": "how-i-generated-a-miro-board-using-anthropic-mcp-and-agentai",
     "category": "ai-agents",
     "date": "2025-03-26 14:00:00",
-    "read_time": 1,
+    "read_time": 6,
     "path": "blog/ai-agents/how-i-generated-a-miro-board-using-anthropic-mcp-and-agentai.html"
   },
   {
@@ -204,7 +204,7 @@
     "slug": "autonomous-agents-anthropic-mcp-gives-a-glimpse-into-the-future",
     "category": "ai-agents",
     "date": "2025-03-18 14:00:00",
-    "read_time": 1,
+    "read_time": 7,
     "path": "blog/ai-agents/autonomous-agents-anthropic-mcp-gives-a-glimpse-into-the-future.html"
   },
   {
@@ -212,39 +212,39 @@
     "slug": "autonomous-agents-it-all-started-with-manus",
     "category": "ai-agents",
     "date": "2025-03-13 17:51:00",
-    "read_time": 1,
+    "read_time": 5,
     "path": "blog/ai-agents/autonomous-agents-it-all-started-with-manus.html"
   },
   {
     "title": "Vibe Prompting and Agent Debugging",
     "slug": "vibe-prompting-and-agent-debugging",
-    "category": "ai-agents",
+    "category": "technical",
     "date": "2025-03-06 15:00:00",
-    "read_time": 1,
-    "path": "blog/ai-agents/vibe-prompting-and-agent-debugging.html"
+    "read_time": 3,
+    "path": "blog/technical/vibe-prompting-and-agent-debugging.html"
   },
   {
     "title": "Agent Building and Vibe Prompting - #1",
     "slug": "agent-building-and-vibe-prompting-1",
-    "category": "ai-agents",
+    "category": "technical",
     "date": "2025-03-05 15:00:00",
-    "read_time": 1,
-    "path": "blog/ai-agents/agent-building-and-vibe-prompting-1.html"
+    "read_time": 5,
+    "path": "blog/technical/agent-building-and-vibe-prompting-1.html"
   },
   {
     "title": "A person walks onto your website...",
     "slug": "a-person-walks-onto-your-website",
-    "category": "strategy",
+    "category": "gtm-automation",
     "date": "2025-03-03 15:00:00",
-    "read_time": 1,
-    "path": "blog/strategy/a-person-walks-onto-your-website.html"
+    "read_time": 5,
+    "path": "blog/gtm-automation/a-person-walks-onto-your-website.html"
   },
   {
     "title": "The Future is Multi-Agentic",
     "slug": "the-future-is-multi-agentic",
     "category": "ai-agents",
     "date": "2025-02-24 15:00:00",
-    "read_time": 1,
+    "read_time": 7,
     "path": "blog/ai-agents/the-future-is-multi-agentic.html"
   },
   {
@@ -252,7 +252,7 @@
     "slug": "anthropic-agentic-systems-5-evaluator-optimizer",
     "category": "ai-agents",
     "date": "2025-02-20 18:00:00",
-    "read_time": 1,
+    "read_time": 5,
     "path": "blog/ai-agents/anthropic-agentic-systems-5-evaluator-optimizer.html"
   },
   {
@@ -260,7 +260,7 @@
     "slug": "anthropic-agentic-systems-4-orchestrator-workers",
     "category": "ai-agents",
     "date": "2025-02-14 15:00:00",
-    "read_time": 1,
+    "read_time": 4,
     "path": "blog/ai-agents/anthropic-agentic-systems-4-orchestrator-workers.html"
   },
   {
@@ -268,7 +268,7 @@
     "slug": "anthropic-agentic-systems-3-parallelization",
     "category": "ai-agents",
     "date": "2025-02-06 15:00:00",
-    "read_time": 1,
+    "read_time": 3,
     "path": "blog/ai-agents/anthropic-agentic-systems-3-parallelization.html"
   },
   {
@@ -276,31 +276,31 @@
     "slug": "anthropic-agentic-systems-2-routing",
     "category": "ai-agents",
     "date": "2025-01-31 15:00:00",
-    "read_time": 1,
+    "read_time": 3,
     "path": "blog/ai-agents/anthropic-agentic-systems-2-routing.html"
   },
   {
     "title": "Challenges with Operator",
     "slug": "challenges-with-operator",
-    "category": "strategy",
+    "category": "ai-agents",
     "date": "2025-01-28 15:18:00",
-    "read_time": 1,
-    "path": "blog/strategy/challenges-with-operator.html"
+    "read_time": 3,
+    "path": "blog/ai-agents/challenges-with-operator.html"
   },
   {
     "title": "Will Operator take my job",
     "slug": "will-operator-take-my-job",
-    "category": "strategy",
+    "category": "ai-agents",
     "date": "2025-01-27 14:15:00",
-    "read_time": 1,
-    "path": "blog/strategy/will-operator-take-my-job.html"
+    "read_time": 5,
+    "path": "blog/ai-agents/will-operator-take-my-job.html"
   },
   {
     "title": "Anthropic Agentic Systems - #1. Prompt Chaining",
     "slug": "anthropic-agentic-systems-1-prompt-chaining",
     "category": "ai-agents",
     "date": "2025-01-24 15:00:00",
-    "read_time": 1,
+    "read_time": 4,
     "path": "blog/ai-agents/anthropic-agentic-systems-1-prompt-chaining.html"
   },
   {
@@ -308,55 +308,55 @@
     "slug": "ai-agents-and-workflows",
     "category": "ai-agents",
     "date": "2025-01-16 15:00:00",
-    "read_time": 1,
+    "read_time": 4,
     "path": "blog/ai-agents/ai-agents-and-workflows.html"
   },
   {
     "title": "Everyone is a programmer - Part 2",
     "slug": "everyone-is-a-programmer-part-2",
-    "category": "strategy",
+    "category": "gtm-automation",
     "date": "2025-01-14 15:00:00",
-    "read_time": 1,
-    "path": "blog/strategy/everyone-is-a-programmer-part-2.html"
+    "read_time": 4,
+    "path": "blog/gtm-automation/everyone-is-a-programmer-part-2.html"
   },
   {
     "title": "Services as Software - Will disrupt consulting",
     "slug": "services-as-software-will-disrupt-consulting",
-    "category": "strategy",
+    "category": "gtm-automation",
     "date": "2025-01-09 16:45:00",
-    "read_time": 1,
-    "path": "blog/strategy/services-as-software-will-disrupt-consulting.html"
+    "read_time": 2,
+    "path": "blog/gtm-automation/services-as-software-will-disrupt-consulting.html"
   },
   {
     "title": "GenAI for Captivating Visuals",
     "slug": "genai-for-captivating-visuals",
     "category": "strategy",
     "date": "2025-01-06 16:58:00",
-    "read_time": 1,
+    "read_time": 3,
     "path": "blog/strategy/genai-for-captivating-visuals.html"
   },
   {
     "title": "Why AI will replace (some) humans",
     "slug": "why-ai-will-replace-some-humans",
-    "category": "strategy",
+    "category": "gtm-automation",
     "date": "2024-12-16 17:19:00",
     "read_time": 1,
-    "path": "blog/strategy/why-ai-will-replace-some-humans.html"
+    "path": "blog/gtm-automation/why-ai-will-replace-some-humans.html"
   },
   {
     "title": "Everyone is a programmer",
     "slug": "everyone-is-a-programmer",
-    "category": "strategy",
+    "category": "gtm-automation",
     "date": "2024-12-10 18:47:00",
-    "read_time": 1,
-    "path": "blog/strategy/everyone-is-a-programmer.html"
+    "read_time": 5,
+    "path": "blog/gtm-automation/everyone-is-a-programmer.html"
   },
   {
     "title": "Agents agents everywhere",
     "slug": "agents-agents-everywhere",
     "category": "ai-agents",
     "date": "2024-12-05 15:00:00",
-    "read_time": 1,
+    "read_time": 4,
     "path": "blog/ai-agents/agents-agents-everywhere.html"
   },
   {
@@ -364,7 +364,7 @@
     "slug": "genai-in-education",
     "category": "strategy",
     "date": "2024-12-03 15:00:00",
-    "read_time": 1,
+    "read_time": 5,
     "path": "blog/strategy/genai-in-education.html"
   },
   {
@@ -372,7 +372,7 @@
     "slug": "agents-and-digital-workers",
     "category": "ai-agents",
     "date": "2024-11-18 15:00:00",
-    "read_time": 1,
+    "read_time": 5,
     "path": "blog/ai-agents/agents-and-digital-workers.html"
   },
   {
@@ -380,7 +380,7 @@
     "slug": "autonomous-cars-and-autonomous-agents",
     "category": "ai-agents",
     "date": "2024-11-08 15:00:00",
-    "read_time": 1,
+    "read_time": 7,
     "path": "blog/ai-agents/autonomous-cars-and-autonomous-agents.html"
   },
   {
@@ -388,24 +388,24 @@
     "slug": "crm-20-a-genai-crm",
     "category": "gtm-automation",
     "date": "2024-10-28 13:28:00",
-    "read_time": 1,
+    "read_time": 6,
     "path": "blog/gtm-automation/crm-20-a-genai-crm.html"
   },
   {
     "title": "GenAI - Will we see a new application architecture?",
     "slug": "genai-will-we-see-a-new-application-architecture",
-    "category": "technical",
+    "category": "gtm-automation",
     "date": "2024-10-22 14:00:00",
-    "read_time": 1,
-    "path": "blog/technical/genai-will-we-see-a-new-application-architecture.html"
+    "read_time": 5,
+    "path": "blog/gtm-automation/genai-will-we-see-a-new-application-architecture.html"
   },
   {
     "title": "Using GenAI for Analytics + using GenAI to understand something technical ",
     "slug": "using-genai-for-analytics-using-genai-to-understand-something-technical-",
-    "category": "use-cases",
+    "category": "gtm-automation",
     "date": "2024-10-16 14:00:00",
-    "read_time": 1,
-    "path": "blog/use-cases/using-genai-for-analytics-using-genai-to-understand-something-technical-.html"
+    "read_time": 2,
+    "path": "blog/gtm-automation/using-genai-for-analytics-using-genai-to-understand-something-technical-.html"
   },
   {
     "title": "Big Tech - AI, Layoffs, Dividends, Stock prices",
@@ -418,89 +418,89 @@
   {
     "title": "Using GenAI to understand a 15000 word essay on AI",
     "slug": "using-genai-to-understand-a-15000-word-essay-on-ai",
-    "category": "use-cases",
+    "category": "ai-agents",
     "date": "2024-10-14 15:00:00",
-    "read_time": 1,
-    "path": "blog/use-cases/using-genai-to-understand-a-15000-word-essay-on-ai.html"
+    "read_time": 3,
+    "path": "blog/ai-agents/using-genai-to-understand-a-15000-word-essay-on-ai.html"
   },
   {
     "title": "Revisiting GenAI for Images",
     "slug": "revisiting-genai-for-images",
-    "category": "strategy",
+    "category": "gtm-automation",
     "date": "2024-10-07 17:36:00",
-    "read_time": 1,
-    "path": "blog/strategy/revisiting-genai-for-images.html"
+    "read_time": 2,
+    "path": "blog/gtm-automation/revisiting-genai-for-images.html"
   },
   {
     "title": "GenAI for my business",
     "slug": "genai-for-my-business",
     "category": "strategy",
     "date": "2024-09-03 14:00:00",
-    "read_time": 1,
+    "read_time": 4,
     "path": "blog/strategy/genai-for-my-business.html"
   },
   {
     "title": "Using GenAI to find case study snippets (a RAG example)",
     "slug": "using-genai-to-find-case-study-snippets-a-rag-example",
-    "category": "use-cases",
+    "category": "gtm-automation",
     "date": "2024-08-23 14:00:00",
-    "read_time": 1,
-    "path": "blog/use-cases/using-genai-to-find-case-study-snippets-a-rag-example.html"
+    "read_time": 7,
+    "path": "blog/gtm-automation/using-genai-to-find-case-study-snippets-a-rag-example.html"
   },
   {
     "title": "Life of a GenAI General Contractor - Poly Employment",
     "slug": "life-of-a-genai-general-contractor-poly-employment",
-    "category": "strategy",
+    "category": "gtm-automation",
     "date": "2024-08-14 15:00:00",
-    "read_time": 1,
-    "path": "blog/strategy/life-of-a-genai-general-contractor-poly-employment.html"
+    "read_time": 4,
+    "path": "blog/gtm-automation/life-of-a-genai-general-contractor-poly-employment.html"
   },
   {
     "title": "GenAI, Security and Privacy",
     "slug": "genai-security-and-privacy",
-    "category": "strategy",
+    "category": "use-cases",
     "date": "2024-08-13 13:00:00",
-    "read_time": 1,
-    "path": "blog/strategy/genai-security-and-privacy.html"
+    "read_time": 6,
+    "path": "blog/use-cases/genai-security-and-privacy.html"
   },
   {
     "title": "Identifying GenAI Use Cases",
     "slug": "identifying-genai-use-cases",
-    "category": "strategy",
+    "category": "use-cases",
     "date": "2024-08-08 14:00:00",
-    "read_time": 1,
-    "path": "blog/strategy/identifying-genai-use-cases.html"
+    "read_time": 5,
+    "path": "blog/use-cases/identifying-genai-use-cases.html"
   },
   {
     "title": "GenAI for CS - Handoff documents",
     "slug": "genai-for-cs-handoff-documents",
-    "category": "strategy",
+    "category": "gtm-automation",
     "date": "2024-08-05 18:00:00",
-    "read_time": 1,
-    "path": "blog/strategy/genai-for-cs-handoff-documents.html"
+    "read_time": 4,
+    "path": "blog/gtm-automation/genai-for-cs-handoff-documents.html"
   },
   {
     "title": "GenAI and SaaS - What does the future hold?",
     "slug": "genai-and-saas-what-does-the-future-hold",
-    "category": "strategy",
+    "category": "gtm-automation",
     "date": "2024-08-02 14:00:00",
-    "read_time": 1,
-    "path": "blog/strategy/genai-and-saas-what-does-the-future-hold.html"
+    "read_time": 3,
+    "path": "blog/gtm-automation/genai-and-saas-what-does-the-future-hold.html"
   },
   {
     "title": "GenAI for creating proposals and SOWs",
     "slug": "genai-for-creating-proposals-and-sows",
-    "category": "strategy",
+    "category": "gtm-automation",
     "date": "2024-07-29 14:00:00",
-    "read_time": 1,
-    "path": "blog/strategy/genai-for-creating-proposals-and-sows.html"
+    "read_time": 3,
+    "path": "blog/gtm-automation/genai-for-creating-proposals-and-sows.html"
   },
   {
     "title": "GenAI in GTM - 6 months later",
     "slug": "genai-in-gtm-6-months-later",
     "category": "gtm-automation",
     "date": "2024-07-25 14:00:00",
-    "read_time": 1,
+    "read_time": 6,
     "path": "blog/gtm-automation/genai-in-gtm-6-months-later.html"
   },
   {
@@ -508,23 +508,23 @@
     "slug": "goldman-sachs-take-on-genai",
     "category": "strategy",
     "date": "2024-07-16 14:00:00",
-    "read_time": 1,
+    "read_time": 5,
     "path": "blog/strategy/goldman-sachs-take-on-genai.html"
   },
   {
     "title": "Cooking with GPT-4o",
     "slug": "cooking-with-gpt-4o",
-    "category": "strategy",
+    "category": "use-cases",
     "date": "2024-07-15 14:00:00",
-    "read_time": 1,
-    "path": "blog/strategy/cooking-with-gpt-4o.html"
+    "read_time": 3,
+    "path": "blog/use-cases/cooking-with-gpt-4o.html"
   },
   {
     "title": "GenAI Hype (NOT)- Learnings from AlphaGo",
     "slug": "genai-hype-not-learnings-from-alphago",
     "category": "strategy",
     "date": "2024-07-08 14:00:00",
-    "read_time": 1,
+    "read_time": 4,
     "path": "blog/strategy/genai-hype-not-learnings-from-alphago.html"
   },
   {
@@ -532,71 +532,71 @@
     "slug": "building-genai-agents-the-approach",
     "category": "ai-agents",
     "date": "2024-07-01 14:00:00",
-    "read_time": 1,
+    "read_time": 7,
     "path": "blog/ai-agents/building-genai-agents-the-approach.html"
   },
   {
     "title": "GenAI Productivity - Podcast Summarizer",
     "slug": "genai-productivity-podcast-summarizer",
-    "category": "strategy",
+    "category": "gtm-automation",
     "date": "2024-06-26 14:00:00",
-    "read_time": 1,
-    "path": "blog/strategy/genai-productivity-podcast-summarizer.html"
+    "read_time": 3,
+    "path": "blog/gtm-automation/genai-productivity-podcast-summarizer.html"
   },
   {
     "title": "GenAI for building a case study (synthetic data)",
     "slug": "genai-for-building-a-case-study-synthetic-data",
     "category": "gtm-automation",
     "date": "2024-06-20 17:00:00",
-    "read_time": 1,
+    "read_time": 3,
     "path": "blog/gtm-automation/genai-for-building-a-case-study-synthetic-data.html"
   },
   {
     "title": "Using ChatGPT for Data Analysis #2",
     "slug": "using-chatgpt-for-data-analysis-2",
-    "category": "strategy",
+    "category": "use-cases",
     "date": "2024-06-13 14:00:00",
-    "read_time": 1,
-    "path": "blog/strategy/using-chatgpt-for-data-analysis-2.html"
+    "read_time": 3,
+    "path": "blog/use-cases/using-chatgpt-for-data-analysis-2.html"
   },
   {
     "title": "A new mental model in working with GenAI",
     "slug": "a-new-mental-model-in-working-with-genai",
     "category": "strategy",
     "date": "2024-06-12 14:00:00",
-    "read_time": 1,
+    "read_time": 2,
     "path": "blog/strategy/a-new-mental-model-in-working-with-genai.html"
   },
   {
     "title": "Bias in GenAI",
     "slug": "bias-in-genai",
-    "category": "strategy",
+    "category": "technical",
     "date": "2024-06-07 14:00:00",
-    "read_time": 1,
-    "path": "blog/strategy/bias-in-genai.html"
+    "read_time": 3,
+    "path": "blog/technical/bias-in-genai.html"
   },
   {
     "title": "ChatGPT for data analysis",
     "slug": "chatgpt-for-data-analysis",
-    "category": "strategy",
+    "category": "use-cases",
     "date": "2024-05-23 14:00:00",
-    "read_time": 1,
-    "path": "blog/strategy/chatgpt-for-data-analysis.html"
+    "read_time": 3,
+    "path": "blog/use-cases/chatgpt-for-data-analysis.html"
   },
   {
     "title": "Using GenAI to build an org structure, priorities, challenges, success metrics ",
     "slug": "using-genai-to-build-an-org-structure-priorities-challenges-success-metrics-",
-    "category": "use-cases",
+    "category": "gtm-automation",
     "date": "2024-05-22 14:00:00",
-    "read_time": 1,
-    "path": "blog/use-cases/using-genai-to-build-an-org-structure-priorities-challenges-success-metrics-.html"
+    "read_time": 5,
+    "path": "blog/gtm-automation/using-genai-to-build-an-org-structure-priorities-challenges-success-metrics-.html"
   },
   {
     "title": "Productivity Gains from GenAI?",
     "slug": "productivity-gains-from-genai",
     "category": "strategy",
     "date": "2024-05-13 15:00:00",
-    "read_time": 1,
+    "read_time": 7,
     "path": "blog/strategy/productivity-gains-from-genai.html"
   },
   {
@@ -604,23 +604,23 @@
     "slug": "genai-for-account-research-3-months-later",
     "category": "strategy",
     "date": "2024-05-09 14:00:00",
-    "read_time": 1,
+    "read_time": 4,
     "path": "blog/strategy/genai-for-account-research-3-months-later.html"
   },
   {
     "title": "GenAI + Automation",
     "slug": "genai-automation",
-    "category": "strategy",
+    "category": "gtm-automation",
     "date": "2024-05-06 14:00:00",
-    "read_time": 1,
-    "path": "blog/strategy/genai-automation.html"
+    "read_time": 3,
+    "path": "blog/gtm-automation/genai-automation.html"
   },
   {
     "title": "Tesla & Customer Success",
     "slug": "tesla-customer-success",
     "category": "gtm-automation",
     "date": "2024-04-29 14:00:00",
-    "read_time": 1,
+    "read_time": 3,
     "path": "blog/gtm-automation/tesla-customer-success.html"
   },
   {
@@ -628,7 +628,7 @@
     "slug": "golf-genai-and-gtm",
     "category": "gtm-automation",
     "date": "2024-04-22 14:00:00",
-    "read_time": 1,
+    "read_time": 5,
     "path": "blog/gtm-automation/golf-genai-and-gtm.html"
   },
   {
@@ -636,7 +636,7 @@
     "slug": "ai-first-organizations-a-new-dna",
     "category": "strategy",
     "date": "2024-04-16 14:00:00",
-    "read_time": 1,
+    "read_time": 5,
     "path": "blog/strategy/ai-first-organizations-a-new-dna.html"
   },
   {
@@ -644,23 +644,23 @@
     "slug": "genai-and-the-future-of-work",
     "category": "strategy",
     "date": "2024-04-11 15:00:00",
-    "read_time": 1,
+    "read_time": 3,
     "path": "blog/strategy/genai-and-the-future-of-work.html"
   },
   {
     "title": "GenAI for Strategic Initiatives ",
     "slug": "genai-for-strategic-initiatives-",
-    "category": "strategy",
+    "category": "gtm-automation",
     "date": "2024-04-08 14:00:00",
-    "read_time": 1,
-    "path": "blog/strategy/genai-for-strategic-initiatives-.html"
+    "read_time": 4,
+    "path": "blog/gtm-automation/genai-for-strategic-initiatives-.html"
   },
   {
     "title": "Using GenAI for quick research",
     "slug": "using-genai-for-quick-research",
     "category": "use-cases",
     "date": "2024-03-28 13:00:00",
-    "read_time": 1,
+    "read_time": 3,
     "path": "blog/use-cases/using-genai-for-quick-research.html"
   },
   {
@@ -668,47 +668,47 @@
     "slug": "day-45-update",
     "category": "strategy",
     "date": "2024-03-21 15:00:00",
-    "read_time": 1,
+    "read_time": 3,
     "path": "blog/strategy/day-45-update.html"
   },
   {
     "title": "GenAI for Knowledge Workers",
     "slug": "genai-for-knowledge-workers",
-    "category": "strategy",
+    "category": "use-cases",
     "date": "2024-03-12 13:00:00",
-    "read_time": 1,
-    "path": "blog/strategy/genai-for-knowledge-workers.html"
+    "read_time": 3,
+    "path": "blog/use-cases/genai-for-knowledge-workers.html"
   },
   {
     "title": "What happened in the 2020 elections ",
     "slug": "what-happened-in-the-2020-elections-",
     "category": "strategy",
     "date": "2024-03-04 16:00:00",
-    "read_time": 1,
+    "read_time": 3,
     "path": "blog/strategy/what-happened-in-the-2020-elections-.html"
   },
   {
     "title": "Using GenAI to create a pitch video",
     "slug": "using-genai-to-create-a-pitch-video",
-    "category": "use-cases",
+    "category": "gtm-automation",
     "date": "2024-02-29 14:00:00",
-    "read_time": 1,
-    "path": "blog/use-cases/using-genai-to-create-a-pitch-video.html"
+    "read_time": 2,
+    "path": "blog/gtm-automation/using-genai-to-create-a-pitch-video.html"
   },
   {
     "title": "Can GenAI replace consultants?",
     "slug": "can-genai-replace-consultants",
-    "category": "use-cases",
+    "category": "gtm-automation",
     "date": "2024-02-26 14:00:00",
-    "read_time": 1,
-    "path": "blog/use-cases/can-genai-replace-consultants.html"
+    "read_time": 4,
+    "path": "blog/gtm-automation/can-genai-replace-consultants.html"
   },
   {
     "title": "Building strategy with GenAI and custom content",
     "slug": "building-strategy-with-genai-and-custom-content",
     "category": "strategy",
     "date": "2024-02-21 23:52:00",
-    "read_time": 1,
+    "read_time": 2,
     "path": "blog/strategy/building-strategy-with-genai-and-custom-content.html"
   },
   {
@@ -716,7 +716,7 @@
     "slug": "unleashing-productivity-with-genai-a-linkedin-journey",
     "category": "strategy",
     "date": "2024-02-20 12:35:00",
-    "read_time": 1,
+    "read_time": 2,
     "path": "blog/strategy/unleashing-productivity-with-genai-a-linkedin-journey.html"
   },
   {
@@ -724,24 +724,24 @@
     "slug": "adopting-genai-in-organizations",
     "category": "strategy",
     "date": "2024-02-16 18:05:00",
-    "read_time": 1,
+    "read_time": 3,
     "path": "blog/strategy/adopting-genai-in-organizations.html"
   },
   {
     "title": "Generating Outcomes Map with GenAI",
     "slug": "generating-outcomes-map-with-genai",
-    "category": "strategy",
+    "category": "gtm-automation",
     "date": "2024-02-13 15:54:00",
-    "read_time": 1,
-    "path": "blog/strategy/generating-outcomes-map-with-genai.html"
+    "read_time": 2,
+    "path": "blog/gtm-automation/generating-outcomes-map-with-genai.html"
   },
   {
     "title": "Watch out Miro!!",
     "slug": "watch-out-miro",
-    "category": "strategy",
+    "category": "use-cases",
     "date": "2024-02-10 16:22:00",
-    "read_time": 1,
-    "path": "blog/strategy/watch-out-miro.html"
+    "read_time": 2,
+    "path": "blog/use-cases/watch-out-miro.html"
   },
   {
     "title": "Can GenAI write a blog post",
@@ -754,25 +754,25 @@
   {
     "title": "Initial business set up - did GenAI help?",
     "slug": "initial-business-set-up-did-genai-help",
-    "category": "strategy",
+    "category": "gtm-automation",
     "date": "2024-02-06 17:06:00",
-    "read_time": 1,
-    "path": "blog/strategy/initial-business-set-up-did-genai-help.html"
+    "read_time": 5,
+    "path": "blog/gtm-automation/initial-business-set-up-did-genai-help.html"
   },
   {
     "title": "Setting up my own business",
     "slug": "setting-up-my-own-business",
-    "category": "strategy",
+    "category": "gtm-automation",
     "date": "2024-02-05 19:33:00",
-    "read_time": 1,
-    "path": "blog/strategy/setting-up-my-own-business.html"
+    "read_time": 3,
+    "path": "blog/gtm-automation/setting-up-my-own-business.html"
   },
   {
     "title": "Automating Account Planning",
     "slug": "automating-account-planning",
     "category": "gtm-automation",
     "date": "2024-02-01 13:29:00",
-    "read_time": 1,
+    "read_time": 3,
     "path": "blog/gtm-automation/automating-account-planning.html"
   },
   {
@@ -780,7 +780,7 @@
     "slug": "account-planning-with-genai",
     "category": "gtm-automation",
     "date": "2024-01-31 18:24:00",
-    "read_time": 1,
+    "read_time": 3,
     "path": "blog/gtm-automation/account-planning-with-genai.html"
   }
 ]
