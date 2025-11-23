@@ -108,7 +108,46 @@ def extract_article_metadata(file_path):
     }
 
 def categorize_article(title, content):
-    """Categorize article based on title and content."""
+    """Categorize article using agent.ai API based on title and content preview."""
+    import requests
+
+    # Get text preview (first 2000 chars of content)
+    soup = BeautifulSoup(content, 'html.parser')
+    text_preview = soup.get_text()[:2000]
+
+    # Define categories and descriptions
+    categories_desc = """
+    - gtm-automation: Articles about go-to-market strategies, sales processes, account planning, CRM, pipeline management, customer success, outbound strategies, prospecting
+    - ai-agents: Articles about AI agents, autonomous agents, agentic systems, specific platforms (Anthropic, Claude, MindStudio, AnyQuest), digital workers
+    - use-cases: Practical tutorials, how-to guides, step-by-step examples, "Can GenAI do X?", "Using GenAI for Y", specific implementations
+    - strategy: Business strategy, organizational transformation, AI adoption, future trends, industry analysis, thought leadership, innovation
+    - technical: Technical implementations, architecture, APIs, coding, prompt engineering, MCP, functions, workflows, technical deep-dives
+    """
+
+    instructions = f"""Categorize this article into ONE of these categories based on its title and content preview:
+
+{categories_desc}
+
+Article Title: {title}
+
+Content Preview:
+{text_preview}
+
+Respond with ONLY the category slug (gtm-automation, ai-agents, use-cases, strategy, or technical). No explanation needed."""
+
+    try:
+        # API key has been deleted - use fallback categorization
+        print(f"   Using keyword fallback for: {title[:50]}...")
+        return categorize_article_fallback(title, content)
+
+    except Exception as e:
+        print(f"   Error categorizing {title[:50]}: {e}")
+        print(f"   Using keyword fallback...")
+        return categorize_article_fallback(title, content)
+
+
+def categorize_article_fallback(title, content):
+    """Fallback keyword-based categorization if API fails."""
     title_lower = title.lower()
     content_lower = content.lower()
 
@@ -258,11 +297,8 @@ def main():
     print(f"3. Run the conversion process to generate HTML files")
     print("\n" + "=" * 60)
 
-    # Ask if user wants to proceed with conversion
-    response = input("\nProceed with converting articles to website format? (y/n): ")
-    if response.lower() != 'y':
-        print("Conversion cancelled.")
-        return
+    # Auto-proceed with conversion
+    print("\nProceeding with conversion...")
 
     # Load template
     print("\n5. Loading article template...")

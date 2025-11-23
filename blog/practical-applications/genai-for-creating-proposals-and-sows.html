@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="As I go through how various functions in GTM can leverage GenAI (I shared about SDR, PMM and Enablement in my last post), this one is for my friends in">
+  <title>GenAI for creating proposals and SOWs | Vyceral Solutions</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://b2bjsstore.s3.us-west-2.amazonaws.com/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("1N5W0HM2RYO5");</script>
+  <style>
+    /* Article-specific styles */
+    .article-header {
+      background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-primary) 100%);
+      padding: 6rem 0 3rem;
+      margin-bottom: 3rem;
+      margin-top: 0;
+    }
+    .article-meta {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      margin-top: 1.5rem;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.875rem;
+    }
+    .article-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .article-content p {
+      margin: 1.5rem 0;
+      line-height: 1.8;
+      color: var(--color-gray);
+    }
+    .article-content h2 {
+      margin: 2.5rem 0 1rem;
+      color: var(--color-dark);
+      font-size: 1.75rem;
+    }
+    .article-content h3 {
+      margin: 2rem 0 1rem;
+      color: var(--color-dark);
+      font-size: 1.25rem;
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--color-accent);
+      padding-left: 1.5rem;
+      margin: 2rem 0;
+      font-style: italic;
+      color: var(--color-dark);
+    }
+    .article-content ul, .article-content ol {
+      margin: 1.5rem 0;
+      padding-left: 2rem;
+      color: var(--color-gray);
+      line-height: 1.8;
+    }
+    .article-content li {
+      margin: 0.5rem 0;
+    }
+    .article-content a {
+      color: var(--color-accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--color-accent);
+    }
+    .article-content pre {
+      background: #F3F6F8;
+      padding: 1.5rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 2rem 0;
+    }
+    .article-footer {
+      max-width: 800px;
+      margin: 4rem auto 0;
+      padding: 2rem;
+      border-top: 1px solid #E5E7EB;
+    }
+    .article-nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .article-nav-link {
+      padding: 1.5rem;
+      background: var(--color-light);
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .article-nav-link:hover {
+      background: white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .article-nav-label {
+      font-size: 0.75rem;
+      color: var(--color-gray);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+    .article-nav-title {
+      color: var(--color-dark);
+      font-weight: 600;
+    }
+    @media (max-width: 768px) {
+      .article-nav {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="../../index.html" class="nav-logo">
+        <img src="../../images/logo.png" alt="Vyceral Solutions Logo" onerror="this.style.display='none'">
+      </a>
+      <ul class="nav-menu">
+        <li><a href="../../index.html" class="nav-link">Home</a></li>
+        <li><a href="../../gtm-automation.html" class="nav-link">GTM Automation</a></li>
+        <li><a href="../../consulting-transformation.html" class="nav-link">Consulting Transformation</a></li>
+        <li><a href="../../case-studies.html" class="nav-link">Case Studies</a></li>
+        <li><a href="../../about.html" class="nav-link">About</a></li>
+        <li><a href="../../blog.html" class="nav-link">Blog</a></li>
+        <li><a href="../../contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Article Header -->
+  <header class="article-header">
+    <div class="container">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <a href="../../blog.html" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.875rem; display: inline-block; margin-bottom: 1rem;">← Back to Blog</a>
+        <span class="badge badge-outline" style="background: rgba(255,255,255,0.1); color: white; border-color: rgba(255,255,255,0.3);">Practical Applications</span>
+        <h1 style="color: white; margin-top: 1rem;">GenAI for creating proposals and SOWs</h1>
+        <div class="article-meta">
+          <span>July 29, 2024</span>
+          <span>•</span>
+          <span>3 min read</span>
+          <span>•</span>
+          <span>GenAI in GTM</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Article Content -->
+  <article class="article-content">
+    <p>As I go through how various functions in GTM can leverage GenAI (I shared about SDR, PMM and Enablement in my<a href="https://www.linkedin.com/pulse/genai-gtm-6-months-later-vikram-ekambaram-6x7he" target="_blank"> last post</a>), this one is for my friends in consulting / professional services. As someone that runs their own consulting firm, one of the activities I spend a lot of time on is generating proposals / SOWs for clients. The typical process I follow is below </p><p></p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQE0oFqRC-eKUg" src="https://media.licdn.com/dms/image/v2/D4E12AQE0oFqRC-eKUg/article-inline_image-shrink_400_744/article-inline_image-shrink_400_744/0/1722017971072?e=1765411200&amp;v=beta&amp;t=AijVg85n23QzYczpU0AYM5ZrDwbuPi9j6cnQja2kcRc"/><figcaption></figcaption></figure><p>I typically have a few calls with clients, to capture all the information I need to generate a proposal. I religiously record all my calls (thanks Gong) and don't take any notes. If you are a note taker, then this is still relevant to you but you might have a few more calls as you might need to have some clarification calls.</p><p>When I am ready to start creating the proposal, I review all the calls and then get down to writing. This process typically takes me about 2 hrs per proposal. It depends on the proposal and some take less and some take more. My consulting projects are still relatively small and I am sure if you do larger more complicated projects this will take you a lot longer and you will have multiple people to coordinate with.</p><p>After having done this process a few times, I decided to see if I could leverage GenAI to help with this process. So for my latest client project, I decided to use <a href="https://www.linkedin.com/company/anyquest-ai/" target="_blank">AnyQuest</a> , the main reason being that it is super easy and intuitive to build a repeatable agent with them. For this client, I had a few Gong calls and a few Fathom calls. This was not an issue as both of them generated call transcripts. All I did was upload my call transcripts, build out the prompts and I had a customer facing proposal ready to go. I spent 15 mins reviewing it to fill out some of the blanks / fix some things it missed and I sent it out to the customer. </p><p>The process now looked like this -</p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQHOd0oNkhlIJg" src="https://media.licdn.com/dms/image/v2/D4E12AQHOd0oNkhlIJg/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1722018541787?e=1765411200&amp;v=beta&amp;t=kjtONuWUyPPEXu-BARsAOAeHHWGFdDrFnnmJYDaAMWY"/><figcaption></figcaption></figure><p>In terms of productivity and time savings, this took a 2 hr process and brought it down to 15 mins. An 8X reduction in time. Assuming I do 10 proposals a month, that goes from 20 hrs to 2.5 hrs. While the time savings is great, it also speeds up a job that I don't really enjoy.</p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQERP3EZ89RSww" src="https://media.licdn.com/dms/image/v2/D4E12AQERP3EZ89RSww/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1722018582165?e=1765411200&amp;v=beta&amp;t=BYoB9bnLnX9Hty5jsBxVDA7J75qKGdSN9n9JLrw82ec"/><figcaption></figcaption></figure><p></p><p>There is a lot of great information just sitting in the call recordings and GenAI is able to read all of it and generate a pretty good SOW / proposal. It captures all the details, is able to look across multiple calls and once given the framework I want to use, is able to generate all the information I need. So I asked it to generate a proposal and it created one with the following sections.</p><ul><li><p>Executive Overview</p></li></ul><ul><li><p>Project Overview (Objectives, Duration, Cost)</p></li><li><p>Deliverables</p></li><li><p>Use Cases </p></li><li><p>Next steps</p></li></ul><p>It is amazing how it is able to analyze the call transcripts and pull out just the information I needed and organize it in a way that I could quickly send to a client.</p><p>Just as I finished building the agent in <a href="https://www.linkedin.com/company/anyquest-ai/" target="_blank">AnyQuest</a> and was feeling all good. I got a call from another prospective client and we had a long discussion on the phone and guess what - since it was on my phone it was not recorded. So that night I had to do this process the old way and it was so obvious to me how much time I was spending and how easy it was to automate this.</p><p>So 2 calls to action -</p><ol><li><p><strong>Record all your calls. </strong>There is so much goodness in your calls and this is just one example of how to use the calls.</p></li><li><p><strong>Are you in Services or Consulting? Are you using GenAI?</strong> I know most of you are not and this is such a low hanging use case.</p></li></ol>
+  </article>
+
+  <!-- Article Footer -->
+  <div class="article-footer">
+    <div class="card" style="text-align: center; padding: 2rem;">
+      <h3>Stay Updated</h3>
+      <p style="margin: 1rem 0 1.5rem;">Follow Vikram on LinkedIn for more insights on GenAI automation and go-to-market strategy.</p>
+      <a href="https://www.linkedin.com/in/vikramekambaram" target="_blank" class="btn btn-primary">Follow on LinkedIn →</a>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="cta-section">
+        <h2>Ready to Transform Your GTM Operations?</h2>
+        <p>Let's discuss how AI agents can automate 60-75% of your manual work.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="../../contact.html" class="btn btn-large">Schedule a Consultation</a>
+          <a href="../../case-studies.html" class="btn btn-outline btn-large" style="background: transparent; color: white; border-color: white;">View Case Studies</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Vyceral Solutions LLC</h4>
+          <p>Deep Understanding → Tangible Outcomes</p>
+          <p style="margin-top: 1rem;">Transforming B2B go-to-market strategies with Generative AI and intelligent automation.</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Solutions</h4>
+          <ul class="footer-links">
+            <li><a href="../../gtm-automation.html">GTM Automation</a></li>
+            <li><a href="../../consulting-transformation.html">Consulting Transformation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="../../about.html">About Us</a></li>
+            <li><a href="../../case-studies.html">Case Studies</a></li>
+            <li><a href="../../blog.html">Blog</a></li>
+            <li><a href="../../contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Get in Touch</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:vikram.ekambaram@vyceralsolutions.com">vikram.ekambaram@vyceralsolutions.com</a></li>
+            <li><a href="https://www.linkedin.com/in/vikramekambaram" target="_blank">LinkedIn Profile</a></li>
+            <li><a href="https://www.linkedin.com/newsletters/7158509558993215488" target="_blank">Newsletter (LinkedIn)</a></li>
+            <li style="margin-top: 0.5rem; color: var(--color-gray);">Croton-on-Hudson, NY</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright © 2025 Vyceral Solutions LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="In my previous edition of this newsletter, I wrote about how GenAI could save hours of time for an AE or CSM that is doing account research. That being sai...">
+  <title>Automating Account Planning | Vyceral Solutions</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://b2bjsstore.s3.us-west-2.amazonaws.com/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("1N5W0HM2RYO5");</script>
+  <style>
+    /* Article-specific styles */
+    .article-header {
+      background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-primary) 100%);
+      padding: 6rem 0 3rem;
+      margin-bottom: 3rem;
+      margin-top: 0;
+    }
+    .article-meta {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      margin-top: 1.5rem;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.875rem;
+    }
+    .article-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .article-content p {
+      margin: 1.5rem 0;
+      line-height: 1.8;
+      color: var(--color-gray);
+    }
+    .article-content h2 {
+      margin: 2.5rem 0 1rem;
+      color: var(--color-dark);
+      font-size: 1.75rem;
+    }
+    .article-content h3 {
+      margin: 2rem 0 1rem;
+      color: var(--color-dark);
+      font-size: 1.25rem;
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--color-accent);
+      padding-left: 1.5rem;
+      margin: 2rem 0;
+      font-style: italic;
+      color: var(--color-dark);
+    }
+    .article-content ul, .article-content ol {
+      margin: 1.5rem 0;
+      padding-left: 2rem;
+      color: var(--color-gray);
+      line-height: 1.8;
+    }
+    .article-content li {
+      margin: 0.5rem 0;
+    }
+    .article-content a {
+      color: var(--color-accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--color-accent);
+    }
+    .article-content pre {
+      background: #F3F6F8;
+      padding: 1.5rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 2rem 0;
+    }
+    .article-footer {
+      max-width: 800px;
+      margin: 4rem auto 0;
+      padding: 2rem;
+      border-top: 1px solid #E5E7EB;
+    }
+    .article-nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .article-nav-link {
+      padding: 1.5rem;
+      background: var(--color-light);
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .article-nav-link:hover {
+      background: white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .article-nav-label {
+      font-size: 0.75rem;
+      color: var(--color-gray);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+    .article-nav-title {
+      color: var(--color-dark);
+      font-weight: 600;
+    }
+    @media (max-width: 768px) {
+      .article-nav {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="../../index.html" class="nav-logo">
+        <img src="../../images/logo.png" alt="Vyceral Solutions Logo" onerror="this.style.display='none'">
+      </a>
+      <ul class="nav-menu">
+        <li><a href="../../index.html" class="nav-link">Home</a></li>
+        <li><a href="../../gtm-automation.html" class="nav-link">GTM Automation</a></li>
+        <li><a href="../../consulting-transformation.html" class="nav-link">Consulting Transformation</a></li>
+        <li><a href="../../case-studies.html" class="nav-link">Case Studies</a></li>
+        <li><a href="../../about.html" class="nav-link">About</a></li>
+        <li><a href="../../blog.html" class="nav-link">Blog</a></li>
+        <li><a href="../../contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Article Header -->
+  <header class="article-header">
+    <div class="container">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <a href="../../blog.html" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.875rem; display: inline-block; margin-bottom: 1rem;">← Back to Blog</a>
+        <span class="badge badge-outline" style="background: rgba(255,255,255,0.1); color: white; border-color: rgba(255,255,255,0.3);">Practical Applications</span>
+        <h1 style="color: white; margin-top: 1rem;">Automating Account Planning</h1>
+        <div class="article-meta">
+          <span>February 01, 2024</span>
+          <span>•</span>
+          <span>3 min read</span>
+          <span>•</span>
+          <span>GenAI in GTM</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Article Content -->
+  <article class="article-content">
+    <p>In my previous edition of this newsletter, I wrote about how GenAI could save hours of time for an AE or CSM that is doing account research. That being said, I still saw inefficiencies in the process. It still takes about 5 hrs for an AE to do the research and then present the POV to the customer.</p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQF61KgGyFOLGQ" src="https://media.licdn.com/dms/image/v2/D4E12AQF61KgGyFOLGQ/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1706790939127?e=1765411200&amp;v=beta&amp;t=PvBI1-ItPTlF6puO-evszPmBPblxH35lADF9ksSSoEw"/><figcaption>Old Process no GenAI = ~8 hrs per account</figcaption></figure><p></p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQFepDzhsTNTQA" src="https://media.licdn.com/dms/image/v2/D4E12AQFepDzhsTNTQA/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1706790970502?e=1765411200&amp;v=beta&amp;t=0Fc6j7J3Mm3TiFS2sYXzc85MbtCjDCHzJIO4nK4aKlI"/><figcaption>New Process with GenAI - ~5 hrs per account</figcaption></figure><p>As I was thinking through this process and putting on my process optimization hat, the product idea I had in my head was, what if the AE did not have to do any of the work of going to ChatGPT, putting in the PDF, ask questions etc. Wouldn't it be amazing, if an AE could open up his CRM and the information was already populated for his customer in his CRM. Eliminate the account research part of the process and return another hour to the AEs. </p><p>As I was chatting with <a target="_blank">Simon Frey</a>, he pointed me to <a href="http://Copy.ai" target="_blank">Copy.ai</a> and said I should check it out. Part of it was because Simon and I both geek out about outcomes and the tag line for <a href="http://Copy.ai" target="_blank">Copy.ai</a> was "The only AI platform purpose-built for outcomes". As I am evaluating options for my next job, he felt that I should check out <a href="http://Copy.ai" target="_blank">Copy.ai</a> as a company I could work for as he shares my passion for Outcomes.</p><p>As I started doing research on <a href="http://Copy.ai" target="_blank">Copy.ai</a>, I noticed that it was the product that I had been thinking about. It is a GenAI wrapper (I am sure I am not doing them justice) that allows you to build a workflow to automate tasks. So I started playing around with it and I did a quick test but it was exactly what I was visualizing. You describe the workflow and it generates the steps and does all the work.</p><figure><a href="https://youtu.be/knBG9PR9--Q" target="_blank"><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQHtQViFcZF5LQ" src="https://media.licdn.com/dms/image/v2/D4E12AQHtQViFcZF5LQ/article-inline_image-shrink_400_744/article-inline_image-shrink_400_744/0/1706792395111?e=1765411200&amp;v=beta&amp;t=DKygANd8AF47AT0SyLGjX8s5a288T1fc8TQjpnd5uU8"/></a><figcaption>Simple workflow in Copy.ai</figcaption></figure><p>I just gave <a href="http://Copy.ai" target="_blank">Copy.ai</a> my instructions in plain english and it generated this 4 step workflow. <a target="_blank">Jill Markoff</a> <a target="_blank">Devon Kirschmann</a> <a target="_blank">Stephanie Pellegrino</a> , you know how much I love my flow diagrams. The first step generates a form where I share the link to the 10K and the name of my company, then it scrapes the data from the PDF (I could have given it a URL or something else), then it calls GenAI with my prompts (you can edit and reconfigure all of this) and then outputs to PDF, but I could call a Zapier API to update CRM or integrate with any other system. Check out this <a href="https://youtu.be/knBG9PR9--Q" target="_blank">video</a>.</p><p>So to all my friends in Enablement - <a target="_blank">Nick Saunders</a> <a target="_blank">Nate Vogel</a> <a target="_blank">Danny Wasserman</a>, all you need to do is use <a href="http://Copy.ai" target="_blank">Copy.ai</a> and it could upload all the account research you need into Salesforce and you don't have to be after the AEs to update their account plan. Imagine the process below -</p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQFJzj12-QwVhQ" src="https://media.licdn.com/dms/image/v2/D4E12AQFJzj12-QwVhQ/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1706793001010?e=1765411200&amp;v=beta&amp;t=zjWKlQwI9mpCKSZR8N0-suE-2QnMUBImNohU07nMZpk"/><figcaption>Account Planning workflow automated with Copy.ai</figcaption></figure><p>To expand on this further, you could also upload your value proposition training, your CVI Why Change messaging, any product collateral and all that can be used as input to generate very tailored and specific point of views for your customers. </p><p>The ROI for this is very obvious - Let's say you have 100 accounts you want to do Account Plans for.</p><ul><li><p>Current Process No GenAI - 850 hours</p></li><li><p>New Process with AE using GenAI - 550 hours</p></li><li><p>New Process with <a href="http://Copy.ai" target="_blank">Copy.ai</a> - 250 hours + 1 time set up + license cost.</p></li></ul><p>To be fair, I just played around with <a href="http://Copy.ai" target="_blank">Copy.ai</a> and I am not sure what is involved in getting this all working for a production use case but I can see the vision of where they are going with automating workflows and I can see how GenAI will start delivering specific business use cases that people in the field can see the immediate impact in time savings. I can see how I can quantify the 'Outcomes'.</p><p> </p>
+  </article>
+
+  <!-- Article Footer -->
+  <div class="article-footer">
+    <div class="card" style="text-align: center; padding: 2rem;">
+      <h3>Stay Updated</h3>
+      <p style="margin: 1rem 0 1.5rem;">Follow Vikram on LinkedIn for more insights on GenAI automation and go-to-market strategy.</p>
+      <a href="https://www.linkedin.com/in/vikramekambaram" target="_blank" class="btn btn-primary">Follow on LinkedIn →</a>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="cta-section">
+        <h2>Ready to Transform Your GTM Operations?</h2>
+        <p>Let's discuss how AI agents can automate 60-75% of your manual work.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="../../contact.html" class="btn btn-large">Schedule a Consultation</a>
+          <a href="../../case-studies.html" class="btn btn-outline btn-large" style="background: transparent; color: white; border-color: white;">View Case Studies</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Vyceral Solutions LLC</h4>
+          <p>Deep Understanding → Tangible Outcomes</p>
+          <p style="margin-top: 1rem;">Transforming B2B go-to-market strategies with Generative AI and intelligent automation.</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Solutions</h4>
+          <ul class="footer-links">
+            <li><a href="../../gtm-automation.html">GTM Automation</a></li>
+            <li><a href="../../consulting-transformation.html">Consulting Transformation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="../../about.html">About Us</a></li>
+            <li><a href="../../case-studies.html">Case Studies</a></li>
+            <li><a href="../../blog.html">Blog</a></li>
+            <li><a href="../../contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Get in Touch</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:vikram.ekambaram@vyceralsolutions.com">vikram.ekambaram@vyceralsolutions.com</a></li>
+            <li><a href="https://www.linkedin.com/in/vikramekambaram" target="_blank">LinkedIn Profile</a></li>
+            <li><a href="https://www.linkedin.com/newsletters/7158509558993215488" target="_blank">Newsletter (LinkedIn)</a></li>
+            <li style="margin-top: 0.5rem; color: var(--color-gray);">Croton-on-Hudson, NY</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright © 2025 Vyceral Solutions LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>

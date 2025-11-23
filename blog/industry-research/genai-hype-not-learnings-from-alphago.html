@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="I vacillate between GenAI is hype to GenAI is gamechanging. I think people on both sides make good points to support their case. That being said, I think A...">
+  <title>GenAI Hype (NOT)- Learnings from AlphaGo | Vyceral Solutions</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://b2bjsstore.s3.us-west-2.amazonaws.com/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("1N5W0HM2RYO5");</script>
+  <style>
+    /* Article-specific styles */
+    .article-header {
+      background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-primary) 100%);
+      padding: 6rem 0 3rem;
+      margin-bottom: 3rem;
+      margin-top: 0;
+    }
+    .article-meta {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      margin-top: 1.5rem;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.875rem;
+    }
+    .article-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .article-content p {
+      margin: 1.5rem 0;
+      line-height: 1.8;
+      color: var(--color-gray);
+    }
+    .article-content h2 {
+      margin: 2.5rem 0 1rem;
+      color: var(--color-dark);
+      font-size: 1.75rem;
+    }
+    .article-content h3 {
+      margin: 2rem 0 1rem;
+      color: var(--color-dark);
+      font-size: 1.25rem;
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--color-accent);
+      padding-left: 1.5rem;
+      margin: 2rem 0;
+      font-style: italic;
+      color: var(--color-dark);
+    }
+    .article-content ul, .article-content ol {
+      margin: 1.5rem 0;
+      padding-left: 2rem;
+      color: var(--color-gray);
+      line-height: 1.8;
+    }
+    .article-content li {
+      margin: 0.5rem 0;
+    }
+    .article-content a {
+      color: var(--color-accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--color-accent);
+    }
+    .article-content pre {
+      background: #F3F6F8;
+      padding: 1.5rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 2rem 0;
+    }
+    .article-footer {
+      max-width: 800px;
+      margin: 4rem auto 0;
+      padding: 2rem;
+      border-top: 1px solid #E5E7EB;
+    }
+    .article-nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .article-nav-link {
+      padding: 1.5rem;
+      background: var(--color-light);
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .article-nav-link:hover {
+      background: white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .article-nav-label {
+      font-size: 0.75rem;
+      color: var(--color-gray);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+    .article-nav-title {
+      color: var(--color-dark);
+      font-weight: 600;
+    }
+    @media (max-width: 768px) {
+      .article-nav {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="../../index.html" class="nav-logo">
+        <img src="../../images/logo.png" alt="Vyceral Solutions Logo" onerror="this.style.display='none'">
+      </a>
+      <ul class="nav-menu">
+        <li><a href="../../index.html" class="nav-link">Home</a></li>
+        <li><a href="../../gtm-automation.html" class="nav-link">GTM Automation</a></li>
+        <li><a href="../../consulting-transformation.html" class="nav-link">Consulting Transformation</a></li>
+        <li><a href="../../case-studies.html" class="nav-link">Case Studies</a></li>
+        <li><a href="../../about.html" class="nav-link">About</a></li>
+        <li><a href="../../blog.html" class="nav-link">Blog</a></li>
+        <li><a href="../../contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Article Header -->
+  <header class="article-header">
+    <div class="container">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <a href="../../blog.html" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.875rem; display: inline-block; margin-bottom: 1rem;">← Back to Blog</a>
+        <span class="badge badge-outline" style="background: rgba(255,255,255,0.1); color: white; border-color: rgba(255,255,255,0.3);">Industry Research</span>
+        <h1 style="color: white; margin-top: 1rem;">GenAI Hype (NOT)- Learnings from AlphaGo</h1>
+        <div class="article-meta">
+          <span>July 08, 2024</span>
+          <span>•</span>
+          <span>4 min read</span>
+          <span>•</span>
+          <span>GenAI in GTM</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Article Content -->
+  <article class="article-content">
+    <p>I vacillate between GenAI is hype to GenAI is gamechanging. I think people on both sides make good points to support their case. That being said, I think <a href="https://en.wikipedia.org/wiki/Roy_Amara#:~:text=His%20adage%20about%20forecasting%20the,been%20used%20in%20explaining%20nanotechnology." target="_blank">Amara's Law</a> is at play here - <em>We tend to overestimate the effect of a technology in the short run and underestimate the effect in the long run.</em></p><p>Most arguments for GenAI being hype are a good reflection of Amara's Law. The pushback is often around - 'you still need someone (a human) who really knows what they are doing to get anything of value out of GenAI.' I tried using it and it requires too much work.</p><p>I recently watched the AlphaGo Documentary - <a href="https://www.youtube.com/watch?v=WXuK6gekU1Y" target="_blank">https://www.youtube.com/watch?v=WXuK6gekU1Y</a>. It is free on YouTube and if you have not watched it, I highly recommend you do. It's like <a href="https://www.netflix.com/title/80234304" target="_blank">Queen's Gambit</a> for Go. Where Beth is played by AlphaGo.</p><p><strong>Go</strong> is an <a href="https://en.wikipedia.org/wiki/Go_(game)" target="_blank">abstract strategy board game</a> for two players in which the aim is to capture more territory than the opponent by fencing off empty space. The game was invented in China more than 2,500 years ago and is believed to be the oldest board game continuously played to the present day.</p><p>To answer why I feel Amara's Law is at play with GenAI and GenAI is not hype, it is all about learning. Learning is how we get better and there is a fundamental difference between human learning and AI learning.</p><p>Here is a visual of human learning. We gain some skills, we plateau, we then have a breakthrough then we settle back down to steady state and then we have another spike. </p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQEo03QI9aIutQ" src="https://media.licdn.com/dms/image/v2/D4E12AQEo03QI9aIutQ/article-inline_image-shrink_400_744/article-inline_image-shrink_400_744/0/1719443073216?e=1765411200&amp;v=beta&amp;t=anuEnYwE6HcWsSWcNOa7nvDX9yUL7RstFfDf0uCj0M8"/><figcaption></figcaption></figure><p>AI learning is more of an exponential curve in the beginning followed by a logarithmic curve as it plateaus.</p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQFDhOYuMDRiQA" src="https://media.licdn.com/dms/image/v2/D4E12AQFDhOYuMDRiQA/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1719443218605?e=1765411200&amp;v=beta&amp;t=G4sF9OvBjxOA-R3U93Q6PwHzqUwkPsHdtgLehCsmXZY"/><figcaption></figcaption></figure><p>In case you are wondering what all this has to do with the topic of this post, AlphaGo demonstrates this crazy ability to learn and get better. Here is a timeline for AlphaGo.</p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQFa2ibAtqZn6A" src="https://media.licdn.com/dms/image/v2/D4E12AQFa2ibAtqZn6A/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1719443779434?e=1765411200&amp;v=beta&amp;t=v4vWA2TYlM9tfpEFEsp1Jdy3GrQMmmeRw0vIouI8i3U"/><figcaption></figcaption></figure><p> AlphaGo went from a beginner in July 2014 to a 2 <a href="https://en.wikipedia.org/wiki/Go_ranks_and_ratings" target="_blank">Dan</a> in October 2015 to 9 Dan in March 2016. Just for context here is a table with the Dan ranking system.</p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQFZeUu7nXYzGw" src="https://media.licdn.com/dms/image/v2/D4E12AQFZeUu7nXYzGw/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1719443645196?e=1765411200&amp;v=beta&amp;t=EaMZKRVaw8KY6FvmdT4nf4TsHZv-fPxM7lpv1UQnl2g"/><figcaption></figcaption></figure><p>In 2 years it was the best in the world. For context it can take the best humans 10-20 years and as we all know 99.99% will never make it and be stuck at Single-digit kyu.</p><p>What was also fascinating was the reaction of Lee Sedol (the world champion) before his match. He said that AlphaGo had beaten a lowly 2 Dan and there was no way it could be competitive with a 9 Dan. He said, AlphaGo did not have creativity or intuition. He was very confident he would win 5-0.</p><p>Doesn't this sound like a lot of GenAI naysayers. To be fair, if Lee Sedol had played AlphaGo in Oct 2015, he would have probably won 5-0, but he played it in Mar 2016. Humans cannot fathom that a machine could go from 2 Dan to 9 Dan in 5 months. This is because our frame of reference is human learning as opposed to AI learning which is exponential.</p><p>What is even more fascinating and this is not in the movie, is that <a href="https://deepmind.google/discover/blog/alphago-zero-starting-from-scratch/" target="_blank">AlphaGo Zero</a> the next version beat the AlphaGo version that beat Lee Sedol after 3 days of learning and beat the best AlphaGo verison (Master) in 40 days. Also, it not only learnt how to play Go but it learnt Chess too (from scratch). </p><p>Not only does it learn exponentially, it is learning to learn exponentially. </p><p><em>Over the course of millions of AlphaGo vs AlphaGo games, the system progressively learned the game of Go from scratch, accumulating thousands of years of human knowledge during a period of just a few days. AlphaGo Zero also discovered new knowledge, developing unconventional strategies and creative new moves that echoed and surpassed the novel techniques it played in the games against Lee Sedol and Ke Jie.</em></p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQFJfKBXLHE2lA" src="https://media.licdn.com/dms/image/v2/D4E12AQFJfKBXLHE2lA/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1719444337317?e=1765411200&amp;v=beta&amp;t=h97eO992OybryahVx2UF9pquIYYcartXsnhb6Xsb5tA"/><figcaption></figcaption></figure><p>There are a few other things that came to mind - AI will not take our jobs but a human with AI will. You could literally see a human with AI (AlphaGo) beat the best human in the world. So technically the human with AI did the job better. But then I ask myself, what would it take to replace the human, what value is the human really adding. I think this is going to play out in a lot of jobs.</p><p>Then we come to humans getting nervous. AI does not show emotion or get nervous. Humans make mistakes. AI does not make mistakes (or if it does it is calculated or a hallucination).</p><p>What this means for GenAI is that whatever we have today, for example the <a href="https://www.youtube.com/watch?v=F_WfIzYGlg4" target="_blank">Toys' R Us commercial</a> using Sora or this news - <a href="https://www.cnbc.com/2024/06/26/morgan-stanley-openai-powered-assistant-for-wealth-advisors.html" target="_blank">Morgan Stanley Advisors getting an AI assistant</a>, is just the beginning of the exponential curve. Yes the technology is not there yet, but in a blink of an eye it will surpass us at all kinds of stuff.</p>
+  </article>
+
+  <!-- Article Footer -->
+  <div class="article-footer">
+    <div class="card" style="text-align: center; padding: 2rem;">
+      <h3>Stay Updated</h3>
+      <p style="margin: 1rem 0 1.5rem;">Follow Vikram on LinkedIn for more insights on GenAI automation and go-to-market strategy.</p>
+      <a href="https://www.linkedin.com/in/vikramekambaram" target="_blank" class="btn btn-primary">Follow on LinkedIn →</a>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="cta-section">
+        <h2>Ready to Transform Your GTM Operations?</h2>
+        <p>Let's discuss how AI agents can automate 60-75% of your manual work.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="../../contact.html" class="btn btn-large">Schedule a Consultation</a>
+          <a href="../../case-studies.html" class="btn btn-outline btn-large" style="background: transparent; color: white; border-color: white;">View Case Studies</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Vyceral Solutions LLC</h4>
+          <p>Deep Understanding → Tangible Outcomes</p>
+          <p style="margin-top: 1rem;">Transforming B2B go-to-market strategies with Generative AI and intelligent automation.</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Solutions</h4>
+          <ul class="footer-links">
+            <li><a href="../../gtm-automation.html">GTM Automation</a></li>
+            <li><a href="../../consulting-transformation.html">Consulting Transformation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="../../about.html">About Us</a></li>
+            <li><a href="../../case-studies.html">Case Studies</a></li>
+            <li><a href="../../blog.html">Blog</a></li>
+            <li><a href="../../contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Get in Touch</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:vikram.ekambaram@vyceralsolutions.com">vikram.ekambaram@vyceralsolutions.com</a></li>
+            <li><a href="https://www.linkedin.com/in/vikramekambaram" target="_blank">LinkedIn Profile</a></li>
+            <li><a href="https://www.linkedin.com/newsletters/7158509558993215488" target="_blank">Newsletter (LinkedIn)</a></li>
+            <li style="margin-top: 0.5rem; color: var(--color-gray);">Croton-on-Hudson, NY</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright © 2025 Vyceral Solutions LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>

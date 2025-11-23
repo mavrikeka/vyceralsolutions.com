@@ -1,0 +1,83 @@
+================================================================================
+6 UNMATCHED ARTICLES - NEED CATEGORIZATION
+================================================================================
+
+INSTRUCTIONS: Please categorize each article into ONE of these categories:
+
+Categories:
+1. practical-applications - GenAI Practical Applications & Use Cases
+2. tools-platforms - GenAI Tools & Platforms
+3. ai-agents - AI Agents & Agentic Systems
+4. gtm-strategy - Business & GTM Strategy
+5. personal-journey - Personal Journey & Entrepreneurship
+6. ai-philosophy - AI Philosophy & Future of Work
+7. technical-analysis - Technical Deep Dives & Analysis
+8. industry-research - Industry Analysis & Research
+
+================================================================================
+UNMATCHED ARTICLES (WITH FULL CONTENT):
+================================================================================
+
+1. TITLE: Why AI will replace (some) humans
+   DATE: Unknown
+   URL: 
+   FILENAME: 2024-12-16 17:19:29.0-Why AI will replace (some) humans.html
+   FULL CONTENT:
+   There are lots of posts asking and answering the question on whether AI will replace humans and this shows up in many forms. Will AI replace sales people? AI is a craftsman at best.. nothing new is created. Then there is always a Klarna story - Klarna CEO says the company stopped hiring a year ago because AI 'can already do all of the jobs'
+
+--------------------------------------------------------------------------------
+
+2. TITLE: Using GenAI for Analytics + using GenAI to understand something technical 
+   DATE: 2024-10-16
+   URL: https://www.linkedin.com/pulse/using-genai-analytics-understand-something-technical-vikram-ekambaram-c0zpe
+   FILENAME: using-genai-analytics-understand-something-technical-vikram-ekambaram-c0zpe.html
+   FULL CONTENT:
+   A few months ago I had posted about GenAI for Data Analytics and the challenges of using something probabilistic to return something deterministic. Here are the 2 articles - Link 1 and Link 2. For the most part, I have stayed away from GenAI on structured data but I am getting on a call with a dear friend and former colleague John Jensen today to talk about Zenlytic. I do feel that GenAI on Structured Data will unlock a ton of new applications and was curious to learn more before my meeting. I came across a case study on how Pinterest was using GenAI to do Text to SQL, written by Lewis Walker ➲ that was quite illuminating. They talked about how they went from 40% accuracy to 90% accuracy by moving from just LLM to LLM + RAG. For those interested, here are a couple diagrams that talk about their approach.Here is the text that describes the approachHere is the 2nd approach -Here is the text describing the approachWhile this case study gave me a high level understanding of the approach, I was not sure I completely understood it. I am a learn by examples kind of person. If someone gives me an example I can really understand the topic. But the case study did not have an example. So I asked GenAI to explain this to me with examples.This is the output it came up with - https://docs.google.com/document/d/1JRwWGjShq4NXzupOC3xLki_q_nMQFhJ7Nrung-0kCgo/edit?usp=sharingThis was very helpful as it really broke down the process in a way I could understand it. What is fascinating is that the author of the case study gave me some information and then GenAI was able to uses it's knowledge to extrapolate and expand on it.I've always wondered how Text to SQL works and seeing some of the code examples also helped a lot.So next time someone talks about using LLMs to generate SQL queries, I can be much more knowledgeable and also, now I will always use GenAI to explain things to me with examples.The question still remains - if it is 90% accurate, what happens with the 10% errors? Another question for GenAI.
+
+--------------------------------------------------------------------------------
+
+3. TITLE: The MIT Study on GenAI that roiled stock markets - my 0.02
+   DATE: Unknown
+   URL: 
+   FILENAME: 2025-08-25 09:38:08.0-The MIT Study on GenAI that roiled stock markets - my 0.02.html
+   FULL CONTENT:
+   AI stocks took a hit last week and there were 2 big reasons. First, Sam Altman gave a "bubble" warning and second there was an MIT report that 95% of companies that have deployed GenAI have seen no measurable impact on their bottom line.I was very interested in reading what the MIT report had to say and it is not easy to find. All the articles that have written about it, link to a page that leads to a Google Form from 
+
+--------------------------------------------------------------------------------
+
+4. TITLE: Big Tech - AI, Layoffs, Dividends, Stock prices
+   DATE: Unknown
+   URL: 
+   FILENAME: 2024-10-14 18:20:37.0-Big Tech - AI, Layoffs, Dividends, Stock prices.html
+   FULL CONTENT:
+   While unemployment numbers are low and inflation is cooling down, those of us that have been in the tech sector can't help but feel that the economy is not doing great (unless you are doing AI work). Companies don't seem to be hiring and I still hear about layoffs in tech. I've spent all my life working in tech, so that is the only sector I can speak to. I don't know how people feel about jobs in other sectors.
+
+--------------------------------------------------------------------------------
+
+5. TITLE: Expertise and GenAI
+   DATE: Unknown
+   URL: 
+   FILENAME: 2025-06-02 17:25:45.0-Expertise and GenAI.html
+   FULL CONTENT:
+    
+
+--------------------------------------------------------------------------------
+
+6. TITLE: GenAI for my business
+   DATE: 2024-09-03
+   URL: https://www.linkedin.com/pulse/genai-my-business-vikram-ekambaram-sl6te
+   FILENAME: genai-my-business-vikram-ekambaram-sl6te.html
+   FULL CONTENT:
+   When I decided to start my own business back in Feb, there were so many unknowns - I was not sure if I would make any money, I was not sure if I wanted to do this long term, I was not sure I'd like being my own boss, I was not sure I was cut out for entrepreneurship etc. So I went with the simplest option - I created an LLC online with ZenBusiness. I had posted about this about 6 months ago - here. I had also decided that I was going to use GenAI as much as possible in setting up my business.6 months into this experiment and there are a few things I have figured out -It is a viable business model and I am generating revenueI am enjoying being my own boss.There are enough innovators that are willing to invest in leveraging GenAIThere are 3 main areas that I have had great success with - Advising on GTM strategy, GenAI in GTM for technology vendors and GenAI for Consulting (SMB).I am solving real business problems and my customers are seeing value.Recently, I was playing golf with an accountant friend and when he heard I had started my own LLC, he told me about a few ways to reduce my tax obligation. He talked about advantages of opening a Solo 401K etc. Reducing tax obligations was not something I had been thinking about when I started my LLC as I was more concerned about bringing in revenue.I quickly realized that as an expert he had some very valuable insights. My current tax advisor had not told me about either of these ideas and this was someone that came highly recommended. So then I reached out to another tax advisor and she was very knowledgeable and told me that I should convert to an S Corp (for various good reasons). That being said, her fees were very high. I was confident that if I worked with her, I would save money on taxes but I was not sure the fees justified that.So I was back to where I have been in various areas of my life - learning tennis, learning golf, going to a doctor etc. You know there are lots of experts but some of the really good ones charge a lot or are not local to you. Secondly, you need to go to these experts multiple times, it is not a one and done thing, so the costs add up really quickly. Alternatively, you have lots of experts that are not that great and you don't have the time to try them out one by one.You all know where this is going - CAN GENAI HELP? The short answer is that GenAI is amazing. I asked it to come up with 10 creative tax strategies and I was impressed at the ideas. Here are some that I had not heard from any of the tax experts that will help me save a lot of money (and they are all legit) -Qualified Business Income DeductionEstablish retirement plans such as a Solo 401(k) or a SEP IRAResearch and Development (R&D) Tax Credit (yes it applies to me because I am providing a service that is innovative and helps organizations improve processes).Using the 14 day rule and renting out my house for board meetings.Convert to an S Corp and lower payroll taxesNow I am not going to just follow this blindly but I can now go to any tax advisor and have them look into this and make sure that I am not forgetting to take something that I am eligible for. I can have an intelligent discussion with the tax advisor and go deeper into topics that I normally would have just believed them.Here is an example - One of the tax advisors I spoke to said that I was not eligible for the R&D tax credit. She said it was only applicable to companies that were building a product (software or manufacturing companies). I wanted to confirm this and I asked GenAI this question and the short answer is that according to GenAI I am eligible for the R&D Tax Credit. Now I am not going to take it at face value but I can be much more educated when I talk to a tax advisor.Here is a sample of my back and forth with GenAI on the R&D Tax Credit.Here is a sample of my back and forth about QBI.Where this leaves me is that I feel a lot more educated about these topics and feel I can ask the right questions of any tax advisor and if they push back I can use GenAI to educate myself and go back with more questions / clarifications.
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Please return a JSON object with this format:
+{
+  "articles": [
+    {"filename": "article1.html", "category": "practical-applications"},
+    {"filename": "article2.html", "category": "ai-agents"},
+    ...
+  ]
+}

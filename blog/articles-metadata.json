@@ -10,7 +10,7 @@
   {
     "title": "My AI Journey - It's not hype",
     "date": "2025-11-10T18:47:00",
-    "category": "gtm-automation",
+    "category": "ai-agents",
     "read_time": 8,
     "word_count": 1560,
     "source_file": "my-ai-journey-its-hype-vikram-ekambaram-6u8ze.html"
@@ -18,7 +18,7 @@
   {
     "title": "What I Learned Building My First Mobile App (And Why It Made Me a Worse Golfer)",
     "date": "2025-10-23T17:00:00",
-    "category": "strategy",
+    "category": "technical",
     "read_time": 5,
     "word_count": 1052,
     "source_file": "what-i-learned-building-my-first-mobile-app-why-made-me-ekambaram-jwtne.html"
@@ -26,7 +26,7 @@
   {
     "title": "Claude Skills and Custom Functions",
     "date": "2025-10-21T14:00:00",
-    "category": "ai-agents",
+    "category": "technical",
     "read_time": 5,
     "word_count": 1026,
     "source_file": "claude-skills-custom-functions-vikram-ekambaram-zh3ze.html"
@@ -42,7 +42,7 @@
   {
     "title": "Agent Builders - the need for custom functions",
     "date": "2025-09-23T14:00:00",
-    "category": "use-cases",
+    "category": "ai-agents",
     "read_time": 5,
     "word_count": 930,
     "source_file": "agent-builders-need-custom-functions-vikram-ekambaram-zxn3e.html"
@@ -74,7 +74,7 @@
   {
     "title": "The internet as a system of record\nand why your website isn't your interface anymore",
     "date": "2025-08-04T14:00:00",
-    "category": "technical",
+    "category": "strategy",
     "read_time": 4,
     "word_count": 729,
     "source_file": "internet-system-record-why-your-website-isnt-anymore-vikram-ekambaram-4ewwe.html"
@@ -98,7 +98,7 @@
   {
     "title": "Scheming.ai - The dark side of AI",
     "date": "2025-06-24T14:00:00",
-    "category": "use-cases",
+    "category": "ai-agents",
     "read_time": 4,
     "word_count": 736,
     "source_file": "schemingai-dark-side-ai-vikram-ekambaram-otube.html"
@@ -114,7 +114,7 @@
   {
     "title": "AI's Most Dangerous Feature: It Never Admits It's Struggling",
     "date": "2025-06-12T14:00:00",
-    "category": "technical",
+    "category": "strategy",
     "read_time": 4,
     "word_count": 803,
     "source_file": "ais-most-dangerous-feature-never-admits-its-vikram-ekambaram-kmvdc.html"
@@ -138,7 +138,7 @@
   {
     "title": "Can GenAI give golf advice?",
     "date": "2025-05-29T18:01:00",
-    "category": "gtm-automation",
+    "category": "use-cases",
     "read_time": 4,
     "word_count": 771,
     "source_file": "can-genai-give-golf-advice-vikram-ekambaram-zvqde.html"
@@ -154,7 +154,7 @@
   {
     "title": "AI Horseless Carriages",
     "date": "2025-05-06T14:00:00",
-    "category": "ai-agents",
+    "category": "strategy",
     "read_time": 4,
     "word_count": 794,
     "source_file": "ai-horseless-carriages-vikram-ekambaram-vgeae.html"
@@ -162,7 +162,7 @@
   {
     "title": "Generating Images with an agent",
     "date": "2025-04-24T17:51:00",
-    "category": "technical",
+    "category": "ai-agents",
     "read_time": 3,
     "word_count": 621,
     "source_file": "generating-infographics-agent-vikram-ekambaram-sot8e.html"
@@ -170,7 +170,7 @@
   {
     "title": "Is Vibe Coding for me?",
     "date": "2025-04-22T13:00:00",
-    "category": "ai-agents",
+    "category": "use-cases",
     "read_time": 5,
     "word_count": 923,
     "source_file": "vibe-coding-me-vikram-ekambaram-spaee.html"
@@ -226,7 +226,7 @@
   {
     "title": "Agent Building and Vibe Prompting - #1",
     "date": "2025-03-05T15:00:00",
-    "category": "technical",
+    "category": "ai-agents",
     "read_time": 5,
     "word_count": 1085,
     "source_file": "agent-building-vibe-prompting-1-vikram-ekambaram-pdmwe.html"
@@ -234,7 +234,7 @@
   {
     "title": "A person walks onto your website...",
     "date": "2025-03-03T15:00:00",
-    "category": "gtm-automation",
+    "category": "ai-agents",
     "read_time": 5,
     "word_count": 968,
     "source_file": "person-walks-onto-your-website-vikram-ekambaram-jhsoe.html"
@@ -314,7 +314,7 @@
   {
     "title": "Everyone is a programmer - Part 2",
     "date": "2025-01-14T15:00:00",
-    "category": "gtm-automation",
+    "category": "ai-agents",
     "read_time": 4,
     "word_count": 891,
     "source_file": "everyone-programmer-part-2-vikram-ekambaram-v8yee.html"
@@ -322,7 +322,7 @@
   {
     "title": "Services as Software - Will disrupt consulting",
     "date": "2025-01-09T16:45:00",
-    "category": "gtm-automation",
+    "category": "ai-agents",
     "read_time": 2,
     "word_count": 490,
     "source_file": "services-software-disrupt-consulting-vikram-ekambaram-4dmoe.html"
@@ -330,7 +330,7 @@
   {
     "title": "GenAI for Captivating Visuals",
     "date": "2025-01-06T16:58:00",
-    "category": "strategy",
+    "category": "use-cases",
     "read_time": 3,
     "word_count": 517,
     "source_file": "genai-captivating-visuals-vikram-ekambaram-l5h4f.html"
@@ -338,7 +338,7 @@
   {
     "title": "Why AI will replace (some) humans",
     "date": "2024-12-16T17:19:00",
-    "category": "gtm-automation",
+    "category": "strategy",
     "read_time": 1,
     "word_count": 100,
     "source_file": "2024-12-16 17:19:29.0-Why AI will replace (some) humans.html"
@@ -346,7 +346,7 @@
   {
     "title": "Everyone is a programmer",
     "date": "2024-12-10T18:47:00",
-    "category": "gtm-automation",
+    "category": "use-cases",
     "read_time": 5,
     "word_count": 982,
     "source_file": "everyone-programmer-vikram-ekambaram-xhave.html"
@@ -362,7 +362,7 @@
   {
     "title": "GenAI in Education",
     "date": "2024-12-03T15:00:00",
-    "category": "strategy",
+    "category": "use-cases",
     "read_time": 5,
     "word_count": 1043,
     "source_file": "genai-education-vikram-ekambaram-c1cxe.html"
@@ -394,7 +394,7 @@
   {
     "title": "GenAI - Will we see a new application architecture?",
     "date": "2024-10-22T14:00:00",
-    "category": "gtm-automation",
+    "category": "strategy",
     "read_time": 5,
     "word_count": 1011,
     "source_file": "genai-we-see-new-application-architecture-vikram-ekambaram-mztoe.html"
@@ -402,7 +402,7 @@
   {
     "title": "Using GenAI for Analytics + using GenAI to understand something technical ",
     "date": "2024-10-16T14:00:00",
-    "category": "gtm-automation",
+    "category": "use-cases",
     "read_time": 2,
     "word_count": 402,
     "source_file": "using-genai-analytics-understand-something-technical-vikram-ekambaram-c0zpe.html"
@@ -418,7 +418,7 @@
   {
     "title": "Using GenAI to understand a 15000 word essay on AI",
     "date": "2024-10-14T15:00:00",
-    "category": "ai-agents",
+    "category": "use-cases",
     "read_time": 3,
     "word_count": 646,
     "source_file": "using-genai-understand-15000-word-essay-ai-vikram-ekambaram-hhkce.html"
@@ -426,7 +426,7 @@
   {
     "title": "Revisiting GenAI for Images",
     "date": "2024-10-07T17:36:00",
-    "category": "gtm-automation",
+    "category": "use-cases",
     "read_time": 2,
     "word_count": 401,
     "source_file": "revisiting-genai-images-vikram-ekambaram-43nie.html"
@@ -434,7 +434,7 @@
   {
     "title": "GenAI for my business",
     "date": "2024-09-03T14:00:00",
-    "category": "strategy",
+    "category": "use-cases",
     "read_time": 4,
     "word_count": 823,
     "source_file": "genai-my-business-vikram-ekambaram-sl6te.html"
@@ -442,7 +442,7 @@
   {
     "title": "Using GenAI to find case study snippets (a RAG example)",
     "date": "2024-08-23T14:00:00",
-    "category": "gtm-automation",
+    "category": "use-cases",
     "read_time": 7,
     "word_count": 1359,
     "source_file": "using-genai-find-case-study-snippets-rag-example-vikram-ekambaram-gmsre.html"
@@ -458,7 +458,7 @@
   {
     "title": "GenAI, Security and Privacy",
     "date": "2024-08-13T13:00:00",
-    "category": "use-cases",
+    "category": "technical",
     "read_time": 6,
     "word_count": 1259,
     "source_file": "genai-security-privacy-vikram-ekambaram-w2oae.html"
@@ -474,7 +474,7 @@
   {
     "title": "GenAI for CS - Handoff documents",
     "date": "2024-08-05T18:00:00",
-    "category": "gtm-automation",
+    "category": "use-cases",
     "read_time": 4,
     "word_count": 816,
     "source_file": "genai-cs-handoff-documents-vikram-ekambaram-lfuoe.html"
@@ -482,7 +482,7 @@
   {
     "title": "GenAI and SaaS - What does the future hold?",
     "date": "2024-08-02T14:00:00",
-    "category": "gtm-automation",
+    "category": "strategy",
     "read_time": 3,
     "word_count": 673,
     "source_file": "genai-saas-what-does-future-hold-vikram-ekambaram-dscve.html"
@@ -490,7 +490,7 @@
   {
     "title": "GenAI for creating proposals and SOWs",
     "date": "2024-07-29T14:00:00",
-    "category": "gtm-automation",
+    "category": "use-cases",
     "read_time": 3,
     "word_count": 676,
     "source_file": "genai-creating-proposals-sows-vikram-ekambaram-zfhke.html"
@@ -538,7 +538,7 @@
   {
     "title": "GenAI Productivity - Podcast Summarizer",
     "date": "2024-06-26T14:00:00",
-    "category": "gtm-automation",
+    "category": "ai-agents",
     "read_time": 3,
     "word_count": 620,
     "source_file": "genai-productivity-podcast-summarizer-vikram-ekambaram-ti3me.html"
@@ -546,7 +546,7 @@
   {
     "title": "GenAI for building a case study (synthetic data)",
     "date": "2024-06-20T17:00:00",
-    "category": "gtm-automation",
+    "category": "use-cases",
     "read_time": 3,
     "word_count": 639,
     "source_file": "genai-building-case-study-synthetic-data-vikram-ekambaram-3cfqe.html"
@@ -570,7 +570,7 @@
   {
     "title": "Bias in GenAI",
     "date": "2024-06-07T14:00:00",
-    "category": "technical",
+    "category": "strategy",
     "read_time": 3,
     "word_count": 576,
     "source_file": "bias-genai-vikram-ekambaram-7jgye.html"
@@ -578,7 +578,7 @@
   {
     "title": "ChatGPT for data analysis",
     "date": "2024-05-23T14:00:00",
-    "category": "use-cases",
+    "category": "ai-agents",
     "read_time": 3,
     "word_count": 692,
     "source_file": "chatgpt-data-analysis-vikram-ekambaram-sy0he.html"
@@ -602,7 +602,7 @@
   {
     "title": "GenAI for Account Research - 3 months later",
     "date": "2024-05-09T14:00:00",
-    "category": "strategy",
+    "category": "gtm-automation",
     "read_time": 4,
     "word_count": 887,
     "source_file": "genai-account-research-3-months-later-vikram-ekambaram-yapue.html"
@@ -610,7 +610,7 @@
   {
     "title": "GenAI + Automation",
     "date": "2024-05-06T14:00:00",
-    "category": "gtm-automation",
+    "category": "use-cases",
     "read_time": 3,
     "word_count": 531,
     "source_file": "genai-automation-vikram-ekambaram-kt3le.html"
@@ -626,7 +626,7 @@
   {
     "title": "Golf, GenAI and GTM",
     "date": "2024-04-22T14:00:00",
-    "category": "gtm-automation",
+    "category": "strategy",
     "read_time": 5,
     "word_count": 948,
     "source_file": "golf-genai-gtm-vikram-ekambaram-frlme.html"
@@ -650,7 +650,7 @@
   {
     "title": "GenAI for Strategic Initiatives ",
     "date": "2024-04-08T14:00:00",
-    "category": "gtm-automation",
+    "category": "use-cases",
     "read_time": 4,
     "word_count": 760,
     "source_file": "genai-strategic-initiatives-vikram-ekambaram-nwiqe.html"
@@ -666,7 +666,7 @@
   {
     "title": "Day 45 Update",
     "date": "2024-03-21T15:00:00",
-    "category": "strategy",
+    "category": "gtm-automation",
     "read_time": 3,
     "word_count": 690,
     "source_file": "day-45-update-vikram-ekambaram-nxnge.html"
@@ -690,7 +690,7 @@
   {
     "title": "Using GenAI to create a pitch video",
     "date": "2024-02-29T14:00:00",
-    "category": "gtm-automation",
+    "category": "use-cases",
     "read_time": 2,
     "word_count": 467,
     "source_file": "using-genai-create-pitch-video-vikram-ekambaram-axdxe.html"
@@ -698,7 +698,7 @@
   {
     "title": "Can GenAI replace consultants?",
     "date": "2024-02-26T14:00:00",
-    "category": "gtm-automation",
+    "category": "use-cases",
     "read_time": 4,
     "word_count": 870,
     "source_file": "can-genai-replace-consultants-vikram-ekambaram-jmz0e.html"
@@ -714,7 +714,7 @@
   {
     "title": "Unleashing Productivity with GenAI - A LinkedIn Journey",
     "date": "2024-02-20T12:35:00",
-    "category": "strategy",
+    "category": "use-cases",
     "read_time": 2,
     "word_count": 339,
     "source_file": "unleashing-productivity-genai-linkedin-journey-vikram-ekambaram-h9w3c.html"
@@ -730,7 +730,7 @@
   {
     "title": "Generating Outcomes Map with GenAI",
     "date": "2024-02-13T15:54:00",
-    "category": "gtm-automation",
+    "category": "use-cases",
     "read_time": 2,
     "word_count": 473,
     "source_file": "generating-outcomes-map-genai-vikram-ekambaram-kf7fe.html"
@@ -754,7 +754,7 @@
   {
     "title": "Initial business set up - did GenAI help?",
     "date": "2024-02-06T17:06:00",
-    "category": "gtm-automation",
+    "category": "use-cases",
     "read_time": 5,
     "word_count": 1062,
     "source_file": "initial-business-set-up-did-genai-help-vikram-ekambaram-5cese.html"
@@ -762,7 +762,7 @@
   {
     "title": "Setting up my own business",
     "date": "2024-02-05T19:33:00",
-    "category": "gtm-automation",
+    "category": "strategy",
     "read_time": 3,
     "word_count": 514,
     "source_file": "setting-up-my-own-business-vikram-ekambaram-oiefe.html"

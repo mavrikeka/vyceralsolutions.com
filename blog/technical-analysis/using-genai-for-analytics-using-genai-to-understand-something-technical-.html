@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A few months ago I had posted about GenAI for Data Analytics and the challenges of using something probabilistic to return something deterministic. Here ar...">
+  <title>Using GenAI for Analytics + using GenAI to understand something technical  | Vyceral Solutions</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://b2bjsstore.s3.us-west-2.amazonaws.com/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("1N5W0HM2RYO5");</script>
+  <style>
+    /* Article-specific styles */
+    .article-header {
+      background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-primary) 100%);
+      padding: 6rem 0 3rem;
+      margin-bottom: 3rem;
+      margin-top: 0;
+    }
+    .article-meta {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      margin-top: 1.5rem;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.875rem;
+    }
+    .article-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .article-content p {
+      margin: 1.5rem 0;
+      line-height: 1.8;
+      color: var(--color-gray);
+    }
+    .article-content h2 {
+      margin: 2.5rem 0 1rem;
+      color: var(--color-dark);
+      font-size: 1.75rem;
+    }
+    .article-content h3 {
+      margin: 2rem 0 1rem;
+      color: var(--color-dark);
+      font-size: 1.25rem;
+    }
+    .article-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+    .article-content blockquote {
+      border-left: 4px solid var(--color-accent);
+      padding-left: 1.5rem;
+      margin: 2rem 0;
+      font-style: italic;
+      color: var(--color-dark);
+    }
+    .article-content ul, .article-content ol {
+      margin: 1.5rem 0;
+      padding-left: 2rem;
+      color: var(--color-gray);
+      line-height: 1.8;
+    }
+    .article-content li {
+      margin: 0.5rem 0;
+    }
+    .article-content a {
+      color: var(--color-accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .article-content a:hover {
+      border-bottom-color: var(--color-accent);
+    }
+    .article-content pre {
+      background: #F3F6F8;
+      padding: 1.5rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 2rem 0;
+    }
+    .article-footer {
+      max-width: 800px;
+      margin: 4rem auto 0;
+      padding: 2rem;
+      border-top: 1px solid #E5E7EB;
+    }
+    .article-nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .article-nav-link {
+      padding: 1.5rem;
+      background: var(--color-light);
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .article-nav-link:hover {
+      background: white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .article-nav-label {
+      font-size: 0.75rem;
+      color: var(--color-gray);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+    .article-nav-title {
+      color: var(--color-dark);
+      font-weight: 600;
+    }
+    @media (max-width: 768px) {
+      .article-nav {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="../../index.html" class="nav-logo">
+        <img src="../../images/logo.png" alt="Vyceral Solutions Logo" onerror="this.style.display='none'">
+      </a>
+      <ul class="nav-menu">
+        <li><a href="../../index.html" class="nav-link">Home</a></li>
+        <li><a href="../../gtm-automation.html" class="nav-link">GTM Automation</a></li>
+        <li><a href="../../consulting-transformation.html" class="nav-link">Consulting Transformation</a></li>
+        <li><a href="../../case-studies.html" class="nav-link">Case Studies</a></li>
+        <li><a href="../../about.html" class="nav-link">About</a></li>
+        <li><a href="../../blog.html" class="nav-link">Blog</a></li>
+        <li><a href="../../contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Article Header -->
+  <header class="article-header">
+    <div class="container">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <a href="../../blog.html" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.875rem; display: inline-block; margin-bottom: 1rem;">← Back to Blog</a>
+        <span class="badge badge-outline" style="background: rgba(255,255,255,0.1); color: white; border-color: rgba(255,255,255,0.3);">Technical Analysis</span>
+        <h1 style="color: white; margin-top: 1rem;">Using GenAI for Analytics + using GenAI to understand something technical </h1>
+        <div class="article-meta">
+          <span>October 16, 2024</span>
+          <span>•</span>
+          <span>2 min read</span>
+          <span>•</span>
+          <span>GenAI in GTM</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Article Content -->
+  <article class="article-content">
+    <p>A few months ago I had posted about GenAI for Data Analytics and the challenges of using something probabilistic to return something deterministic. Here are the 2 articles -<a href="https://linkedin.com/pulse/chatgpt-data-analysis-vikram-ekambaram-sy0he/" target="_blank"> Link 1 </a>and <a href="https://www.linkedin.com/pulse/using-chatgpt-data-analysis-2-vikram-ekambaram-hldbe" target="_blank">Link 2</a>. For the most part, I have stayed away from GenAI on structured data but I am getting on a call with a dear friend and former colleague <a href="https://www.linkedin.com/in/johncjensen?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAAcUFsBA1uwC4Vjrw35adrSF7LngJE0wDw" target="_blank">John Jensen</a> today to talk about <a href="https://www.zenlytic.com/" target="_blank">Zenlytic</a>. I do feel that GenAI on Structured Data will unlock a ton of new applications and was curious to learn more before my meeting. </p><p>I came across a case study on how Pinterest was using GenAI to do Text to SQL, written by <a href="https://www.linkedin.com/in/lewiswalkerai?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAA2tUDoBo5fY2XjjyNNEH9PClEWHjbdL9_Q" target="_blank">Lewis Walker ➲</a> that was quite illuminating. They talked about how they went from 40% accuracy to 90% accuracy by moving from just LLM to LLM + RAG. For those interested, here are a couple diagrams that talk about their approach.</p><p></p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQEvmULDCEE2ew" src="https://media.licdn.com/dms/image/v2/D4E12AQEvmULDCEE2ew/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1729004293827?e=1765411200&amp;v=beta&amp;t=Vv5qZHSekKtMUbJojT5c-CPKKr3MFB7JQS1AVWizOpM"/><figcaption></figcaption></figure><p>Here is the text that describes the approach</p><p></p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQGqQhoIdZuigg" src="https://media.licdn.com/dms/image/v2/D4E12AQGqQhoIdZuigg/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1729005699645?e=1765411200&amp;v=beta&amp;t=lw7wWq4g_JL1d_4hdV3Yr17D6CONHcpIZ0RnpgxwbVE"/><figcaption></figcaption></figure><p>Here is the 2nd approach -</p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQFlEoPFE6Ej2g" src="https://media.licdn.com/dms/image/v2/D4E12AQFlEoPFE6Ej2g/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1729004313254?e=1765411200&amp;v=beta&amp;t=5SfoQpb0SR5LnMrGvsYxJ7j7nYQsJR97Nn1qYF77rGk"/><figcaption></figcaption></figure><p>Here is the text describing the approach</p><p></p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQGSMeevVAbQ3g" src="https://media.licdn.com/dms/image/v2/D4E12AQGSMeevVAbQ3g/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1729005741617?e=1765411200&amp;v=beta&amp;t=wCrAfrCG_cGPLkctHhOiKs68a_wuSRjrTNK5hgQWWg0"/><figcaption></figcaption></figure><p>While this case study gave me a high level understanding of the approach, I was not sure I completely understood it. I am a learn by examples kind of person. If someone gives me an example I can really understand the topic. But the case study did not have an example. So I asked GenAI to explain this to me with examples.</p><p>This is the output it came up with - <a href="https://docs.google.com/document/d/1JRwWGjShq4NXzupOC3xLki_q_nMQFhJ7Nrung-0kCgo/edit?usp=sharing" target="_blank">https://docs.google.com/document/d/1JRwWGjShq4NXzupOC3xLki_q_nMQFhJ7Nrung-0kCgo/edit?usp=sharing</a></p><p>This was very helpful as it really broke down the process in a way I could understand it. What is fascinating is that the author of the case study gave me some information and then GenAI was able to uses it's knowledge to extrapolate and expand on it.</p><p>I've always wondered how Text to SQL works and seeing some of the code examples also helped a lot.</p><p>So next time someone talks about using LLMs to generate SQL queries, I can be much more knowledgeable and also, now I will always use GenAI to explain things to me with examples.</p><p>The question still remains - if it is 90% accurate, what happens with the 10% errors? Another question for GenAI.</p>
+  </article>
+
+  <!-- Article Footer -->
+  <div class="article-footer">
+    <div class="card" style="text-align: center; padding: 2rem;">
+      <h3>Stay Updated</h3>
+      <p style="margin: 1rem 0 1.5rem;">Follow Vikram on LinkedIn for more insights on GenAI automation and go-to-market strategy.</p>
+      <a href="https://www.linkedin.com/in/vikramekambaram" target="_blank" class="btn btn-primary">Follow on LinkedIn →</a>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="cta-section">
+        <h2>Ready to Transform Your GTM Operations?</h2>
+        <p>Let's discuss how AI agents can automate 60-75% of your manual work.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="../../contact.html" class="btn btn-large">Schedule a Consultation</a>
+          <a href="../../case-studies.html" class="btn btn-outline btn-large" style="background: transparent; color: white; border-color: white;">View Case Studies</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Vyceral Solutions LLC</h4>
+          <p>Deep Understanding → Tangible Outcomes</p>
+          <p style="margin-top: 1rem;">Transforming B2B go-to-market strategies with Generative AI and intelligent automation.</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Solutions</h4>
+          <ul class="footer-links">
+            <li><a href="../../gtm-automation.html">GTM Automation</a></li>
+            <li><a href="../../consulting-transformation.html">Consulting Transformation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="../../about.html">About Us</a></li>
+            <li><a href="../../case-studies.html">Case Studies</a></li>
+            <li><a href="../../blog.html">Blog</a></li>
+            <li><a href="../../contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Get in Touch</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:vikram.ekambaram@vyceralsolutions.com">vikram.ekambaram@vyceralsolutions.com</a></li>
+            <li><a href="https://www.linkedin.com/in/vikramekambaram" target="_blank">LinkedIn Profile</a></li>
+            <li><a href="https://www.linkedin.com/newsletters/7158509558993215488" target="_blank">Newsletter (LinkedIn)</a></li>
+            <li style="margin-top: 0.5rem; color: var(--color-gray);">Croton-on-Hudson, NY</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright © 2025 Vyceral Solutions LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
