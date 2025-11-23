@@ -235,10 +235,10 @@ def main():
 
     print(f"   Successfully extracted metadata from {len(articles_metadata)} articles")
 
-    # Sort by date (most recent first) and select top 50
-    print("\n3. Selecting top 50 most recent articles...")
+    # Sort by date (most recent first) and select all articles
+    print("\n3. Selecting all GenAI in GTM articles...")
     articles_metadata.sort(key=lambda x: x['date'] if x['date'] else datetime.min, reverse=True)
-    top_50 = articles_metadata[:50]
+    top_50 = articles_metadata  # Using all articles instead of limiting to 50
 
     # Show category distribution
     category_counts = {}
