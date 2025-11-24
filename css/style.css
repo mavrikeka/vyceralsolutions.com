@@ -931,8 +931,8 @@ strong {
    =================================== */
 .breadcrumbs {
   background: var(--color-light-gray);
-  padding: 1rem 0;
-  padding-top: 5rem; /* Account for fixed nav */
+  padding: 1.5rem 0;
+  padding-top: 6rem; /* Account for fixed nav */
   border-bottom: 1px solid var(--color-border);
 }
 
