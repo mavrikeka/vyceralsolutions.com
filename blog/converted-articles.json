@@ -828,15 +828,6 @@
     "path": "blog/ai-agents/ai-agents-and-workflows.html"
   },
   {
-    "title": "Why AI will replace (some) humans",
-    "slug": "why-ai-will-replace-some-humans",
-    "category": "ai-philosophy",
-    "category_name": "AI Philosophy",
-    "date": null,
-    "read_time": 1,
-    "path": "blog/ai-philosophy/why-ai-will-replace-some-humans.html"
-  },
-  {
     "title": "Using GenAI for Analytics + using GenAI to understand something technical ",
     "slug": "using-genai-for-analytics-using-genai-to-understand-something-technical-",
     "category": "technical-analysis",
@@ -844,33 +835,6 @@
     "date": "2024-10-16 14:00:00",
     "read_time": 2,
     "path": "blog/technical-analysis/using-genai-for-analytics-using-genai-to-understand-something-technical-.html"
-  },
-  {
-    "title": "The MIT Study on GenAI that roiled stock markets - my 0.02",
-    "slug": "the-mit-study-on-genai-that-roiled-stock-markets-my-002",
-    "category": "industry-research",
-    "category_name": "Industry Research",
-    "date": null,
-    "read_time": 1,
-    "path": "blog/industry-research/the-mit-study-on-genai-that-roiled-stock-markets-my-002.html"
-  },
-  {
-    "title": "Big Tech - AI, Layoffs, Dividends, Stock prices",
-    "slug": "big-tech-ai-layoffs-dividends-stock-prices",
-    "category": "industry-research",
-    "category_name": "Industry Research",
-    "date": null,
-    "read_time": 1,
-    "path": "blog/industry-research/big-tech-ai-layoffs-dividends-stock-prices.html"
-  },
-  {
-    "title": "Expertise and GenAI",
-    "slug": "expertise-and-genai",
-    "category": "ai-philosophy",
-    "category_name": "AI Philosophy",
-    "date": null,
-    "read_time": 1,
-    "path": "blog/ai-philosophy/expertise-and-genai.html"
   },
   {
     "title": "GenAI for my business",
