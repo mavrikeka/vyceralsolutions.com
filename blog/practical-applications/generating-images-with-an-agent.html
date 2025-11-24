@@ -1,13 +1,14 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Even since OpenAI released their new image generation functionality, on March 25th to be precise, I have been waiting with bated breath for it to be availa...">
-  <title>Generating Images with an agent | Vyceral Solutions</title>
-  <link rel="stylesheet" href="../../css/style.css">
-  <script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://b2bjsstore.s3.us-west-2.amazonaws.com/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("1N5W0HM2RYO5");</script>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Even since OpenAI released their new image generation functionality, on March 25th to be precise, I have been waiting with bated breath for it to be availa..." name="description"/>
+<title>Generating Images with an agent | Vyceral Solutions</title>
+<link href="../../css/style.css" rel="stylesheet"/>
+<script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://b2bjsstore.s3.us-west-2.amazonaws.com/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("1N5W0HM2RYO5");</script>
+<style>
     /* Article-specific styles */
     .article-header {
       background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-primary) 100%);
@@ -123,134 +124,128 @@
   </style>
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="nav">
-    <div class="nav-container">
-      <a href="../../index.html" class="nav-logo">
-        <img src="../../images/logo.png" alt="Vyceral Solutions Logo" onerror="this.style.display='none'">
-      </a>
-      <ul class="nav-menu">
-        <li><a href="../../index.html" class="nav-link">Home</a></li>
-        <li><a href="../../gtm-automation.html" class="nav-link">GTM Automation</a></li>
-        <li><a href="../../consulting-transformation.html" class="nav-link">Consulting Transformation</a></li>
-        <li><a href="../../case-studies.html" class="nav-link">Case Studies</a></li>
-        <li><a href="../../about.html" class="nav-link">About</a></li>
-        <li><a href="../../blog.html" class="nav-link">Blog</a></li>
-        <li><a href="../../contact.html" class="nav-link">Contact</a></li>
-      </ul>
-      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
+<!-- Navigation -->
+<nav class="nav">
+<div class="nav-container">
+<a class="nav-logo" href="../../index.html">
+<img alt="Vyceral Solutions Logo" onerror="this.style.display='none'" src="../../images/logo.png"/>
+</a>
+<ul class="nav-menu">
+<li><a class="nav-link" href="../../index.html">Home</a></li>
+<li><a class="nav-link" href="../../gtm-automation.html">GTM Automation</a></li>
+<li><a class="nav-link" href="../../consulting-transformation.html">Consulting Transformation</a></li>
+<li><a class="nav-link" href="../../case-studies.html">Case Studies</a></li>
+<li><a class="nav-link" href="../../about.html">About</a></li>
+<li><a class="nav-link" href="../../blog.html">Blog</a></li>
+<li><a class="nav-link" href="../../contact.html">Contact</a></li>
+</ul>
+<button aria-label="Toggle mobile menu" class="mobile-menu-toggle">
+<span></span>
+<span></span>
+<span></span>
+</button>
+</div>
+</nav>
+<!-- Breadcrumbs -->
+<div class="breadcrumbs">
+<div class="breadcrumbs-container">
+<nav aria-label="Breadcrumb">
+<a href="../../index.html">Home</a>
+<span class="separator">/</span>
+<a href="../../blog.html">Blog</a>
+<span class="separator">/</span>
+<a href="../practical-applications/index.html">Practical Applications</a>
+<span class="separator">/</span>
+<span class="current">Generating Images with an agent</span>
+</nav>
+</div>
+</div>
+<!-- Article Hero Image -->
+<div class="article-hero-image">
+<img alt="Generating Images with an agent" onerror="this.parentElement.style.display='none'" src="../../images/article-images/generating-images-with-an-agent.jpg"/>
+</div>
 
-  <!-- Breadcrumbs -->
-  <div class="breadcrumbs">
-    <div class="breadcrumbs-container">
-      <nav aria-label="Breadcrumb">
-        <a href="../../index.html">Home</a>
-        <span class="separator">/</span>
-        <a href="../../blog.html">Blog</a>
-        <span class="separator">/</span>
-        <a href="../practical-applications/index.html">Practical Applications</a>
-        <span class="separator">/</span>
-        <span class="current">Generating Images with an agent</span>
-      </nav>
-    </div>
-  </div>
-
-  <!-- Article Header -->
-  <header class="article-header">
-    <div class="container">
-      <div style="max-width: 800px; margin: 0 auto;">
-        <span class="badge badge-outline" style="background: rgba(255,255,255,0.1); color: white; border-color: rgba(255,255,255,0.3);">Practical Applications</span>
-        <h1 style="color: white; margin-top: 1rem;">Generating Images with an agent</h1>
-        <div class="article-meta">
-          <span>April 24, 2025</span>
-          <span>•</span>
-          <span>3 min read</span>
-          <span>•</span>
-          <span>GenAI in GTM</span>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Article Content -->
-  <article class="article-content">
-    <p>Even since OpenAI released their new image generation functionality, on <a href="https://openai.com/index/introducing-4o-image-generation/" target="_blank">March 25th</a> to be precise, I have been waiting with bated breath for it to be available via the API so I can use it in my favorite agent builder tools to build agents that visualize information. </p><p>I have documented all my <a href="https://www.linkedin.com/pulse/ai-cant-do-x-just-give-time-vikram-ekambaram-dy0be" target="_blank">struggles</a> with using GenAI to generate text and images and it is impressive to see how far we've come. Well that day arrived yesterday and <a href="http://agent.ai" target="_blank"><strong>agent.ai</strong></a> was quick to make it available in their platform and I have been trying out some of the use cases that I have put on pause.</p><blockquote><p>One caveat is that this does make the agent slow. As OpenAI had pointed out, all the image generation was "melting their servers" and now that there is API access, I am sure a lot of people are generating images using agents, which slows things down even more.</p></blockquote><ol><li><p><strong>Generating an image with text</strong> : My most popular agent on <a href="http://Agent.ai" target="_blank">Agent.ai</a> is a <a href="https://agent.ai/profile/fit_to_purpose_image_generator" target="_blank">fit to purpose image generator</a> that has had over 80K runs and almost 2000 reviews. I have added this caveat to the description : "Generating the text is hit or miss" as I could never get the Flux/ Dall-E models to generate text on an image consistently. I am happy to say that last night I upgraded my agent to use the OpenAI Image Generation model and the results are much better. I am now able to get it to print out text on the image (with a much higher degree of consistency - it still has a typo here or there, but for the most part it is great). If you do get a typo, run it again and that usually fixes it.</p></li></ol><p></p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQF2KVblY94aNQ" src="https://media.licdn.com/dms/image/v2/D4E12AQF2KVblY94aNQ/article-inline_image-shrink_1500_2232/B4EZZo9NBkHYAU-/0/1745517597258?e=1765411200&amp;v=beta&amp;t=AIOA6Cmu6OlcCZyni1IHCM7xMAGQ00pbU5C734VrdH0"/><figcaption></figcaption></figure><p><strong>2. Generating an infographic</strong> : I have always wanted to do this. I am not a visual person and I have no skill in generating good infographics from data and I want to build an agent that takes a CSV file, analyzes it and then generates an infographic. The results here are a bit of a hit or miss. I gave the agent financial data from the P&amp;L of a retail firm and asked it to analyze it and then generate an infographic.</p><p></p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQHSXWZNRx3l1g" src="https://media.licdn.com/dms/image/v2/D4E12AQHSXWZNRx3l1g/article-inline_image-shrink_1500_2232/B4EZZoQyRVHoAU-/0/1745505953549?e=1765411200&amp;v=beta&amp;t=LV6_TtI5PTXhtEYSWUmDppwrxaN0LUTEsXWIxy9OEuY"/><figcaption></figcaption></figure><p>On the surface, this is pretty impressive. It generated bar charts / scatter plots / line graphs etc. The visuals also accurately represent the data, but when you dig deeper you can see that while this demos well, it is not really that useful. </p><p>When you look at Net Sales - it is hard to figure out what the exact numbers are. Why is there 1 green bar? What does the 12.5% represent? </p><p>I won't go through each chart to point out the gaps, but what is obvious to me is that generating infographics (at least number heavy ones are a tricky use case).</p><p>3. <strong>Generating a Superhero Comic Strip</strong> : A few months ago I had done a series around using people's LinkedIn information to generate a <a href="https://www.linkedin.com/pulse/anthropic-agentic-systems-1-prompt-chaining-vikram-ekambaram-pjn5e" target="_blank">superhero bio</a> for each person. The one thing I had struggled with was generating a superhero image. So I wanted to test and see if I could generate a comic strip for each person using their generate bio. This it did a great job with.</p><p></p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQFHvz5OYiOlBQ" src="https://media.licdn.com/dms/image/v2/D4E12AQFHvz5OYiOlBQ/article-inline_image-shrink_1500_2232/B4EZZo6EuUHEAU-/0/1745516779374?e=1765411200&amp;v=beta&amp;t=ayeQFmGujDY40TV26iWpJ324VSZttH0SmNQGQmb9XkQ"/><figcaption></figcaption></figure><p>If anyone wants to try out the Comic Strip agent, here is the <a href="https://agent.ai/agent/prompt_chaining_superhero" target="_blank">link</a>.</p><p>I am excited to see what else is possible and keep iterating and seeing what kind of infographics I can build, but it is extremely impressive how far we have come in a year.</p><p></p>
-  </article>
-
-  <!-- Article Footer -->
-  <div class="article-footer">
-    <div class="card" style="text-align: center; padding: 2rem;">
-      <h3>Stay Updated</h3>
-      <p style="margin: 1rem 0 1.5rem;">Follow Vikram on LinkedIn for more insights on GenAI automation and go-to-market strategy.</p>
-      <a href="https://www.linkedin.com/in/vikramekambaram" target="_blank" class="btn btn-primary">Follow on LinkedIn →</a>
-    </div>
-  </div>
-
-  <!-- CTA Section -->
-  <section class="section bg-light">
-    <div class="container">
-      <div class="cta-section">
-        <h2>Ready to Transform Your GTM Operations?</h2>
-        <p>Let's discuss how AI agents can automate 60-75% of your manual work.</p>
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-          <a href="../../contact.html" class="btn btn-large">Schedule a Consultation</a>
-          <a href="../../case-studies.html" class="btn btn-outline btn-large" style="background: transparent; color: white; border-color: white;">View Case Studies</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h4>Vyceral Solutions LLC</h4>
-          <p>Deep Understanding → Tangible Outcomes</p>
-          <p style="margin-top: 1rem;">Transforming B2B go-to-market strategies with Generative AI and intelligent automation.</p>
-        </div>
-
-        <div class="footer-section">
-          <h4>Solutions</h4>
-          <ul class="footer-links">
-            <li><a href="../../gtm-automation.html">GTM Automation</a></li>
-            <li><a href="../../consulting-transformation.html">Consulting Transformation</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-section">
-          <h4>Company</h4>
-          <ul class="footer-links">
-            <li><a href="../../about.html">About Us</a></li>
-            <li><a href="../../case-studies.html">Case Studies</a></li>
-            <li><a href="../../blog.html">Blog</a></li>
-            <li><a href="../../contact.html">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-section">
-          <h4>Get in Touch</h4>
-          <ul class="footer-links">
-            <li><a href="mailto:vikram.ekambaram@vyceralsolutions.com">vikram.ekambaram@vyceralsolutions.com</a></li>
-            <li><a href="https://www.linkedin.com/in/vikramekambaram" target="_blank">LinkedIn Profile</a></li>
-            <li><a href="https://www.linkedin.com/newsletters/7158509558993215488" target="_blank">Newsletter (LinkedIn)</a></li>
-            <li style="margin-top: 0.5rem; color: var(--color-gray);">Croton-on-Hudson, NY</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>Copyright © 2025 Vyceral Solutions LLC. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="../../js/main.js"></script>
+<!-- Article Header -->
+<header class="article-header">
+<div class="container">
+<div style="max-width: 800px; margin: 0 auto;">
+<span class="badge badge-outline" style="background: rgba(255,255,255,0.1); color: white; border-color: rgba(255,255,255,0.3);">Practical Applications</span>
+<h1 style="color: white; margin-top: 1rem;">Generating Images with an agent</h1>
+<div class="article-meta">
+<span>April 24, 2025</span>
+<span>•</span>
+<span>3 min read</span>
+<span>•</span>
+<span>GenAI in GTM</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Article Content -->
+<article class="article-content">
+<p>Even since OpenAI released their new image generation functionality, on <a href="https://openai.com/index/introducing-4o-image-generation/" target="_blank">March 25th</a> to be precise, I have been waiting with bated breath for it to be available via the API so I can use it in my favorite agent builder tools to build agents that visualize information. </p><p>I have documented all my <a href="https://www.linkedin.com/pulse/ai-cant-do-x-just-give-time-vikram-ekambaram-dy0be" target="_blank">struggles</a> with using GenAI to generate text and images and it is impressive to see how far we've come. Well that day arrived yesterday and <a href="http://agent.ai" target="_blank"><strong>agent.ai</strong></a> was quick to make it available in their platform and I have been trying out some of the use cases that I have put on pause.</p><blockquote><p>One caveat is that this does make the agent slow. As OpenAI had pointed out, all the image generation was "melting their servers" and now that there is API access, I am sure a lot of people are generating images using agents, which slows things down even more.</p></blockquote><ol><li><p><strong>Generating an image with text</strong> : My most popular agent on <a href="http://Agent.ai" target="_blank">Agent.ai</a> is a <a href="https://agent.ai/profile/fit_to_purpose_image_generator" target="_blank">fit to purpose image generator</a> that has had over 80K runs and almost 2000 reviews. I have added this caveat to the description : "Generating the text is hit or miss" as I could never get the Flux/ Dall-E models to generate text on an image consistently. I am happy to say that last night I upgraded my agent to use the OpenAI Image Generation model and the results are much better. I am now able to get it to print out text on the image (with a much higher degree of consistency - it still has a typo here or there, but for the most part it is great). If you do get a typo, run it again and that usually fixes it.</p></li></ol><p></p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQF2KVblY94aNQ" src="https://media.licdn.com/dms/image/v2/D4E12AQF2KVblY94aNQ/article-inline_image-shrink_1500_2232/B4EZZo9NBkHYAU-/0/1745517597258?e=1765411200&amp;v=beta&amp;t=AIOA6Cmu6OlcCZyni1IHCM7xMAGQ00pbU5C734VrdH0"><figcaption></figcaption></img></figure><p><strong>2. Generating an infographic</strong> : I have always wanted to do this. I am not a visual person and I have no skill in generating good infographics from data and I want to build an agent that takes a CSV file, analyzes it and then generates an infographic. The results here are a bit of a hit or miss. I gave the agent financial data from the P&amp;L of a retail firm and asked it to analyze it and then generate an infographic.</p><p></p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQHSXWZNRx3l1g" src="https://media.licdn.com/dms/image/v2/D4E12AQHSXWZNRx3l1g/article-inline_image-shrink_1500_2232/B4EZZoQyRVHoAU-/0/1745505953549?e=1765411200&amp;v=beta&amp;t=LV6_TtI5PTXhtEYSWUmDppwrxaN0LUTEsXWIxy9OEuY"/><figcaption></figcaption></figure><p>On the surface, this is pretty impressive. It generated bar charts / scatter plots / line graphs etc. The visuals also accurately represent the data, but when you dig deeper you can see that while this demos well, it is not really that useful. </p><p>When you look at Net Sales - it is hard to figure out what the exact numbers are. Why is there 1 green bar? What does the 12.5% represent? </p><p>I won't go through each chart to point out the gaps, but what is obvious to me is that generating infographics (at least number heavy ones are a tricky use case).</p><p>3. <strong>Generating a Superhero Comic Strip</strong> : A few months ago I had done a series around using people's LinkedIn information to generate a <a href="https://www.linkedin.com/pulse/anthropic-agentic-systems-1-prompt-chaining-vikram-ekambaram-pjn5e" target="_blank">superhero bio</a> for each person. The one thing I had struggled with was generating a superhero image. So I wanted to test and see if I could generate a comic strip for each person using their generate bio. This it did a great job with.</p><p></p><figure><img data-media-urn="urn:li:digitalmediaAsset:D4E12AQFHvz5OYiOlBQ" src="https://media.licdn.com/dms/image/v2/D4E12AQFHvz5OYiOlBQ/article-inline_image-shrink_1500_2232/B4EZZo6EuUHEAU-/0/1745516779374?e=1765411200&amp;v=beta&amp;t=ayeQFmGujDY40TV26iWpJ324VSZttH0SmNQGQmb9XkQ"/><figcaption></figcaption></figure><p>If anyone wants to try out the Comic Strip agent, here is the <a href="https://agent.ai/agent/prompt_chaining_superhero" target="_blank">link</a>.</p><p>I am excited to see what else is possible and keep iterating and seeing what kind of infographics I can build, but it is extremely impressive how far we have come in a year.</p><p></p>
+</article>
+<!-- Article Footer -->
+<div class="article-footer">
+<div class="card" style="text-align: center; padding: 2rem;">
+<h3>Stay Updated</h3>
+<p style="margin: 1rem 0 1.5rem;">Follow Vikram on LinkedIn for more insights on GenAI automation and go-to-market strategy.</p>
+<a class="btn btn-primary" href="https://www.linkedin.com/in/vikramekambaram" target="_blank">Follow on LinkedIn →</a>
+</div>
+</div>
+<!-- CTA Section -->
+<section class="section bg-light">
+<div class="container">
+<div class="cta-section">
+<h2>Ready to Transform Your GTM Operations?</h2>
+<p>Let's discuss how AI agents can automate 60-75% of your manual work.</p>
+<div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+<a class="btn btn-large" href="../../contact.html">Schedule a Consultation</a>
+<a class="btn btn-outline btn-large" href="../../case-studies.html" style="background: transparent; color: white; border-color: white;">View Case Studies</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="footer">
+<div class="container">
+<div class="footer-content">
+<div class="footer-section">
+<h4>Vyceral Solutions LLC</h4>
+<p>Deep Understanding → Tangible Outcomes</p>
+<p style="margin-top: 1rem;">Transforming B2B go-to-market strategies with Generative AI and intelligent automation.</p>
+</div>
+<div class="footer-section">
+<h4>Solutions</h4>
+<ul class="footer-links">
+<li><a href="../../gtm-automation.html">GTM Automation</a></li>
+<li><a href="../../consulting-transformation.html">Consulting Transformation</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h4>Company</h4>
+<ul class="footer-links">
+<li><a href="../../about.html">About Us</a></li>
+<li><a href="../../case-studies.html">Case Studies</a></li>
+<li><a href="../../blog.html">Blog</a></li>
+<li><a href="../../contact.html">Contact</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h4>Get in Touch</h4>
+<ul class="footer-links">
+<li><a href="mailto:vikram.ekambaram@vyceralsolutions.com">vikram.ekambaram@vyceralsolutions.com</a></li>
+<li><a href="https://www.linkedin.com/in/vikramekambaram" target="_blank">LinkedIn Profile</a></li>
+<li><a href="https://www.linkedin.com/newsletters/7158509558993215488" target="_blank">Newsletter (LinkedIn)</a></li>
+<li style="margin-top: 0.5rem; color: var(--color-gray);">Croton-on-Hudson, NY</li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>Copyright © 2025 Vyceral Solutions LLC. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script src="../../js/main.js"></script>
 </body>
 </html>
