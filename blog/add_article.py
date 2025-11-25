@@ -267,15 +267,61 @@ def regenerate_category_index(category):
         # Fallback: just return count
         return count
 
-def generate_featured_articles():
-    """Generate featured articles HTML."""
-    import subprocess
-    try:
-        subprocess.run(['python3', 'blog/generate_blog_page.py'],
-                      capture_output=True, check=True)
-        return True
-    except:
+def update_blog_homepage(metadata, slug, category):
+    """Automatically update blog.html with new article."""
+    from bs4 import BeautifulSoup
+
+    blog_html_path = Path('blog.html')
+
+    # Read current blog.html
+    with open(blog_html_path, 'r') as f:
+        soup = BeautifulSoup(f.read(), 'html.parser')
+
+    # Find the grid div
+    grid_div = soup.find('div', class_='grid grid-2')
+    if not grid_div:
         return False
+
+    # Get category name
+    category_name = CATEGORIES[category]['name']
+    date_str = metadata['date'].strftime('%B %d, %Y')
+
+    # Create new article card HTML
+    new_card_html = f'''<div class="card">
+          <div class="card-image-wrapper">
+            <img src="images/article-images/{slug}.jpg" alt="{metadata['title']}" onerror="this.parentElement.style.display='none'">
+          </div>
+          <span class="badge badge-outline" style="margin-bottom: 1rem;">{category_name}</span>
+          <span style="color: var(--color-gray); font-size: 0.875rem; display: block; margin-bottom: 1rem;">{date_str}</span>
+          <h3>{metadata['title']}</h3>
+          <div style="margin-top: 1.5rem; color: var(--color-gray); font-size: 0.875rem;">
+            <p>📖 {metadata['read_time']} min read</p>
+          </div>
+          <a href="blog/{category}/{slug}.html" class="btn btn-outline" style="margin-top: 1.5rem;">Read Article →</a>
+        </div>'''
+
+    # Parse the new card
+    new_card = BeautifulSoup(new_card_html, 'html.parser')
+
+    # Insert at the beginning of the grid (before first child)
+    first_card = grid_div.find('div', class_='card')
+    if first_card:
+        first_card.insert_before(new_card)
+    else:
+        grid_div.append(new_card)
+
+    # Keep only the first 6 cards (featured articles)
+    all_cards = grid_div.find_all('div', class_='card')
+    if len(all_cards) > 6:
+        # Remove cards beyond 6
+        for card in all_cards[6:]:
+            card.decompose()
+
+    # Write updated HTML
+    with open(blog_html_path, 'w') as f:
+        f.write(str(soup))
+
+    return True
 
 def main():
     parser = argparse.ArgumentParser(description='Add a new blog article')
@@ -322,7 +368,7 @@ def main():
         print(f"  - Update: blog/converted-articles.json")
         print(f"  - Update: blog/articles-metadata.json")
         print(f"  - Regenerate: blog/{category}/index.html")
-        print(f"  - Generate: blog/featured-articles.html")
+        print(f"  - Update: blog.html (add to latest articles)")
         print(f"  - Delete: blog/new-articles/{article_file.name}")
         return
 
@@ -360,10 +406,10 @@ def main():
     cat_count = regenerate_category_index(category)
     print(f"✓ Regenerated: blog/{category}/index.html ({cat_count} articles)")
 
-    if generate_featured_articles():
-        print(f"✓ Generated: blog/featured-articles.html\n")
+    if update_blog_homepage(metadata, slug, category):
+        print(f"✓ Updated: blog.html (latest articles)\n")
     else:
-        print(f"⚠️  Could not regenerate featured articles (run manually)\n")
+        print(f"⚠️  Could not update blog.html (check manually)\n")
 
     # Cleanup
     print("🗑️  Cleaning up...")
@@ -377,9 +423,9 @@ def main():
     # Next steps
     print("📋 Next Steps:")
     print(f"1. Review article: {article_path}")
-    print(f"2. Update blog.html: Copy content from blog/featured-articles.html")
-    print(f"3. Commit to git:")
+    print(f"2. Commit to git:")
     print(f"   git add blog/{category}/")
+    print(f"   git add blog.html")
     print(f"   git add images/article-images/{slug}.jpg")
     print(f"   git add blog/converted-articles.json")
     print(f"   git add blog/articles-metadata.json")

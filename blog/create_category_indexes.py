@@ -150,6 +150,9 @@ TEMPLATE = '''<!DOCTYPE html>
 '''
 
 CARD_TEMPLATE = '''        <div class="card">
+          <div class="card-image-wrapper">
+            <img src="../../images/article-images/{{SLUG}}.jpg" alt="{{TITLE}}" onerror="this.parentElement.style.display='none'">
+          </div>
           <span class="badge badge-outline" style="margin-bottom: 1rem;">{{CATEGORY_NAME}}</span>
           <span style="color: var(--color-gray); font-size: 0.875rem; display: block; margin-bottom: 1rem;">{{DATE}}</span>
           <h3>{{TITLE}}</h3>
