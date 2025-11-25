@@ -13,11 +13,14 @@ with open('blog/converted-articles.json', 'r') as f:
 
 # Category info
 CATEGORIES = {
-    'ai-agents': {'name': 'AI Agents & Platforms', 'icon': '🤖', 'description': 'Deep-dives into Anthropic, Claude, MCP, and agentic systems'},
-    'strategy': {'name': 'Strategy & Insights', 'icon': '📊', 'description': 'AI adoption, organizational transformation, and industry analysis'},
-    'gtm-automation': {'name': 'GTM Automation', 'icon': '🎯', 'description': 'Go-to-market workflows and automation strategies'},
-    'technical': {'name': 'Technical Deep-Dives', 'icon': '⚙️', 'description': 'Vibe coding, custom functions, and implementation details'},
-    'use-cases': {'name': 'Use Cases & Tutorials', 'icon': '💡', 'description': 'Practical implementations and step-by-step guides'}
+    'ai-agents': {'name': 'AI Agents & Agentic Systems', 'icon': '🤖', 'description': 'Building and deploying autonomous AI agents'},
+    'ai-philosophy': {'name': 'AI Philosophy & Future of Work', 'icon': '🧠', 'description': 'Exploring AI ethics, future of work, and organizational change'},
+    'gtm-strategy': {'name': 'Business & GTM Strategy', 'icon': '🎯', 'description': 'Go-to-market strategies and business transformation'},
+    'industry-research': {'name': 'Industry Research & Insights', 'icon': '🏭', 'description': 'Industry-specific AI insights and analysis'},
+    'personal-journey': {'name': 'Personal Journey & Entrepreneurship', 'icon': '🚀', 'description': 'Lessons from building an AI-first business'},
+    'practical-applications': {'name': 'GenAI Practical Applications & Use Cases', 'icon': '💡', 'description': 'Practical tutorials, how-tos, and implementations'},
+    'technical-analysis': {'name': 'Technical Deep Dives & Analysis', 'icon': '⚙️', 'description': 'Architecture, APIs, and technical deep dives'},
+    'tools-platforms': {'name': 'GenAI Tools & Platforms', 'icon': '🛠️', 'description': 'Reviews and guides for GenAI tools and platforms'}
 }
 
 # Group articles by category
