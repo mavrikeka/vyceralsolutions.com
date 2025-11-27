@@ -4,12 +4,28 @@ This directory contains technical documentation for the VyceralSolutions.com web
 
 ## Documentation Files
 
+### ⭐ [Single Article Workflow](./single-article-workflow.md) **← START HERE**
+**Complete guide to publishing new articles (100% automated)**
+
+Covers:
+- Your complete publishing workflow
+- Console script for extracting from LinkedIn
+- Running the automated publishing script
+- What gets automatically updated (15 items)
+- Available categories
+- Error handling
+- Troubleshooting
+
+**Read this if**: You want to publish a new article from LinkedIn to your website. This is the primary workflow you'll use going forward.
+
+---
+
 ### 📘 [Blog System Documentation](./blog-system-documentation.md)
-**Complete guide to the blog migration and publishing system**
+**Complete guide to the original batch migration system**
 
 Covers:
 - System architecture and directory structure
-- LinkedIn to website migration process
+- Original LinkedIn to website migration process (one-time, 93 articles)
 - Content extraction and processing
 - Categorization system
 - Template system
@@ -17,7 +33,7 @@ Covers:
 - Running migrations
 - Troubleshooting
 
-**Read this if**: You need to understand how the blog system works end-to-end, or you're setting up blog migrations for the first time.
+**Read this if**: You need to understand the original batch migration system, or you're doing historical research on how the blog was initially set up.
 
 ---
 
@@ -73,23 +89,38 @@ Includes:
 
 ---
 
+### 📋 [Single Article Ingestion Plan](./single-article-ingestion-plan.md)
+**Technical planning document for single-article system**
+
+Covers:
+- System requirements and design decisions
+- Implementation phases
+- Script flow and architecture
+- Testing plan
+- Migration from batch to single-article
+
+**Read this if**: You're modifying the single-article publishing script or need to understand the technical decisions behind it.
+
+---
+
 ## Quick Start
 
-### For Adding New Blog Articles
+### For Adding New Blog Articles (Current Workflow)
 
-1. **Export** LinkedIn article as HTML → `blog/articles-raw/`
-2. **Run** conversion scripts:
+**100% Automated - No manual steps!**
+
+1. **Extract** article using console script on LinkedIn newsletter page
+2. **Move** downloaded HTML file:
    ```bash
-   cd blog
-   source venv/bin/activate
-   python3 convert_articles.py
-   python3 create_category_indexes.py
-   python3 generate_blog_page.py
+   mv ~/Downloads/article-name.html blog/new-articles/
    ```
-3. **Add** hero image → `images/article-images/{slug}.jpg`
-4. **Copy** featured articles from `blog/featured-articles.html` to `blog.html`
+3. **Publish**:
+   ```bash
+   cd blog && source venv/bin/activate && python3 add_article.py --category personal-journey
+   ```
+4. **Done!** Article is live everywhere in ~15 seconds
 
-👉 **Full details**: [Blog Quick Reference](./blog-quick-reference.md)
+👉 **Full details**: [Single Article Workflow](./single-article-workflow.md)
 
 ### For Understanding the System
 
@@ -99,34 +130,48 @@ Includes:
 
 ## Blog System Overview
 
-The blog system automatically converts LinkedIn newsletter articles into website blog posts:
+### Current System (Single-Article Publishing)
+**For publishing new articles going forward:**
 
 ```
-LinkedIn Article (HTML)
+LinkedIn Newsletter
     ↓
-blog/articles-raw/*.html
+Console Script (extract clean HTML)
     ↓
-[Python Scripts]
+blog/new-articles/{slug}.html
     ↓
-blog/{category}/{slug}.html
+python3 add_article.py --category {category}
     ↓
-Website Blog
+✅ FULLY PUBLISHED (15 automatic updates)
 ```
 
 **Key Features**:
-- ✅ Automated HTML conversion
-- ✅ AI-powered categorization (keyword fallback)
-- ✅ Template-based generation
-- ✅ Category organization
-- ✅ SEO optimization
-- ✅ Hero images
-- ✅ Responsive design
+- ✅ 100% automated (zero manual steps)
+- ✅ Downloads hero image from LinkedIn
+- ✅ Auto-updates blog homepage
+- ✅ Auto-regenerates all category indexes
+- ✅ Auto-updates master JSON indexes
+- ✅ Self-cleaning inbox
+- ✅ ~15 second publish time
+
+### Legacy System (Batch Migration)
+**Used for one-time migration of 93 historical articles:**
+
+```
+LinkedIn Article Archive
+    ↓
+blog/articles-raw/*.html
+    ↓
+convert_articles.py (batch)
+    ↓
+blog/{category}/{slug}.html
+```
 
 **Stats** (as of Nov 2025):
-- 81+ articles converted
+- 95 total articles published
 - 8 content categories
-- 100% automated conversion
-- ~5-7 second build time
+- 100% automated publishing
+- ~15 second per-article publish time
 
 ## File Organization
 
@@ -153,9 +198,10 @@ images/
 
 | Script | Purpose | Documentation |
 |--------|---------|---------------|
-| `convert_articles.py` | Main conversion script | [Technical Details](./blog-technical-details.md#content-extraction-pipeline) |
-| `create_category_indexes.py` | Generate category pages | [Technical Details](./blog-technical-details.md#category-index-generation) |
-| `generate_blog_page.py` | Generate featured articles | [Quick Reference](./blog-quick-reference.md#python-scripts) |
+| `add_article.py` | **Single-article publishing (CURRENT)** | [Single Article Workflow](./single-article-workflow.md) |
+| `create_category_indexes.py` | Generate category index pages | [Technical Details](./blog-technical-details.md#category-index-generation) |
+| `convert_articles.py` | Batch conversion script (legacy) | [Technical Details](./blog-technical-details.md#content-extraction-pipeline) |
+| `generate_blog_page.py` | Generate featured articles (legacy) | [Quick Reference](./blog-quick-reference.md#python-scripts) |
 | `fix_missing_hero_images.py` | Find missing images | [System Docs](./blog-system-documentation.md#image-management) |
 
 ## Categories
@@ -209,8 +255,8 @@ The blog uses 8 content categories:
 
 Potential improvements documented in [System Documentation](./blog-system-documentation.md#future-enhancements):
 
-- [ ] Automated image download from LinkedIn
-- [ ] Full blog page template automation
+- [x] Automated image download from LinkedIn ✅ (Completed)
+- [x] Full blog page template automation ✅ (Completed)
 - [ ] RSS feed generation
 - [ ] Client-side search
 - [ ] Related articles widget
@@ -220,8 +266,17 @@ Potential improvements documented in [System Documentation](./blog-system-docume
 
 ## Version History
 
-- **v1.0** (Nov 2025) - Initial system with 81+ articles
-  - LinkedIn to website migration
+- **v2.0** (Nov 2025) - Single-article automated publishing system
+  - 100% automated single-article publishing workflow
+  - Auto-downloads hero images from LinkedIn
+  - Auto-updates blog homepage with latest 6 articles
+  - Auto-regenerates category index pages
+  - Zero manual steps required
+  - ~15 second publish time per article
+  - Self-cleaning inbox pattern
+
+- **v1.0** (Nov 2025) - Initial batch migration system
+  - One-time LinkedIn to website migration (93 articles)
   - 8 content categories
   - Keyword-based categorization
   - Template-based generation
@@ -243,7 +298,8 @@ When updating documentation:
 ---
 
 **Documentation Last Updated**: November 25, 2025
-**System Version**: 1.0
-**Total Articles**: 81+
+**System Version**: 2.0
+**Total Articles**: 95+
+**Publishing Method**: 100% Automated Single-Article Workflow
 
 For questions or issues, contact: vikram.ekambaram@vyceralsolutions.com

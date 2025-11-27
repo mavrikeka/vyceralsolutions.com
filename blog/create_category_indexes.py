@@ -171,6 +171,9 @@ for cat_slug, cat_info in CATEGORIES.items():
 
     cat_articles = articles_by_category[cat_slug]
 
+    # Sort by date (newest first)
+    cat_articles.sort(key=lambda x: x['date'], reverse=True)
+
     # Generate article cards
     cards_html = []
     for article in cat_articles:
