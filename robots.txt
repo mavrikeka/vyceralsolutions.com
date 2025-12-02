@@ -1,0 +1,15 @@
+# robots.txt for vyceralsolutions.com
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Disallow crawling of any temporary or system files
+Disallow: /tmp/
+Disallow: /.git/
+
+# Sitemap location
+Sitemap: https://vyceralsolutions.com/sitemap.xml
+
+# Crawl delay (optional - be nice to servers)
+# Crawl-delay: 1
