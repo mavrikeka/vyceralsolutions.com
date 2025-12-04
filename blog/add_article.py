@@ -267,8 +267,8 @@ def regenerate_category_index(category):
         # Fallback: just return count
         return count
 
-def update_blog_homepage(metadata, slug, category):
-    """Automatically update blog.html with new article."""
+def update_blog_homepage(metadata, slug, category, total_count, category_count):
+    """Automatically update blog.html with new article and article counts."""
     from bs4 import BeautifulSoup
 
     blog_html_path = Path('blog.html')
@@ -316,6 +316,29 @@ def update_blog_homepage(metadata, slug, category):
         # Remove cards beyond 6
         for card in all_cards[6:]:
             card.decompose()
+
+    # Update total article count in "Browse by Category" section
+    section_headers = soup.find_all('div', class_='section-header')
+    for section_header in section_headers:
+        explore_p = section_header.find('p')
+        if explore_p and 'Explore all' in explore_p.text:
+            explore_p.string = f'Explore all {total_count} articles organized by topic'
+            break
+
+    # Update category-specific article count
+    # Find all category cards and update the one for this category
+    category_cards = soup.find_all('a', class_='card')
+    for card in category_cards:
+        href = card.get('href', '')
+        if href == f'blog/{category}/' or href == f'blog/{category}/index.html':
+            # Find the paragraph with article count
+            for p in card.find_all('p'):
+                if 'articles' in p.text and 'font-size: 0.875rem' in p.get('style', ''):
+                    # Only update if it's the count line (not the description)
+                    if re.match(r'^\d+\s+articles?$', p.text.strip()):
+                        p.string = f'{category_count} articles'
+                        break
+            break
 
     # Write updated HTML
     with open(blog_html_path, 'w') as f:
@@ -406,8 +429,10 @@ def main():
     cat_count = regenerate_category_index(category)
     print(f"✓ Regenerated: blog/{category}/index.html ({cat_count} articles)")
 
-    if update_blog_homepage(metadata, slug, category):
-        print(f"✓ Updated: blog.html (latest articles)\n")
+    if update_blog_homepage(metadata, slug, category, total_articles, cat_count):
+        print(f"✓ Updated: blog.html (latest articles)")
+        print(f"✓ Updated total article count: {total_articles}")
+        print(f"✓ Updated {CATEGORIES[category]['name']} count: {cat_count}\n")
     else:
         print(f"⚠️  Could not update blog.html (check manually)\n")
 
