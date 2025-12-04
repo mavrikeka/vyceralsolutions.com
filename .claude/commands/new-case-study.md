@@ -13,7 +13,86 @@ You are creating a new case study for the Vyceral Solutions website. This scaffo
 
 Create a new case study with proper scaffolding and multi-file updates.
 
-### Step 1: Gather Information
+### Step 1: Choose Input Method
+
+Ask user: "How would you like to create this case study?"
+
+Display options:
+```
+1. 🤖 Generate from Description (AI-Powered) - Recommended
+2. ✍️  Manual Entry (Fill in details yourself)
+```
+
+---
+
+**Option 1: AI-Powered Generation** (If user selects 1)
+
+1. **Ask for case study description**:
+   ```
+   Please provide a 2-4 paragraph description of the case study including:
+   - Client/company context
+   - The problem/challenge they faced
+   - Your solution/approach
+   - Key results/outcomes
+
+   Paste your description below:
+   ```
+
+2. **Read multi-line description** from user (they can paste multiple paragraphs)
+
+3. **Generate structured data with LLM**:
+   - Show message: "Generating case study content with AI... (this takes 30-60 seconds)"
+   - Save description to temporary file or pass via stdin:
+     ```bash
+     echo "[user-description]" | venv/bin/python3 blog/anyquest_client.py generate-case-study
+     ```
+   - Wait for response (returns JSON with all case study data)
+   - Parse JSON output
+
+4. **Show generated data to user**:
+   ```
+   ✨ Generated Case Study Data:
+
+   Client: [client_name]
+   Industry: [industry]
+   Badge: [badge]
+   Tagline: [tagline]
+   Technologies: [technologies]
+
+   Challenge: [challenge]
+
+   Solution: [solution]
+
+   Metrics (3):
+   - [metric1_value]: [metric1_description]
+   - [metric2_value]: [metric2_description]
+   - [metric3_value]: [metric3_description]
+
+   Results (4):
+   - [result1_title]: [result1_description]
+   - [result2_title]: [result2_description]
+   - [result3_title]: [result3_description]
+   - [result4_title]: [result4_description]
+   ```
+
+5. **Ask for confirmation**:
+   ```
+   Accept this generated content? (yes/no/regenerate)
+   - yes: Proceed to Step 2 (Generate Slug)
+   - no: Fall back to Option 2 (Manual Entry)
+   - regenerate: Call LLM again with same description
+   ```
+
+6. **Error handling**:
+   - If LLM call fails: Automatically fall back to Option 2
+   - Show user: "⚠️ AI generation failed. Falling back to manual entry."
+   - If JSON parsing fails: Show error and offer to regenerate or enter manually
+
+**Store all data** (either from LLM or user input) for later use.
+
+---
+
+**Option 2: Manual Entry** (If user selects 2 OR fallback from Option 1)
 
 Ask the user for the following information (one at a time):
 
@@ -36,6 +115,21 @@ Ask the user for the following information (one at a time):
 
 6. **Primary Industry**
    - Example: "Manufacturing", "Professional Services", "Healthcare"
+
+7. **Challenge** (2-3 sentences)
+
+8. **Solution** (2-3 sentences)
+
+9. **Three Metrics**:
+   - Metric 1 value and description
+   - Metric 2 value and description
+   - Metric 3 value and description
+
+10. **Four Results** (for detailed impact section):
+    - Result 1: Title and description
+    - Result 2: Title and description
+    - Result 3: Title and description
+    - Result 4: Title and description
 
 Store all responses for later use.
 

@@ -22,18 +22,42 @@ Execute the complete blog article publishing workflow:
 
 ### Step 2: Select Category
 
-Present the 8 available categories and ask the user to select one:
+**Option A: AI-Powered Auto-Categorization (Recommended)**
 
-- `ai-agents` - AI Agents & Agentic Systems
-- `ai-philosophy` - AI Philosophy & Future of Work
-- `gtm-strategy` - Business & GTM Strategy
-- `industry-research` - Industry Research & Insights
-- `personal-journey` - Personal Journey & Entrepreneurship
-- `practical-applications` - Practical Applications & Use Cases
-- `technical-analysis` - Technical Deep Dives & Analysis
-- `tools-platforms` - GenAI Tools & Platforms
+1. Ask user: "Would you like AI to automatically categorize this article? (yes/no)"
 
-Wait for user confirmation before proceeding.
+2. **If yes (AI categorization)**:
+   - Show message: "Analyzing article content with LLM... (this takes 30-60 seconds)"
+   - Run categorization:
+     ```bash
+     venv/bin/python3 blog/anyquest_client.py categorize blog/new-articles/[article-filename].html
+     ```
+   - Wait for response (LLM will analyze and return category)
+   - Capture the category from stdout (e.g., "ai-agents")
+   - Show user: "✨ AI suggests: **[category]** - [Category Full Name]"
+   - Ask: "Accept this categorization? (yes/no)"
+     - If **yes**: Use the AI-suggested category and proceed to Step 3
+     - If **no**: Fall through to Option B (Manual Selection)
+
+3. **Error handling**:
+   - If LLM call fails (network error, timeout, API error): Automatically fall back to Option B
+   - Show user: "⚠️ AI categorization failed. Falling back to manual selection."
+
+**Option B: Manual Category Selection**
+
+1. Present the 8 available categories:
+   - `ai-agents` - AI Agents & Agentic Systems
+   - `ai-philosophy` - AI Philosophy & Future of Work
+   - `gtm-strategy` - Business & GTM Strategy
+   - `industry-research` - Industry Research & Insights
+   - `personal-journey` - Personal Journey & Entrepreneurship
+   - `practical-applications` - Practical Applications & Use Cases
+   - `technical-analysis` - Technical Deep Dives & Analysis
+   - `tools-platforms` - GenAI Tools & Platforms
+
+2. Ask user to select one (1-8)
+
+3. Wait for user confirmation before proceeding
 
 ### Step 3: Run Article Publishing Script
 
