@@ -1,5 +1,13 @@
 [
   {
+    "title": "My GenAI Journey",
+    "date": "2025-12-04T00:00:00",
+    "category": "personal-journey",
+    "read_time": 5,
+    "word_count": 994,
+    "source_file": "my-genai-journey.html"
+  },
+  {
     "title": "Accidental AEO: What I Learned Rebuilding My Website",
     "date": "2025-12-03T00:00:00",
     "category": "industry-research",

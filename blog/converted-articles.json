@@ -1,5 +1,14 @@
 [
   {
+    "title": "My GenAI Journey",
+    "slug": "my-genai-journey",
+    "category": "personal-journey",
+    "category_name": "Personal Journey",
+    "date": "2025-12-04 00:00:00",
+    "read_time": 5,
+    "path": "blog/personal-journey/my-genai-journey.html"
+  },
+  {
     "title": "Accidental AEO: What I Learned Rebuilding My Website",
     "slug": "accidental-aeo-what-i-learned-rebuilding-my-websit",
     "category": "industry-research",
