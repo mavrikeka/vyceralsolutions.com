@@ -53,6 +53,7 @@ Display options:
    ```
    ✨ Generated Case Study Data:
 
+   Solution Type: [solution_type]
    Client: [client_name]
    Industry: [industry]
    Badge: [badge]
@@ -73,6 +74,10 @@ Display options:
    - [result2_title]: [result2_description]
    - [result3_title]: [result3_description]
    - [result4_title]: [result4_description]
+
+   CTA:
+   - Headline: [cta_headline]
+   - Description: [cta_description]
    ```
 
 5. **Ask for confirmation**:
@@ -96,12 +101,14 @@ Display options:
 
 Ask the user for the following information (one at a time):
 
-1. **Client Name** (or type description if confidential)
-   - Example: "Mann Partners" or "Leadership Development Firm"
+1. **Case Study Type** (choose one - REQUIRED for CTA):
+   - GTM Automation (B2B software sales teams)
+   - Consulting Transformation (strategy consulting firms)
 
-2. **Case Study Type** (choose one):
-   - GTM Automation
-   - Consulting Transformation
+   **Important:** Store this for CTA generation in Step 4
+
+2. **Client Name** (or type description if confidential)
+   - Example: "Mann Partners" or "Leadership Development Firm"
 
 3. **Industry/Category Badge**
    - Examples: "B2B SaaS", "Industrial IoT", "Executive Recruiting", "Digital Experience"
@@ -130,6 +137,18 @@ Ask the user for the following information (one at a time):
     - Result 2: Title and description
     - Result 3: Title and description
     - Result 4: Title and description
+
+11. **CTA Headline** (based on case study type):
+    - **If GTM Automation:** Suggest a sales/GTM-focused CTA
+      - Examples: "Ready to Transform Your Sales Intelligence?", "Ready to Automate Your Research-to-Outreach Pipeline?", "Ready to Automate Your Sales Qualification?"
+    - **If Consulting Transformation:** Suggest a consulting workflow-focused CTA
+      - Examples: "Ready to Transform Your Research Workflow?", "Ready to Automate Your Pitch Pack Creation?", "Ready to Automate Your Executive Recruiting Screening?"
+    - Ask user to confirm or provide custom CTA
+
+12. **CTA Description** (based on case study type):
+    - **If GTM Automation:** "Learn how we can build [type of system] for your GTM/sales team."
+    - **If Consulting Transformation:** "Learn how we can build [type of system] for your business/workflow."
+    - Customize based on the specific solution
 
 Store all responses for later use.
 
@@ -249,6 +268,53 @@ Read the new file and update these sections (use Edit tool):
 
    <!-- TODO: Fill in 4 Impact & Results cards -->
    ```
+
+10. **CTA Section** (customize based on solution type):
+
+   **If GTM Automation:**
+   ```html
+   <!-- CTA Section -->
+   <section class="section cta-section">
+     <div class="container">
+       <div class="cta-section">
+         <h2>[CTA Headline - GTM focused]</h2>
+         <p>[CTA Description - mention GTM/sales team]</p>
+         <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+           <a href="../contact.html" class="btn btn-large">Schedule a Consultation</a>
+           <a href="../case-studies.html" class="btn btn-outline btn-large" style="background: transparent; color: white; border-color: white;">View More Case Studies</a>
+         </div>
+       </div>
+     </div>
+   </section>
+   ```
+
+   **If Consulting Transformation:**
+   ```html
+   <!-- CTA Section -->
+   <section class="section cta-section">
+     <div class="container">
+       <div class="cta-section">
+         <h2>[CTA Headline - Consulting workflow focused]</h2>
+         <p>[CTA Description - mention business/workflow]</p>
+         <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+           <a href="../contact.html" class="btn btn-large">Schedule a Consultation</a>
+           <a href="../case-studies.html" class="btn btn-outline btn-large" style="background: transparent; color: white; border-color: white;">View More Case Studies</a>
+         </div>
+       </div>
+     </div>
+   </section>
+   ```
+
+   **CTA Examples by Type:**
+   - **GTM Automation:**
+     - "Ready to Transform Your Sales Intelligence?" / "Learn how we can build an intelligent automation system for your GTM team."
+     - "Ready to Automate Your Research-to-Outreach Pipeline?" / "Learn how we can build an integrated Clay + Agent.ai + Outreach system for your sales team."
+     - "Ready to Automate Your Sales Qualification?" / "Learn how we can build custom assessment tools that demonstrate value and qualify prospects at scale."
+
+   - **Consulting Transformation:**
+     - "Ready to Transform Your Research Workflow?" / "Learn how we can build a custom AI agent system for your business."
+     - "Ready to Automate Your Pitch Pack Creation?" / "Learn how we can build a multi-agent system to transform your proposal development process."
+     - "Ready to Automate Your Executive Recruiting Screening?" / "Learn how we can build a criteria-based evaluation agent for your recruiting workflows."
 
 ### Step 5: Update Case Studies Index Page
 

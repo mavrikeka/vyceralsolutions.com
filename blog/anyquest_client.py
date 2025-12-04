@@ -177,52 +177,196 @@ def generate_case_study(description: str) -> Dict:
     Generate case study content from brief description
 
     Args:
-        description: Brief case study description (2-3 paragraphs)
+        description: Technical description of the application/project
 
     Returns:
-        dict with structured case study data:
-        {
-            'client_name': str,
-            'industry': str,
-            'badge': str,
-            'tagline': str,
-            'technologies': str,
-            'challenge': str,
-            'solution': str,
-            'metrics': [{'value': str, 'description': str}, ...],
-            'results': [{'title': str, 'description': str}, ...]
-        }
+        dict with structured case study data following Vyceral Solutions format
 
     Raises:
         ValueError: If response cannot be parsed as JSON
     """
-    # Build generation prompt
-    prompt = f"""Based on this case study description, generate structured case study content.
+    # Build generation prompt using the strategic case study format
+    prompt = f"""You are writing a case study for Vyceral Solutions' website. Given a technical description of an application, generate a case study following this exact structure and tone.
 
-Description:
+Structure to follow:
+
+Header tags — [Industry] | [Project Type] (e.g., "Leadership Development | Community Tool")
+Title — "[Client Type]: [Descriptive Name of Capability]"
+One-line hook — A single sentence explaining what the tool does and the key insight it demonstrates
+Metadata table — Client, Industry, Project Type, Technologies
+Results at a Glance — 3 key metrics/deliverables with short labels
+The Challenge — 3 bullets describing the problem, ending with a "The Learning:" callout that captures the strategic insight
+The Solution — Deliverables list (4 items) + Strategic Approach (4 items) + "The Learning:" callout
+Measurable Business Impact — 4 quadrants (Efficiency Gains, System Performance, [Value Category], Strategic Benefits) with 4 bullets each
+CTA section — Not needed in output
+
+Technology translation rules:
+
+If input mentions React, Next.js, Node, Express, or similar frameworks → translate to "Claude Code"
+If input mentions Vercel, Heroku, AWS, or deployment platforms → translate to "Railway"
+If input mentions LLM, language model, AI API, or similar → translate to "AnyQuest"
+Never say "AnyQuest LLM" — just "AnyQuest"
+Technologies line should typically be: "AnyQuest, Claude Code, Railway" unless other specific tools are mentioned
+
+Abstraction rules:
+Frame the case study around the generalizable capability, not the specific use case. The specific project is an example of the broader concept.
+Ask yourself: "What is the reusable product or approach here?" — then lead with that.
+
+Examples of abstraction:
+- Too Narrow: "Community survey for T2V practitioners" → Abstracted: "AI-Enabled Intelligent Survey"
+- Too Narrow: "Built for 5-10 responses" → Abstracted: "Built for contexts where qualitative depth matters more than statistical scale"
+- Too Narrow: "Community pilots" → Abstracted: "Research contexts with constrained sample sizes"
+- Too Narrow: "T2V community insights" → Abstracted: "Stakeholder feedback collection"
+
+The title should name the capability, not the specific deployment:
+❌ "GenAI-Native Community Survey Application"
+✅ "AI-Enabled Intelligent Survey Platform"
+
+The Challenge section should describe the general problem category, with the specific use case as one example:
+❌ "Community pilots often get only 5-10 responses"
+✅ "Many research contexts—executive feedback, community pilots, qualitative studies—involve small samples where traditional surveys fail"
+
+The Solution section should position the reusable approach, with this project as proof:
+❌ "Survey application for community feedback"
+✅ "Intelligent survey platform that dynamically adapts based on response quality—deployed here for community research"
+
+Results at a Glance rules:
+This section needs 3 concrete, quantified metrics that tell a story. Choose from these categories:
+
+1. Efficiency/reduction — What got smaller, faster, or eliminated? (e.g., 75% Time Saved, 37% Fewer Incomplete Responses)
+2. Quality/improvement — What got better, richer, or multiplied? (e.g., 2.4x More Usable Insights)
+3. Speed/time — How fast was delivery, processing, or turnaround? (e.g., 1 Day Launch, 30min Per Pitch Pack)
+4. Scale/capacity — How much more can you handle? (e.g., 3x Client Capacity, 500 Targeted Contacts)
+5. Scope/coverage — How many components, integrations, or workflows? (e.g., 15+ AI Agents, 7 Platforms Integrated)
+6. Cost/ROI — What was the financial impact? (e.g., 40% Cost Reduction, 10x ROI)
+
+Select 3 metrics that best represent the value delivered. Prioritize variety — don't pick 3 from the same category.
+
+If the input does not include specific metrics, extrapolate reasonable estimates based on:
+- The before/after state implied by the technical description
+- Industry-standard improvements for this type of solution
+- The complexity and scope of the build
+
+Metrics should be formatted as:
+- Number/percentage on top (bold, large)
+- Short label below (2-5 words)
+
+Examples of good metrics:
+- 37% | Fewer Incomplete Responses
+- 2.4x | More Usable Insights
+- 1 Day | Launch Timeline
+- 75% | Time Saved
+- 3x | Client Capacity
+- 15+ | AI Agents
+- 7 | Platforms Integrated
+- 500 | Targeted Contacts
+- 30min | Per Pitch Pack
+
+Avoid vague metrics like:
+❌ "AI-Powered" / "Automated" / "Real-Time" (these are features, not results)
+❌ "Conversational" / "Adaptive" / "Dynamic" (these are descriptions, not outcomes)
+
+Strategic Approach rules:
+The Strategic Approach section must capture the thinking and philosophy behind design decisions, NOT implementation details.
+
+❌ Wrong: "Single API call analyzes Q2, Q3, Q4 simultaneously for efficiency"
+✅ Right: "Optimize for the analysis layer — Survey design assumes AI theme extraction, not Excel pivot tables"
+❌ Wrong: "Session-based state management passes analysis to follow-up page"
+✅ Right: "Conversational not transactional — Dynamic follow-ups create dialogue; respondents feel heard rather than processed"
+
+Ask yourself: "What was the strategic bet or insight that drove this design choice?" — not "How was it implemented?"
+
+Extrapolation rules:
+If the input is missing any of the following, extrapolate from the content provided — do not ask for further input:
+
+- Problem context — Infer the pain point from what the solution does (e.g., if it automates follow-ups, the problem was static surveys that miss nuance)
+- Strategic insight — Infer the philosophy from the architecture choices (e.g., if it uses open-ended questions + AI analysis, the insight is "depth over breadth")
+- Results metrics — Estimate reasonable outcomes based on the solution's capabilities and industry benchmarks
+
+Be confident in extrapolations. Frame estimates as results, not guesses.
+
+Tone guidelines:
+
+Confident, not salesy
+Focus on business outcomes and strategic insights
+"The Learning" callouts should be reusable principles, not project-specific observations
+Bullets should be scannable with bold lead-ins
+
+Input:
 {description}
 
-Generate a JSON object with the following structure:
+Solution Type Classification:
+Determine if this case study is:
+- "GTM Automation" if it's for B2B software sales/marketing teams (outreach, prospecting, lead gen, sales enablement)
+- "Consulting Transformation" if it's for strategy consulting firms (internal operations, client delivery, research automation)
+
+Generate a JSON object with this structure:
 {{
-  "client_name": "Client name or generic description (e.g., 'Healthcare Tech Company')",
-  "industry": "Primary industry (e.g., 'Manufacturing', 'Healthcare', 'Professional Services')",
-  "badge": "Category badge (e.g., 'B2B SaaS', 'Industrial IoT', 'Executive Recruiting')",
-  "tagline": "One-line description (5-8 words, e.g., 'CES-Targeted Manufacturing Campaign')",
-  "technologies": "Comma-separated tech stack (e.g., 'Clay, Agent.ai, MindStudio')",
-  "challenge": "2-3 sentence challenge description explaining the core problem",
-  "solution": "2-3 sentence solution description explaining the approach and outcome",
-  "metrics": [
-    {{"value": "75%", "description": "Time Saved"}},
-    {{"value": "3x", "description": "Faster Processing"}},
-    {{"value": "2 weeks", "description": "Implementation Time"}}
+  "solution_type": "GTM Automation" or "Consulting Transformation",
+  "header_tags": "Industry | Project Type",
+  "title": "Client Type: Descriptive Name",
+  "one_line_hook": "Single sentence hook",
+  "client": "Client name or type",
+  "industry": "Industry name",
+  "project_type": "Type of project",
+  "technologies": "Comma-separated (use translation rules)",
+  "results_at_glance": [
+    {{"value": "XX%", "label": "Short Label"}},
+    {{"value": "Xx", "label": "Short Label"}},
+    {{"value": "X weeks", "label": "Short Label"}}
   ],
-  "results": [
-    {{"title": "Efficiency Gains", "description": "2-3 sentence detailed description of this specific result"}},
-    {{"title": "Quality Improvement", "description": "2-3 sentence detailed description"}},
-    {{"title": "Strategic Impact", "description": "2-3 sentence detailed description"}},
-    {{"title": "Scalability", "description": "2-3 sentence detailed description"}}
-  ]
+  "challenge_bullets": [
+    "Challenge point 1",
+    "Challenge point 2",
+    "Challenge point 3"
+  ],
+  "challenge_learning": "The Learning: Strategic insight",
+  "deliverables": [
+    "Deliverable 1",
+    "Deliverable 2",
+    "Deliverable 3",
+    "Deliverable 4"
+  ],
+  "strategic_approach": [
+    "Strategic insight 1 (NOT implementation detail)",
+    "Strategic insight 2",
+    "Strategic insight 3",
+    "Strategic insight 4"
+  ],
+  "solution_learning": "The Learning: Strategic principle",
+  "business_impact": {{
+    "efficiency_gains": [
+      "Efficiency point 1",
+      "Efficiency point 2",
+      "Efficiency point 3",
+      "Efficiency point 4"
+    ],
+    "system_performance": [
+      "Performance point 1",
+      "Performance point 2",
+      "Performance point 3",
+      "Performance point 4"
+    ],
+    "value_category": [
+      "Value point 1",
+      "Value point 2",
+      "Value point 3",
+      "Value point 4"
+    ],
+    "strategic_benefits": [
+      "Strategic point 1",
+      "Strategic point 2",
+      "Strategic point 3",
+      "Strategic point 4"
+    ]
+  }},
+  "cta_headline": "CTA question (GTM: sales-focused | Consulting: workflow-focused)",
+  "cta_description": "Learn how we can... (GTM: mention GTM/sales team | Consulting: mention business/workflow)"
 }}
+
+CTA Guidelines by Solution Type:
+- GTM Automation: Focus on sales/GTM automation ("Ready to Transform Your Sales Intelligence?", "Ready to Automate Your Research-to-Outreach Pipeline?")
+- Consulting Transformation: Focus on consulting workflows ("Ready to Transform Your Research Workflow?", "Ready to Automate Your Pitch Pack Creation?")
 
 CRITICAL: Return ONLY valid JSON, no markdown code blocks, no explanations. Just the raw JSON object.
 

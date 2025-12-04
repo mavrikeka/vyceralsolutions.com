@@ -135,6 +135,26 @@ python3 add_blog_seo.py --test
 python3 add_blog_seo.py --dry-run
 ```
 
+### AI/LLM Commands
+
+```bash
+# Auto-categorize a blog article using AI
+python3 blog/anyquest_client.py categorize blog/new-articles/article.html
+
+# Generate case study from technical description
+echo "[technical description]" | python3 blog/anyquest_client.py generate-case-study
+
+# Test mode with verbose output
+python3 blog/anyquest_client.py categorize blog/new-articles/article.html --verbose
+```
+
+### Slash Commands
+
+Available slash commands in `.claude/commands/`:
+- `/publish-article` - Publish new blog article (includes AI categorization, sitemap update)
+- `/new-case-study` - Create new case study (includes AI generation, CTA customization)
+- `/sync-docs` - Update CLAUDE.md based on code changes
+
 ### Git Workflow
 
 ```bash
@@ -206,14 +226,14 @@ git push origin design-update
 │   ├── data-governance-company.html  # Immuta case study
 │   ├── industrial-iot-company.html   # Viaduct case study
 │   ├── management-consulting-firm-*.html  # Mann Partners (3 case studies)
-│   ├── leadership-development-firm*.html  # CEOWorks (2 case studies)
+│   ├── leadership-development-firm*.html  # CEOWorks (3 case studies)
 │   └── bridgeline-search-assessment.html
 │
 ├── docs/                        # Documentation folder (unused)
 ├── venv/                        # Python virtual environment (not required)
 ├── CNAME                        # Custom domain: vyceralsolutions.com
 ├── robots.txt                   # SEO: Allow all, link to sitemap
-├── sitemap.xml                  # 645 lines, 103 URLs indexed
+├── sitemap.xml                  # 651 lines, 104 URLs indexed
 ├── README.md                    # Project documentation (261 lines)
 └── add_blog_seo.py              # Script for adding SEO elements to blog
 ```
@@ -230,7 +250,7 @@ git push origin design-update
 | **Blog template** | blog/article-template.html | Template with 8 variables |
 | **Article registry** | blog/converted-articles.json | 95 articles with metadata |
 | **Sitemap** | sitemap.xml | All URLs for Google indexing |
-| **Case study template** | case-studies/*.html | Consistent structure across all 9 |
+| **Case study template** | case-studies/*.html | Consistent structure across all 10 |
 
 ---
 
@@ -299,9 +319,16 @@ git push origin design-update
 
 ## Environment Variables
 
-**N/A** - No environment variables. This is a static site.
+**Environment Variables** (for AI/LLM integration):
+- `.env` file (gitignored) - Contains API keys
+- `.env.example` - Template with required variables
 
-**Configuration**:
+**Required Variables**:
+| Variable | Purpose | Where Used |
+|----------|---------|------------|
+| ANYQUEST_API_KEY | LLM API for AI-powered content generation | blog/anyquest_client.py |
+
+**Static Configuration** (hardcoded):
 - Domain: Hardcoded in `CNAME` file (`vyceralsolutions.com`)
 - Reb2b Key: Hardcoded in HTML (`1N5W0HM2RYO5`)
 - Email: Hardcoded in HTML (`vikram.ekambaram@vyceralsolutions.com`)
@@ -309,6 +336,7 @@ git push origin design-update
 **Customization Points**:
 | Item | File | Location |
 |------|------|----------|
+| ANYQUEST_API_KEY | .env | Used in blog/anyquest_client.py for case study generation and article categorization |
 | Domain | CNAME | Line 1 |
 | Company Email | All HTML files | `mailto:` links and schema |
 | LinkedIn Profile | All HTML files | Footer and schema |

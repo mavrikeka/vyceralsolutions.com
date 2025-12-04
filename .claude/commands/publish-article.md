@@ -8,6 +8,7 @@ You are helping publish a new blog article to the Vyceral Solutions website. Thi
 - Articles are sourced from LinkedIn and placed in `/blog/new-articles/`
 - The `add_article.py` script converts them to the site's template format
 - Articles are organized into 8 categories with indexes that must be regenerated
+- **Must update sitemap.xml** for every new article (critical for SEO)
 
 ## Your Task
 
@@ -143,7 +144,50 @@ Execute the complete blog article publishing workflow:
    - Show user: "✅ Total articles: [X] (verified)"
    - Show user: "✅ [Category] articles: [Y] (verified)"
 
-### Step 6: Preview Article Locally
+### Step 6: Update Sitemap
+
+**IMPORTANT**: Every new article must be added to sitemap.xml for SEO.
+
+1. **Read sitemap.xml**:
+   ```bash
+   cat sitemap.xml
+   ```
+
+2. **Find the correct blog category section**:
+   - Look for comment like `<!-- [Category Name] Blog Posts -->`
+   - Example: `<!-- AI Agents Blog Posts -->` or `<!-- Practical Applications Blog Posts -->`
+
+3. **Add new entry** in alphabetical order within that category section:
+   ```xml
+   <url>
+     <loc>https://vyceralsolutions.com/blog/[category]/[slug].html</loc>
+     <changefreq>monthly</changefreq>
+     <priority>0.6</priority>
+   </url>
+   ```
+
+   **Note**: Do NOT add `<lastmod>` tag for blog articles (consistency with existing entries)
+
+4. **Insert in alphabetical order**:
+   - Compare the slug with other article URLs in the same category
+   - Insert in the correct alphabetical position
+   - Use Edit tool to add the entry
+
+5. **Validate sitemap XML**:
+   ```bash
+   python3 -c "import xml.etree.ElementTree as ET; ET.parse('sitemap.xml'); print('✅ sitemap.xml is valid XML')"
+   ```
+
+6. **Verify the entry was added**:
+   ```bash
+   grep "[slug].html" sitemap.xml
+   ```
+
+7. **Show confirmation**:
+   - "✅ Added article to sitemap.xml"
+   - "✅ Sitemap XML is valid"
+
+### Step 7: Preview Article Locally
 
 1. **Start local server in background**:
    ```bash
@@ -167,7 +211,7 @@ Execute the complete blog article publishing workflow:
 
 5. **Stop the server** (use KillShell with the bash_id from step 1)
 
-### Step 7: Prepare Commit
+### Step 8: Prepare Commit
 
 1. Run `git status` to show what changed
 2. Extract article title from the HTML (look for `<h1>` tag)
@@ -177,12 +221,13 @@ Execute the complete blog article publishing workflow:
 
    - Published to /blog/[category]/[slug].html
    - Updated category index and blog homepage
+   - Added to sitemap.xml for SEO
    - [X] total articles, [Y] in [Category] category
    ```
 4. Show user the proposed commit message
 5. Ask if they want to commit now or make manual edits first
 
-### Step 8: Commit and Push (if user confirms)
+### Step 9: Commit and Push (if user confirms)
 
 1. Stage all changes: `git add .`
 2. Commit with the generated message
@@ -196,12 +241,15 @@ Execute the complete blog article publishing workflow:
 
 - ❌ DON'T use system `python3` if `venv/` exists - ALWAYS use `venv/bin/python3`
 - ❌ DON'T skip Step 5 (article count validation) - counts are often wrong
-- ❌ DON'T proceed if validation fails (especially JSON corruption)
+- ❌ DON'T skip Step 6 (sitemap update) - critical for SEO
+- ❌ DON'T proceed if validation fails (especially JSON corruption or XML validation)
 - ❌ DON'T push to main without user confirmation
 - ❌ DON'T skip the local preview step
 - ❌ DON'T forget to stop the background server (use KillShell)
 - ✅ DO check for and use virtual environment
 - ✅ DO validate article counts in blog.html (Step 5)
+- ✅ DO update sitemap.xml with new article URL (Step 6)
+- ✅ DO validate sitemap XML syntax after editing
 - ✅ DO validate at each step before proceeding
 - ✅ DO provide clear error messages if something fails
 - ✅ DO show the user what files changed
@@ -215,6 +263,7 @@ Common issues and solutions:
 - **"externally-managed-environment" error**: This means they need to use the venv. Check if `venv/` exists and use `venv/bin/python3`
 - **Missing hero image**: Article script should download it, but if it fails, ask user to provide image URL or path
 - **Invalid JSON**: Show the syntax error, attempt to fix by re-running category index generator
+- **Invalid XML in sitemap**: Show the syntax error, verify Edit tool preserved XML structure, validate with `python3 -c "import xml.etree.ElementTree as ET; ET.parse('sitemap.xml')"`
 - **Script fails**: Show full error output, check Python version, verify paths
 - **Category typo**: Validate category slug matches one of the 8 exactly
 - **Wrong article counts in blog.html**: The script doesn't always update these correctly. ALWAYS validate and fix in Step 5
@@ -227,6 +276,8 @@ Common issues and solutions:
 - ✅ Category index updated with new article
 - ✅ `converted-articles.json` is valid JSON
 - ✅ **Article counts in blog.html are correct** (total + category)
+- ✅ **sitemap.xml updated with new article URL** (critical for SEO)
+- ✅ sitemap.xml is valid XML (no syntax errors)
 - ✅ Article displays correctly in browser
 - ✅ Committed to git (or user opted to commit manually)
 
