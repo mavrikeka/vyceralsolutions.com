@@ -51,14 +51,25 @@ Execute the complete image fix workflow:
 
 For each article to process:
 
-1. **Search for published article** across all blog categories:
+1. **Search for published article** across all blog categories using fuzzy matching:
    ```bash
+   # Try exact match first
    find blog -name "{slug}.html" -type f ! -path "*/article raw images/*" ! -path "*/new-articles/*" ! -name "index.html"
+
+   # If not found, try partial match (handles truncated filenames)
+   find blog -name "*{first-30-chars}*" -type f ! -path "*/article raw images/*"
    ```
-2. **If not found**:
+
+2. **Handle filename variations**:
+   - **Truncation**: `can-it-b` → `can-it-be-built.html`
+   - **Apostrophes**: `can-t` → `cant.html` (apostrophe removed or converted)
+   - **Special chars**: LinkedIn download names may differ from published names
+
+3. **If not found**:
    - Show warning: "⚠️  Skipping {slug}: Published article not found"
    - Continue to next article
-3. **If found**: Note the full path for processing
+
+4. **If found**: Note the full path AND the actual published slug for processing
 
 ### Step 4: Process Each Article
 
@@ -69,56 +80,64 @@ For each article found, use the TodoWrite tool to track progress with tasks:
 
 **For each article:**
 
-1. **Copy images to target directory**:
+1. **Copy images to target directory with correct filenames**:
    - Create `/images/article-images/inline/` if it doesn't exist:
      ```bash
      mkdir -p images/article-images/inline
      ```
-   - Copy all inline images:
-     ```bash
-     cp "blog/article raw images"/{slug}-img-*.jpg images/article-images/inline/
+   - Copy images using the PUBLISHED slug (not raw slug) for filenames:
+     ```python
+     # If raw slug is "can-it-b" but published is "can-it-be-built":
+     src: blog/article raw images/can-it-b-img-1.jpg
+     dst: images/article-images/inline/can-it-be-built-img-1.jpg
      ```
-   - Verify copy succeeded (check if files exist)
-   - Show: "✅ Copied {N} images for {slug}"
+   - This ensures image filenames match the published article slug
+   - Show: "✅ Copied {N} images for {published-slug}"
 
-2. **Read the published article HTML**
-   - Use Read tool to get current content
-
-3. **Count LinkedIn CDN image references**:
+2. **Count LinkedIn CDN image references**:
+   - Read the published article HTML
    - Search for: `https://media.licdn.com/dms/image`
    - Count occurrences
    - Show: "Found {N} LinkedIn CDN URLs to replace"
 
-4. **Replace LinkedIn CDN URLs with local paths**:
+3. **Replace LinkedIn CDN URLs with local paths** (ALL variations):
 
-   For each image number (1 through N):
+   **IMPORTANT**: Use regex pattern matching on `src` attribute ONLY, not entire figure blocks. This handles ALL HTML variations:
+   - Simple figures: `<figure><img src="..."/></figure>`
+   - Wrapped in links: `<figure><a href="..."><img src="..."/></a></figure>`
+   - With captions: `<figure><img src="..."/><figcaption>Text</figcaption></figure>`
+   - Mixed: `<figure><a><img src="..."/></a><figcaption>Text</figcaption></figure>`
 
-   - **Extract the current LinkedIn URL** by finding the pattern:
-     ```
-     <figure><img data-media-urn="..." src="https://media.licdn.com/dms/image/v2/.../[anything]"/>
-     ```
+   **Working Approach** (Python script):
+   ```python
+   import re
 
-   - **Create replacement** with local path:
-     ```html
-     <figure><img data-media-urn="..." src="../../images/article-images/inline/{slug}-img-{N}.jpg" alt="Article image"/>
-     ```
+   # Read file
+   with open(file_path, 'r') as f:
+       content = f.read()
 
-   - **Use Edit tool** to replace:
-     - old_string: Full `<figure>...</figure>` block with LinkedIn CDN URL
-     - new_string: Same block but with local image path
+   # Find ALL LinkedIn CDN URLs in order
+   linkedin_pattern = r'src="https://media\.licdn\.com/dms/image/[^"]*"'
+   matches = list(re.finditer(linkedin_pattern, content))
 
-   - **Important**: Preserve the `data-media-urn` attribute for reference
-   - **Important**: Handle images wrapped in `<a>` tags (for sponsored content)
+   # Replace each sequentially with local path
+   for i, match in enumerate(matches, 1):
+       old_src = match.group(0)
+       new_src = f'src="../../images/article-images/inline/{published_slug}-img-{i}.jpg"'
+       content = content.replace(old_src, new_src, 1)  # Replace one at a time
 
-5. **Handle special cases**:
-   - If image is wrapped in link (`<figure><a href="..."><img src="..."/></a></figure>`):
-     - Preserve the `<a>` tag and its href
-     - Only replace the img src
-   - If LinkedIn URL has different patterns (e.g., different domain or path structure):
-     - Still replace with local path
-     - Show warning if pattern doesn't match expected format
+   # Write back
+   with open(file_path, 'w') as f:
+       f.write(content)
+   ```
 
-6. **Verify replacements**:
+   **Why this works**:
+   - Replaces ONLY the src attribute, preserving all surrounding HTML
+   - Works with ANY HTML structure around the image
+   - Processes images in document order (top to bottom)
+   - Preserves `data-media-urn`, `<a>` tags, `<figcaption>`, etc.
+
+4. **Verify replacements**:
    - Read the updated file
    - Confirm no LinkedIn CDN URLs remain in the article content:
      ```bash
@@ -172,14 +191,20 @@ NEXT STEPS
 ## Error Handling
 
 **If image file doesn't exist**:
-- Show: "❌ Image not found: {slug}-img-{N}.jpg"
+- Show: "❌ Image not found: {raw-slug}-img-{N}.jpg"
 - Skip that specific image replacement
 - Continue with remaining images
 
-**If Edit tool fails** (can't find unique old_string):
-- Show the problematic HTML snippet
-- Show: "⚠️  Manual fix needed for {slug} image {N}"
-- Continue with next image
+**If published article slug differs from raw slug**:
+- Show mapping: "Raw: {raw-slug} → Published: {published-slug}"
+- Copy images with published slug as target filename
+- This handles truncation and character variations
+
+**If filename variations found**:
+- **Truncated names**: Search with first 30 chars as wildcard
+- **Apostrophe variations**: Try both `can-t` and `cant`
+- **Special characters**: Try with/without special chars
+- Show which variation was matched
 
 **If category directory not found**:
 - Search all blog subdirectories
@@ -189,14 +214,24 @@ NEXT STEPS
 - Show clear error message
 - Suggest checking file permissions
 
+**Common Filename Variations**:
+| Raw Image Slug | Published Article Slug | Reason |
+|----------------|------------------------|--------|
+| `can-it-b` | `can-it-be-built` | Truncation |
+| `can-t` | `cant` | Apostrophe removed |
+| `mcp-a` | `mcp-and-agentai` | Truncation |
+
 ## Important Notes
 
-- **Always use Edit tool** (never Read + Write) to preserve file integrity
-- **Preserve HTML structure**: Keep `<figure>`, `<figcaption>`, `data-media-urn` attributes
-- **Use relative paths**: `../../images/article-images/inline/{slug}-img-{N}.jpg` (from blog/category/ to images/)
+- **Use Python script for replacements**: More reliable than Edit tool for multiple replacements with HTML variations
+- **ONLY replace src attribute**: Don't try to match entire `<figure>` blocks - this breaks with variations
+- **Preserve ALL HTML structure**: `<figure>`, `<a>`, `<figcaption>`, `data-media-urn` - replacement only touches the src URL
+- **Use published slug for image filenames**: Not the raw slug from download folder
+- **Use relative paths**: `../../images/article-images/inline/{published-slug}-img-{N}.jpg` (from blog/category/ to images/)
 - **Don't modify**: Hero images (those are handled separately)
 - **Don't modify**: Article content, only image src attributes
-- **Batch operations**: Process multiple edits sequentially, not in parallel
+- **Replace sequentially**: Process one URL at a time, in document order (top to bottom)
+- **Handle filename variations**: Always check for truncation and character changes
 
 ## Testing Checklist
 
