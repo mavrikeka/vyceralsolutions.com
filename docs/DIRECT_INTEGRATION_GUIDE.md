@@ -43,7 +43,7 @@ POST https://api.anyquest.ai/run
 ### Authentication
 Use the API key from the generic-prompt-agent configuration:
 ```
-Header: x-api-key: 84c0d5a342fc4a6880b4877384e5e3ae
+Header: x-api-key: API KEY
 ```
 
 **IMPORTANT**: Store this in environment variables, never hard-code it!
@@ -56,6 +56,7 @@ Header: x-api-key: 84c0d5a342fc4a6880b4877384e5e3ae
 |-------|------|-------------|
 | `Prompt` | string | Your prompt text (case-sensitive!) |
 | `webhook` | string | Webhook URL for receiving the response |
+
 
 ### Response Format
 ```json
