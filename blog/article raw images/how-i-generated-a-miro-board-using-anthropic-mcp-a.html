@@ -1,0 +1,79 @@
+<article>
+  <header>
+    <h1>How I generated a Miro Board using Anthropic MCP and Agent.ai</h1>
+    <p class="meta">
+      <span class="author">Vikram Ekambaram</span>
+      <time>March 26, 2025</time>
+    </p>
+    <img src="how-i-generated-a-miro-board-using-anthropic-mcp-a-cover.jpg" alt="Cover image" class="cover-image">
+  </header>
+
+  <p><em>Autonomous Agents - A Multipart Series about Manus, Anthropic MCP and other related technologies is sponsored by </em><em><a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="https://agent.ai/?utm_utm_campaign=vyceral&amp;utm_source=newsletter&amp;utm_medium=paidsponsorship&amp;utm_content=autonomous-agents-miro" data-test-app-aware-link="">Agent.ai</a> </em><em>- Discover, connect with and hire AI agents to do useful things.</em></p>
+
+  <p>This is my third newsletter on this topic of Autonomous Agents using Anthropic MCP + <a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="https://agent.ai/?utm_utm_campaign=vyceral&amp;utm_source=newsletter&amp;utm_medium=paidsponsorship&amp;utm_content=autonomous-agents-miro" data-test-app-aware-link="">Agent.ai</a> Tools that was inspired by Manus. The first 2 newsletters introduced Manus, how I got inspired to build a poor man's Manus and how I am leveraging Anthropic MCP + <a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="https://agent.ai/?utm_utm_campaign=vyceral&amp;utm_source=newsletter&amp;utm_medium=paidsponsorship&amp;utm_content=autonomous-agents-miro" data-test-app-aware-link="">Agent.ai</a> tools in my agent building. You can find them here -</p>
+
+  <p><a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="https://www.linkedin.com/pulse/all-started-manus-vikram-ekambaram-pxlpe?utm_utm_campaign=vyceral&amp;utm_source=newsletter&amp;utm_medium=paidsponsorship&amp;utm_content=autonomous-agents" data-test-app-aware-link="">Autonomous Agents - It all started with Manus!!</a></p>
+
+  <p><a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="https://www.linkedin.com/pulse/autonomous-agents-anthropic-mcp-gives-glimpse-future-vikram-ekambaram-gcvfc?utm_utm_campaign=vyceral&amp;utm_source=newsletter&amp;utm_medium=paidsponsorship&amp;utm_content=autonomous-agents-mcp" data-test-app-aware-link="">Autonomous Agents : Anthropic MCP gives a glimpse into the future</a></p>
+
+  <p>Continuing our journey towards building autonomous agents, the next step was to try something that I had tried to do using <a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="https://agent.ai/?utm_utm_campaign=vyceral&amp;utm_source=newsletter&amp;utm_medium=paidsponsorship&amp;utm_content=autonomous-agents-miro" data-test-app-aware-link="">Agent.ai</a> but gave up very quickly and this was to build a Miro board from an agent.</p>
+
+  <p>So let's start with why would I want to build an agent that creates a Miro board? I feel very strongly that a lot of work that strategy consultants do, will be disrupted by Generative AI. To that end, I have been building various agents to showcase work that one would normally pay consultants for. I am not saying that this will 100% replace the consultant but they will get you 80% of the way there.</p>
+
+  <p>Here are a list of agents that I've built that showcase this -</p>
+
+  <p><ol><li><a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="https://agent.ai/profile/five_whys?utm_utm_campaign=vyceral&amp;utm_source=newsletter&amp;utm_medium=paidsponsorship&amp;utm_content=autonomous-agents-miro" data-test-app-aware-link="">5 Why's agent</a> - What is the <a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="https://www.mindtools.com/a3mi00v/5-whys" data-test-app-aware-link="">5 Why's technique</a>?</li><li><a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="https://agent.ai/profile/value_proposition_canvas?utm_utm_campaign=vyceral&amp;utm_source=newsletter&amp;utm_medium=paidsponsorship&amp;utm_content=autonomous-agents-miro" data-test-app-aware-link="">Value Proposition Canvas agent</a> - What is the <a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="https://www.strategyzer.com/library/the-value-proposition-canvas" data-test-app-aware-link="">Value Proposition Canvas</a>?</li><li><a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="https://agent.ai/profile/3-so-what?utm_utm_campaign=vyceral&amp;utm_source=newsletter&amp;utm_medium=paidsponsorship&amp;utm_content=autonomous-agents-miro" data-test-app-aware-link="">3 So What's agent</a> - What is the <a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="https://www.linkedin.com/posts/dharmesh_one-of-the-most-powerful-phrases-in-my-toolbox-activity-7285337474963238912-5Wqh?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAAANDwcBopv7_abJtMjcl9OHxjJtEyPXdLA" data-test-app-aware-link="">3 So What</a>? To be fair, this is not a formal technique, but it is powerful.</li><li><a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="https://agent.ai/profile/reframing-matrix?utm_utm_campaign=vyceral&amp;utm_source=newsletter&amp;utm_medium=paidsponsorship&amp;utm_content=autonomous-agents-miro" data-test-app-aware-link="">Reframing Matrix agent</a> - What is the <a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="https://worldofwork.io/2019/08/the-reframing-matrix/" data-test-app-aware-link="">Reframing Matrix</a>?</li></ol></p>
+
+  <p>A couple of these have visuals that go along with the output and what seemed to make a lot of sense was to take the text output of my agent and generate a Miro Board.</p>
+
+  <figure>
+    <img src="how-i-generated-a-miro-board-using-anthropic-mcp-a-img-1.jpg" alt="Article image">
+  </figure>
+
+  <figure>
+    <img src="how-i-generated-a-miro-board-using-anthropic-mcp-a-img-2.jpg" alt="Article image">
+  </figure>
+
+  <p>The good news is that Miro has an API and <a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="https://agent.ai/?utm_utm_campaign=vyceral&amp;utm_source=newsletter&amp;utm_medium=paidsponsorship&amp;utm_content=autonomous-agents-miro" data-test-app-aware-link="">Agent.ai</a> can call the Miro API and create a board, build shapes and place sticky notes. So technically it could be done. Where I got stuck was the complexity of the Miro API - It is hard to understand and it requires something that I am not good at - describing the position of each object on an X,Y axis. Imagine the board above - It has over 30 sticky notes and other shapes etc. That would require 30 API calls and 30 actions in <a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="https://agent.ai/?utm_utm_campaign=vyceral&amp;utm_source=newsletter&amp;utm_medium=paidsponsorship&amp;utm_content=autonomous-agents-miro" data-test-app-aware-link="">Agent.ai</a> and I would need to know the X, Y coordinates for each. As you can imagine I gave up quickly.</p>
+
+  <p>So when I started playing around with MCP, I wanted to know if I could give instructions in Claude Studio and would I be able to use a prompt to call the APIs and build a Miro board. While the actual process was a bit more complicated, I was able to generate a Miro Board for the value proposition canvas (it wasn't pretty, but it definitely proved the concept out).</p>
+
+  <p>So I started out by asking -</p>
+
+  <blockquote>I have got a Value Proposition Canvas (Strategyzer) that has the Customer Profile and Value Map and I need to build an agent in <a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="http://Agent.ai" data-test-app-aware-link="">Agent.ai</a> that will generate a Miro Board for me by taking the text I have on the Value Proposition Canvas. I don't know how to use the Miro API, but I would like to call it using <a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="http://Agent.ai" data-test-app-aware-link="">Agent.ai</a>'s Web API tool.. can you help me do this?</blockquote>
+
+  <p>It's response was -</p>
+
+  <p>Where I found it tremendously helpful was that it walked me through the process of getting the Miro API token (go to this screen, do this, then copy this etc.). It then made all the API calls and helped me troubleshoot the errors.</p>
+
+  <p>The main error we got was because Claude was using an old version of the API and once we figured that out, I asked it to use <a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="https://agent.ai/?utm_utm_campaign=vyceral&amp;utm_source=newsletter&amp;utm_medium=paidsponsorship&amp;utm_content=autonomous-agents-miro" data-test-app-aware-link="">Agent.ai</a>'s web search to find the new API. It found the new API and learned the new structure and then ran it to create the board.</p>
+
+  <p>It made over 30 calls that all looked like this. There is no way I would be writing this by hand. I needed something that would do this autonomously.</p>
+
+  <p>It even explained it's process to me -</p>
+
+  <p>To create the Value Proposition Canvas in Miro, I'm using four different types of items from the Miro API:</p>
+
+  <p><ol><li><strong>Shapes</strong> - For creating: The main rectangle (Value Map) and circle (Customer Profile) Tiny invisible shapes (5x5 pixels) that serve as endpoints for lines</li><li><strong>Connectors</strong> - For creating all the lines: Diagonal lines in the Value Map Horizontal and vertical lines in the Customer Profile The red arrow connecting the two sides</li><li><strong>Texts</strong> - For adding all text labels: Main title and subtitle Section labels (Value Map, Customer Profile) Section names (Products &amp; Services, Pain Relievers, etc.)</li><li><strong>Sticky Notes</strong> - For adding the actual content: Customer Jobs, Pains, and Gains Products &amp; Services, Pain Relievers, and Gain Creators</li></ol></p>
+
+  <p>This combination of elements allows us to recreate the Value Proposition Canvas structure while working within the constraints of the Miro API.</p>
+
+  <p>When it was all said and done, it made over 60 API calls to build the board.</p>
+
+  <p>Here is a link to a <a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="https://youtu.be/s9FSlr-BN7Y" data-test-app-aware-link="">video</a> that demonstrates this.</p>
+
+  <p>Why am I so excited about this - there are many use cases, where our agents need to update data in other systems. In this case, it happened to be Miro. This last step of updating data in other systems, is what I see as the last mile problem - where an agent moves from doing pure research to actually taking action on the research and this was what was impressive about Manus.</p>
+
+  <p>We've all seen Deep Research do some amazing research, but to act of that research, still needs a human to now read it and do something in some system (even if it is sending a summary email or a Slack Message etc.). When agents go past the research and start taking actions, then they unlock a myriad of use cases and this is an example of that.</p>
+
+  <p>Imagine a consultant that takes in some strategy documents from a client, writes an agent that reviews the strategy and generates an output that ends up in a Miro board, that now the team can work with. It shows that agents can now start tackling more aspects of the workflow and start delivering to the promise of Vertical SaaS applications that handle entire workflows.</p>
+
+  <p>BTW - if anyone is interested in reading through the entire chat conversation and see all the gory details, here is a <a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="https://docs.google.com/document/d/17sBO5hWiAmyyOpwLGpNRPc4QcD9ha_aeoFLiV2pchTY/edit?usp=sharing" data-test-app-aware-link="">link</a>.</p>
+
+  <p>What I will leave you with is that if you have got this far in the newsletter and you have not built an agent, you might want to get started. With Anthropic MCP + <a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="https://agent.ai/?utm_utm_campaign=vyceral&amp;utm_source=newsletter&amp;utm_medium=paidsponsorship&amp;utm_content=autonomous-agents-miro" data-test-app-aware-link="">Agent.ai</a> tools, it has become even easier.</p>
+
+  <figure>
+    <img src="how-i-generated-a-miro-board-using-anthropic-mcp-a-img-3.jpg" alt="Article image">
+  </figure>
+
+</article>

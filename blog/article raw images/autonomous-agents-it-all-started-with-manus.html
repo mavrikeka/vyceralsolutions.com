@@ -1,0 +1,71 @@
+<article>
+  <header>
+    <h1>Autonomous Agents - It all started with Manus!!</h1>
+    <p class="meta">
+      <span class="author">Vikram Ekambaram</span>
+      <time>March 13, 2025</time>
+    </p>
+    <img src="autonomous-agents-it-all-started-with-manus-cover.jpg" alt="Cover image" class="cover-image">
+  </header>
+
+  <p><em>Autonomous Agents - A Multipart Series about Manus, Anthropic MCP and other related technologies is sponsored by </em><a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="https://agent.ai/?utm_utm_campaign=vyceral&amp;utm_source=newsletter&amp;utm_medium=paidsponsorship&amp;utm_content=autonomous-agents" data-test-app-aware-link=""><em>Agent.ai</em></a><em> - Discover, connect with and hire AI agents to do useful things.</em></p>
+
+  <p>The world of AI changes weekly and last week, for a hot second it looked like there was going to be a second DeepSeek moment. A <a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="https://manus.im/" data-test-app-aware-link="">Chinese AI firm</a> had come up with something disruptive. To be fair what they came up with was disruptive but not DeepSeek disruptive.</p>
+
+  <p>The innovation they came up with was that they combined DeepResearch functionality with Operator functionality with Agentic functionality all in one package to build a general AI agent, that can act autonomously on a wide range of tasks.</p>
+
+  <figure>
+    <img src="autonomous-agents-it-all-started-with-manus-img-1.jpg" alt="Article image">
+  </figure>
+
+  <p>Here is a <a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="https://manus.im/" data-test-app-aware-link="">link to their website</a> and you can check out their demos. It will make you sit up, take notice and make you understand what the hype was all about.</p>
+
+  <p>As people got access to Manus and started looking under the covers, what stood out was that they had built all this functionality using Claude and this meme started trending. That being said, if you want a write up on Manus, <a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="https://www.exponentialview.co/p/whats-the-deal-with-manus" data-test-app-aware-link="">check out this post</a>.</p>
+
+  <figure>
+    <img src="autonomous-agents-it-all-started-with-manus-img-2.jpg" alt="Article image">
+  </figure>
+
+  <p>With this long preamble, I'll get to the "It all started with Manus" title of this post. When I heard that Manus was built leveraging Claude, Anthropic's MCP, BrowserUse and 29 tools, it got me thinking -</p>
+
+  <blockquote>Could I build a poor man's Manus? Could I build an autonomous agent too - not in production but at least to test the concept? The goal would be to give the agent instructions and see if it could do the research, create a plan and then take some action.</blockquote>
+
+  <p>I have always been sceptic about Autonomous agents, especially in a business context, but like with all things AI, I have learned to be open to changing my opinion if new data shows up and this was going to give me the opportunity to update my knowledge and possibly my opinion.</p>
+
+  <p>When it comes to agents, I do believe there are levels of autonomy, like with self driving cars and there is a need for agents at all levels of autonomy. Most agents I build are what I would call Assistive or Partial Autonomy agents. I still have to define the steps, I have to tell it what actions to take but sometimes I can give it some leeway to take action. That being said, I have always felt strongly that High and Full autonomy are going to take a while.</p>
+
+  <p>That being said,  those following the LLM vendors know that AGI and Fully Autonomous agents are the holy grail. I was very curious if this journey would help me change my opinion.</p>
+
+  <figure>
+    <img src="autonomous-agents-it-all-started-with-manus-img-3.jpg" alt="Article image">
+  </figure>
+
+  <p>Coming back to building a poor man's Manus - I have been building agents for about a year and what I read gave me confidence that I could do something similar and even if it did not work, I would learn a lot.</p>
+
+  <p>So I looked at each component -</p>
+
+  <p><ol><li>Claude LLM - I know how to use LLMs and I have built many agents that have used Claude under the covers.</li><li>BrowserUse - This is an open-source tool that enables AI agents to interact seamlessly with web browsers by extracting interactive elements from websites. I had used OpenAI Operator and I know how this works. It also turns out that <a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="https://agent.ai/?utm_utm_campaign=vyceral&amp;utm_source=newsletter&amp;utm_medium=paidsponsorship&amp;utm_content=autonomous-agents" data-test-app-aware-link="">Agent.ai</a> has a BrowserOperator action that mimics this functionality.</li><li>29 Tools - While I haven't been able to get a definitive answer on this, I have a good understanding of what tools do. They are specialized modules that empower AI agents to autonomously perform a wide range of tasks, such as web browsing, data analysis, and content creation, by interacting with external environments and resources. Basically think of them as making API calls.</li><li>Anthropic MCP - Anthropic's Model Context Protocol (MCP) is an open standard designed to seamlessly integrate AI systems with various data sources and tools. Basically think of this as something that orchestrates all the work across all these components.</li></ol></p>
+
+  <figure>
+    <img src="autonomous-agents-it-all-started-with-manus-img-4.jpg" alt="Article image">
+  </figure>
+
+  <p>Of all these components, the one component that I did not know much about was Anthropic MCP. The rest I understood. So guess how excited I was when I saw this as I was looking through <a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="https://agent.ai/?utm_utm_campaign=vyceral&amp;utm_source=newsletter&amp;utm_medium=paidsponsorship&amp;utm_content=autonomous-agents" data-test-app-aware-link="">Agent.ai</a>'s documentation.</p>
+
+  <figure>
+    <img src="autonomous-agents-it-all-started-with-manus-img-5.jpg" alt="Article image">
+  </figure>
+
+  <p>Once I saw this, I realized I had no excuse for not going down this journey of building a poor man's Manus. I had all the pieces and all I had to do was put them together and experiment.</p>
+
+  <p>The rest of this series will be me sharing my learnings as I went from knowing nothing about MCP to building autonomous agents that generate a DISC profile from someone's LinkedIn data, creating a Miro board, adding records to a <a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="http://Monday.com" data-test-app-aware-link="">Monday.com</a> board all by just using a prompt (the autonomous agent piece). I will share what I see as pros and cons of this approach and how I see myself using this in practical client situations. I have already shared a few videos on LinkedIn that show a DISC profile being generated, a Miro board being created and a Monday board being updated, for those who are interested.</p>
+
+  <p>The reason I chose Miro.com and Monday.com was because I had tried to build an agent on <a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="https://agent.ai/?utm_utm_campaign=vyceral&amp;utm_source=newsletter&amp;utm_medium=paidsponsorship&amp;utm_content=autonomous-agents" data-test-app-aware-link="">Agent.ai</a> to do this but gave up once I saw their complicated APIs. Also, if I wanted to do something remotely in the realm of what Manus had done, I needed an agent that would take action. Not just an agent that would do research. Eventually my goal is to also leverage Browser Operator functionality and see how that can help in my agent building.</p>
+
+  <p>What I will leave you with is that if you have got this far in the newsletter and you have not built an agent, you might want to get started. This is the future and it is wild!!</p>
+
+  <figure>
+    <img src="autonomous-agents-it-all-started-with-manus-img-6.jpg" alt="Article image">
+  </figure>
+
+</article>

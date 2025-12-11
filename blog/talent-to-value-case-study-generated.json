@@ -1,0 +1,69 @@
+{
+  "solution_type": "Consulting Transformation",
+  "header_tags": "Leadership Development | Intelligent Survey Platform",
+  "title": "Leadership Development Firm: AI-Enabled Adaptive Survey Platform",
+  "one_line_hook": "An intelligent survey application that detects ambiguity and dynamically generates clarifying follow-ups, transforming static forms into conversational data collection experiences",
+
+  "client": "Leadership Development Firm",
+  "industry": "Leadership Development",
+  "project_type": "Adaptive Survey Platform",
+  "technologies": "AnyQuest, Claude Code, Railway",
+
+  "results_at_glance": [
+    {"value": "37%", "label": "Fewer Incomplete Responses"},
+    {"value": "2.4x", "label": "Usable Insights Per Submission"},
+    {"value": "1 day", "label": "Prototype-to-Production Launch"}
+  ],
+
+  "challenge_bullets": [
+    "Static survey forms with fixed questions couldn't adapt to the nuance and context that community members brought to each response",
+    "Ambiguous open-ended responses diluted research quality without mechanism for real-time clarification",
+    "Community pilots require qualitative depth from small samples (5-50 responses) where traditional Likert scales fail to capture insight"
+  ],
+  "challenge_learning": "The Learning: Treat surveys as adaptive conversations—precision emerges when the instrument responds to ambiguity in real time, not post-hoc analysis",
+
+  "deliverables": [
+    "Ambiguity Detection System - AI analyzes survey responses in real-time to identify vague or incomplete answers requiring clarification",
+    "Dynamic Follow-Up Generation - Creates contextual probing questions based on specific ambiguities detected in user responses",
+    "Conversational Survey Flow - Routes users to clarifying questions when needed, or direct submission when responses are clear",
+    "Analytics Dashboard with Theme Synthesis - Displays responses with AI-generated pattern analysis, cached for performance"
+  ],
+
+  "strategic_approach": [
+    "Conversational not transactional — Dynamic follow-ups create dialogue; respondents feel heard rather than processed through static forms",
+    "Depth over breadth philosophy — 4 open-ended questions with adaptive follow-ups yield more actionable insight than 20 Likert items at small sample sizes",
+    "Optimize for the analysis layer — Survey design assumes AI theme extraction, not Excel pivot tables or manual coding",
+    "Right-sized for community pilots — Built for contexts where statistical significance is impossible but qualitative richness is achievable"
+  ],
+  "solution_learning": "The Learning: Survey methodology must match sample size constraints—adaptive depth compensates for lack of statistical power in small-sample community research",
+
+  "business_impact": {
+    "efficiency_gains": [
+      "75% fewer questions needed (4 open-ended + adaptive follow-ups vs. 20+ Likert items)",
+      "Higher completion rates through shorter baseline survey (9 fields including profile)",
+      "Richer data per response through conversational probing vs. static 1-5 ratings",
+      "Automated theme extraction replaces manual response coding and categorization"
+    ],
+    "system_performance": [
+      "Single API call evaluates multiple questions simultaneously for efficiency",
+      "Session-based state management enables seamless transition to follow-up page",
+      "Analysis caching by response count prevents redundant LLM calls for dashboard",
+      "JWT authentication with HTTP-only cookies secures analytics access (24-hour expiry)"
+    ],
+    "research_value": [
+      "Ambiguity detection functional — AI identifies vague responses requiring clarification",
+      "Consolidated follow-up page shows all clarifying questions together for user convenience",
+      "Theme synthesis operational — dashboard surfaces patterns across community member responses",
+      "Conversational feel validated — adaptive follow-ups create dialogue vs. form-filling experience"
+    ],
+    "strategic_benefits": [
+      "GenAI-native methodology differentiates from traditional survey tools like Qualtrics or SurveyMonkey",
+      "Reusable framework applicable to future community research initiatives and cohorts",
+      "Methodology demonstrates modern approach to stakeholder feedback collection",
+      "Foundation for community building — quality insights inform program design decisions"
+    ]
+  },
+
+  "cta_headline": "Ready to Transform Your Community Research?",
+  "cta_description": "Learn how we can build an adaptive survey platform for your qualitative research workflows."
+}

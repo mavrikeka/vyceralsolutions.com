@@ -1,0 +1,63 @@
+<article>
+  <header>
+    <h1>Is Vibe Coding for me?</h1>
+    <p class="meta">
+      <span class="author">Vikram Ekambaram</span>
+      <time>April 22, 2025</time>
+    </p>
+    <img src="is-vibe-coding-for-me-cover.jpg" alt="Cover image" class="cover-image">
+  </header>
+
+  <p>I'll start by saying that I am not a developer. Well, technically I started my career some 25 years ago writing Visual Basic, Java and JSP code but that was a long time ago. For the last 20+ years I have been coding adjacent and every role has taken me further away from coding. That being said, while I cannot write code anymore, I could look at a snippet of code and decipher what it is trying to do. I'm also very proficient using low code / no code tools to write little scripts. Whether it was doing Tableau analysis (calculated fields) or configuring business processes using Fuego or lately using tools like AnyQuest and <a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="http://Agent.ai" data-test-app-aware-link="">Agent.ai</a> to build agents, I feel very comfortable solving business problems with these products.</p>
+
+  <p>That being said, there is so much talk about tools like Replit, Cursor and Lovable and how easy it is to build applications using these tools that I keep asking myself - should this be something I should do? Can I tackle many more use cases if I started building my own applications? Add to this all the hype about Vibe Coding and finally I decided to take a shot at building an application.</p>
+
+  <p>Some more backstory - I have used ChatGPT to generate code that I have deployed via Netlify (this was a tax calculator application) but these were simpler applications and for all practical purposes I was deploying a single code file. I had written about this <a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="https://www.linkedin.com/pulse/everyone-programmer-vikram-ekambaram-xhave" data-test-app-aware-link="">here</a>. What I was curious about was if I could actually generate a full application.</p>
+
+  <p>Google recently came out with Firebase Studio and I decided to give it a shot. It markets itself as a prompt based application builder and it combines both the application code generation and LLM calls. So I can build an AI application from scratch.</p>
+
+  <p>I decided to build an expense tracker app that takes a credit card statement as input and then it will analyze and categorize and analyze all the data. Seems simple enough. So I gave Firebase Studio my prompt (you can see this below).</p>
+
+  <figure>
+    <img src="is-vibe-coding-for-me-img-1.jpg" alt="Article image">
+  </figure>
+
+  <p>It then generates a bunch of code and I was quite excited. It generated a simple UI where I can upload a statement and then it is supposed to generate the analysis. You can see the structure of the application.</p>
+
+  <figure>
+    <img src="is-vibe-coding-for-me-img-2.jpg" alt="Article image">
+  </figure>
+
+  <p>When I tried to run it I got 1 error -</p>
+
+  <blockquote><strong>Unhandled Runtime Error</strong> <strong>Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:</strong> - A server/client branch if (typeof window !== 'undefined'). - Variable input such as Date.now() or Math.random() which changes each time it's called. - Date formatting in a user's locale which doesn't match the server. - External changing data without sending a snapshot of it along with the HTML. - Invalid HTML tag nesting. It can also happen if the client has a browser extension installed which messes with the HTML before React loaded. See more info here: <a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="https://nextjs.org/docs/messages/react-hydration-error" data-test-app-aware-link="">https://nextjs.org/docs/messages/react-hydration-error</a></blockquote>
+
+  <p>I feel very lucky that it did not work the first time, as it quickly highlighted what I see as the biggest challenge of vibe coding. It takes the LLM 5 mins to generate a full web application and all the code. Here is what Firebase Studio generated -</p>
+
+  <figure>
+    <img src="is-vibe-coding-for-me-img-3.jpg" alt="Article image">
+  </figure>
+
+  <p>For a non-developer this is pretty daunting. So many folders and files and I have no clue what each of these does. So I uploaded this to Claude and asked it to explain this to me and this is what it had to say.</p>
+
+  <p>With this new found knowledge and feeling a bit more confident, I went to the src/ folder and felt my confidence disappearing. There were a lot of files here and I did some quick back of the napkin math and there was definitely over 1500 lines of code.</p>
+
+  <figure>
+    <img src="is-vibe-coding-for-me-img-4.jpg" alt="Article image">
+  </figure>
+
+  <p>At this point, I decided to stop. What is obvious to me is that like everything else in AI, it is extremely useful to an expert but extremely dangerous in the hands of a novice. It reminds me of this quote from <a tabindex="0" href="/in/emollick/" id="ember8321" class="ember-view">Ethan Mollick</a> in his recent <a class="TjIOSknSTnKrvutfYbjhveFZecOluAKAeqRCU " target="_self" tabindex="0" href="https://www.linkedin.com/posts/emollick_o3-is-far-more-agentic-than-people-realize-activity-7319237407076192256-bmOW?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAAANDwcBopv7_abJtMjcl9OHxjJtEyPXdLA" data-test-app-aware-link="">post</a> -</p>
+
+  <blockquote>It just does things. (Of course, that makes checking its work even harder, especially for non-experts.)</blockquote>
+
+  <p>It also reminds me of all the memes around vibe coding. If I go back to my coding days, the one thing I never enjoyed was going through someone else's codebase to figure out how it worked and where the bugs were. Now I feel like programmers will be reviewing the code generated by AI (and AI is prodigious in its ability to generate code) and try and debug it. I assume they will use AI to debug the code, but there is going to be so much black box code that no one will have any idea about that we could have other unintended consequences.</p>
+
+  <figure>
+    <img src="is-vibe-coding-for-me-img-5.jpg" alt="Article image">
+  </figure>
+
+  <p>So what did I learn -</p>
+
+  <p><ol><li>Don't vibe code if you are not a developer (not yet).</li><li>Debugging errors in code generated via vibe coding can take significantly more time than generating the code</li><li>There is a lot written about the demise of programmers, but I think we will still need expert humans in the loop.</li><li>Maybe Lovable, Cursor etc. are much simpler and the issues I ran into are specific to Firebase, but I still feel that non-programmers should not be vibe coding.</li></ol></p>
+
+</article>
