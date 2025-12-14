@@ -395,6 +395,11 @@ strong {
   opacity: 0;
 }
 
+.hero p {
+  color: #CBD5E1;
+  /* Light gray for readability on dark hero background */
+}
+
 /* CARDS & GLASSMORPHISM */
 .card {
   background: var(--color-white);
