@@ -179,6 +179,14 @@
     .article-content a:hover {
       border-bottom-color: var(--color-accent);
     }
+    /* Preserve button styling inside article content */
+    .article-content .btn {
+      color: inherit;
+      border-bottom: none;
+    }
+    .article-content .btn-primary {
+      color: var(--color-white);
+    }
     .article-content table {
       width: 100%;
       border-collapse: collapse;

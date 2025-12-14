@@ -648,7 +648,7 @@ strong {
 /* FOOTER */
 .footer {
   background: var(--color-dark);
-  color: var(--color-gray);
+  color: #CBD5E1;  /* Light gray for readability on dark background */
   padding: var(--space-2xl) 0 var(--space-lg);
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -675,7 +675,7 @@ strong {
 }
 
 .footer-links a {
-  color: var(--color-gray);
+  color: #CBD5E1;  /* Light gray for readability on dark background */
   transition: color var(--transition-fast);
 }
 
