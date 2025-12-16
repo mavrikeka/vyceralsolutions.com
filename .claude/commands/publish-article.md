@@ -131,19 +131,37 @@ Execute the complete blog article publishing workflow:
 
 4. **Update article HTML to reference local images**:
    - Read the published article at `/blog/{category}/{slug}.html`
-   - Replace any LinkedIn CDN URLs with local paths:
-     ```python
-     import re
-     # Replace LinkedIn CDN URLs in src attributes
-     linkedin_pattern = r'src="https://media\.licdn\.com/dms/image/[^"]*"'
-     matches = list(re.finditer(linkedin_pattern, content))
-     for i, match in enumerate(matches, 1):
-         old_src = match.group(0)
-         new_src = f'src="../../images/article-images/inline/{slug}-img-{i}.jpg"'
-         content = content.replace(old_src, new_src, 1)
-     ```
-   - Save the updated HTML
-   - Show: "✅ Updated article HTML with local image paths"
+
+   **Fix inline image paths** (these are often just filenames without directory):
+   ```python
+   import re
+
+   # Read the article
+   with open(f'blog/{category}/{slug}.html', 'r') as f:
+       content = f.read()
+
+   # Pattern 1: Fix relative filename-only paths (most common issue)
+   # Matches: src="slug-img-1.jpg" → src="../../images/article-images/inline/slug-img-1.jpg"
+   content = re.sub(
+       rf'src="{slug}-img-(\d+)\.jpg"',
+       rf'src="../../images/article-images/inline/{slug}-img-\1.jpg"',
+       content
+   )
+
+   # Pattern 2: Replace LinkedIn CDN URLs (if present)
+   linkedin_pattern = r'src="https://media\.licdn\.com/dms/image/[^"]*"'
+   matches = list(re.finditer(linkedin_pattern, content))
+   for i, match in enumerate(matches, 1):
+       old_src = match.group(0)
+       new_src = f'src="../../images/article-images/inline/{slug}-img-{i}.jpg"'
+       content = content.replace(old_src, new_src, 1)
+
+   # Write back
+   with open(f'blog/{category}/{slug}.html', 'w') as f:
+       f.write(content)
+   ```
+   - Count how many image paths were fixed
+   - Show: "✅ Updated {N} inline image paths in article HTML"
 
 ### Step 5: Validate Output
 
