@@ -6,7 +6,14 @@ You are helping publish a new blog article to the Vyceral Solutions website. Thi
 
 - This is a static website with blog articles managed via Python scripts
 - Articles are sourced from LinkedIn and placed in `/blog/new-articles/`
-- The `add_article.py` script converts them to the site's template format
+- **Images are also placed in `/blog/new-articles/` alongside the article:**
+  - `{slug}-cover.jpg` - hero/cover image
+  - `{slug}-img-1.jpg`, `{slug}-img-2.jpg`, etc. - inline images
+- The `add_article.py` script converts articles to the site's template format
+- **After publishing, images are copied to their final locations:**
+  - Cover → `/images/article-images/{slug}.jpg`
+  - Inline → `/images/article-images/inline/{slug}-img-X.jpg`
+- Article HTML is updated to reference local image paths (not LinkedIn CDN)
 - Articles are organized into 8 categories with indexes that must be regenerated
 - **Must update sitemap.xml** for every new article (critical for SEO)
 
@@ -97,18 +104,65 @@ Execute the complete blog article publishing workflow:
 
 7. **If errors occur**, diagnose and attempt to fix, or guide user
 
-### Step 4: Validate Output
+### Step 4: Copy Images to Proper Locations
+
+**IMPORTANT**: Images are now placed in `/blog/new-articles/` alongside the article HTML. The script must copy them to their final locations.
+
+1. **Identify the article slug** from the generated article filename
+
+2. **Copy hero/cover image**:
+   - Source: `/blog/new-articles/{slug}-cover.jpg`
+   - Destination: `/images/article-images/{slug}.jpg`
+   ```bash
+   cp blog/new-articles/{slug}-cover.jpg images/article-images/{slug}.jpg
+   ```
+   - If cover image doesn't exist, warn user but continue
+   - Show: "✅ Copied hero image: {slug}.jpg"
+
+3. **Copy inline images**:
+   - Find all files matching `/blog/new-articles/{slug}-img-*.jpg`
+   - Copy each to `/images/article-images/inline/{slug}-img-X.jpg`
+   ```bash
+   mkdir -p images/article-images/inline
+   cp blog/new-articles/{slug}-img-*.jpg images/article-images/inline/
+   ```
+   - Count how many were copied
+   - Show: "✅ Copied {N} inline images"
+
+4. **Update article HTML to reference local images**:
+   - Read the published article at `/blog/{category}/{slug}.html`
+   - Replace any LinkedIn CDN URLs with local paths:
+     ```python
+     import re
+     # Replace LinkedIn CDN URLs in src attributes
+     linkedin_pattern = r'src="https://media\.licdn\.com/dms/image/[^"]*"'
+     matches = list(re.finditer(linkedin_pattern, content))
+     for i, match in enumerate(matches, 1):
+         old_src = match.group(0)
+         new_src = f'src="../../images/article-images/inline/{slug}-img-{i}.jpg"'
+         content = content.replace(old_src, new_src, 1)
+     ```
+   - Save the updated HTML
+   - Show: "✅ Updated article HTML with local image paths"
+
+### Step 5: Validate Output
 
 1. Verify the article was created in `/blog/[category]/[slug].html`
 2. Read the first 50 lines of the new article to verify it looks correct
 3. Check that hero image exists at `/images/article-images/[slug].jpg`
-4. Validate `blog/converted-articles.json` is valid JSON:
+4. Check that inline images exist in `/images/article-images/inline/[slug]-img-*.jpg`
+5. Verify no LinkedIn CDN URLs remain:
+   ```bash
+   grep -c "media.licdn.com/dms/image" blog/[category]/[slug].html
+   ```
+   Expected: 0
+6. Validate `blog/converted-articles.json` is valid JSON:
    ```bash
    python3 -c "import json; json.load(open('blog/converted-articles.json'))"
    ```
-5. Verify the category index was updated: `blog/[category]/index.html`
+7. Verify the category index was updated: `blog/[category]/index.html`
 
-### Step 5: Validate and Fix Article Counts in blog.html
+### Step 6: Validate and Fix Article Counts in blog.html
 
 **CRITICAL**: The `add_article.py` script updates `blog.html` but sometimes the article counts don't update correctly. You MUST validate and fix these:
 
@@ -144,7 +198,7 @@ Execute the complete blog article publishing workflow:
    - Show user: "✅ Total articles: [X] (verified)"
    - Show user: "✅ [Category] articles: [Y] (verified)"
 
-### Step 6: Update Sitemap
+### Step 7: Update Sitemap
 
 **IMPORTANT**: Every new article must be added to sitemap.xml for SEO.
 
@@ -187,7 +241,7 @@ Execute the complete blog article publishing workflow:
    - "✅ Added article to sitemap.xml"
    - "✅ Sitemap XML is valid"
 
-### Step 7: Preview Article Locally
+### Step 8: Preview Article Locally
 
 1. **Start local server in background**:
    ```bash
@@ -211,7 +265,7 @@ Execute the complete blog article publishing workflow:
 
 5. **Stop the server** (use KillShell with the bash_id from step 1)
 
-### Step 8: Prepare Commit
+### Step 9: Prepare Commit
 
 1. Run `git status` to show what changed
 2. Extract article title from the HTML (look for `<h1>` tag)
@@ -227,7 +281,7 @@ Execute the complete blog article publishing workflow:
 4. Show user the proposed commit message
 5. Ask if they want to commit now or make manual edits first
 
-### Step 9: Commit and Push (if user confirms)
+### Step 10: Commit and Push (if user confirms)
 
 1. Stage all changes: `git add .`
 2. Commit with the generated message
@@ -240,15 +294,20 @@ Execute the complete blog article publishing workflow:
 ## Important Rules
 
 - ❌ DON'T use system `python3` if `venv/` exists - ALWAYS use `venv/bin/python3`
-- ❌ DON'T skip Step 5 (article count validation) - counts are often wrong
-- ❌ DON'T skip Step 6 (sitemap update) - critical for SEO
+- ❌ DON'T skip Step 4 (image copying) - images must be moved to proper locations
+- ❌ DON'T skip Step 6 (article count validation) - counts are often wrong
+- ❌ DON'T skip Step 7 (sitemap update) - critical for SEO
 - ❌ DON'T proceed if validation fails (especially JSON corruption or XML validation)
 - ❌ DON'T push to main without user confirmation
 - ❌ DON'T skip the local preview step
 - ❌ DON'T forget to stop the background server (use KillShell)
+- ❌ DON'T leave LinkedIn CDN URLs in article HTML
 - ✅ DO check for and use virtual environment
-- ✅ DO validate article counts in blog.html (Step 5)
-- ✅ DO update sitemap.xml with new article URL (Step 6)
+- ✅ DO copy images from `/blog/new-articles/` to proper locations (Step 4)
+- ✅ DO replace LinkedIn CDN URLs with local paths (Step 4)
+- ✅ DO validate no LinkedIn CDN URLs remain (Step 5)
+- ✅ DO validate article counts in blog.html (Step 6)
+- ✅ DO update sitemap.xml with new article URL (Step 7)
 - ✅ DO validate sitemap XML syntax after editing
 - ✅ DO validate at each step before proceeding
 - ✅ DO provide clear error messages if something fails
@@ -261,18 +320,24 @@ Common issues and solutions:
 - **Missing `bs4` (beautifulsoup4)**: Install with `venv/bin/pip install beautifulsoup4 lxml`
 - **No virtual environment**: Warn user, try with system `python3`, may need to create venv or use `--break-system-packages`
 - **"externally-managed-environment" error**: This means they need to use the venv. Check if `venv/` exists and use `venv/bin/python3`
-- **Missing hero image**: Article script should download it, but if it fails, ask user to provide image URL or path
+- **Missing hero image**: Remind user to place `{slug}-cover.jpg` in `/blog/new-articles/`. Article can be published without it, but should be added later
+- **Missing inline images**: Check that numbered image files (`{slug}-img-1.jpg`, etc.) match the number of images in the article HTML
 - **Invalid JSON**: Show the syntax error, attempt to fix by re-running category index generator
 - **Invalid XML in sitemap**: Show the syntax error, verify Edit tool preserved XML structure, validate with `python3 -c "import xml.etree.ElementTree as ET; ET.parse('sitemap.xml')"`
 - **Script fails**: Show full error output, check Python version, verify paths
 - **Category typo**: Validate category slug matches one of the 8 exactly
-- **Wrong article counts in blog.html**: The script doesn't always update these correctly. ALWAYS validate and fix in Step 5
+- **Wrong article counts in blog.html**: The script doesn't always update these correctly. ALWAYS validate and fix in Step 6
 - **Server still running**: If KillShell fails, guide user to manually kill: `lsof -ti:8000 | xargs kill`
 
 ## Success Criteria
 
 - ✅ Article HTML created in correct category folder
-- ✅ Hero image exists and loads
+- ✅ **Hero image copied** from `/blog/new-articles/{slug}-cover.jpg` to `/images/article-images/{slug}.jpg`
+- ✅ **Inline images copied** from `/blog/new-articles/{slug}-img-*.jpg` to `/images/article-images/inline/`
+- ✅ **LinkedIn CDN URLs replaced** with local image paths in article HTML
+- ✅ Hero image exists and loads in browser
+- ✅ Inline images exist and load in browser
+- ✅ No LinkedIn CDN URLs remain in article (verified with grep)
 - ✅ Category index updated with new article
 - ✅ `converted-articles.json` is valid JSON
 - ✅ **Article counts in blog.html are correct** (total + category)
