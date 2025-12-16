@@ -351,6 +351,11 @@
 
   <!-- Industry Research Blog Posts -->
   <url>
+    <loc>https://vyceralsolutions.com/blog/industry-research/aeo-s-dirty-secret-the-self-ranking-listicle-game.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://vyceralsolutions.com/blog/industry-research/genai-hype-not-learnings-from-alphago.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
