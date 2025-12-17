@@ -157,8 +157,8 @@ strong {
 }
 
 .section {
-  padding: var(--space-2xl) 0;
-  /* Changed from 6rem to 4rem for better section spacing */
+  padding: 2.5rem 0;
+  /* Reduced from 4rem to 2.5rem for tighter section spacing */
   position: relative;
 }
 
@@ -504,8 +504,8 @@ strong {
 .section-header {
   text-align: center;
   max-width: 800px;
-  margin: 0 auto var(--space-lg);
-  /* Reduced from 4rem to 2rem to keep heading closer to its content */
+  margin: 0 auto 1rem;
+  /* Reduced from 2rem to 1rem to keep heading closer to its content */
 }
 
 .section-header h2 {
@@ -731,7 +731,6 @@ strong {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-lg);
-  margin: var(--space-xl) 0;
 }
 
 .challenge-box,
@@ -769,7 +768,6 @@ strong {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-lg);
-  margin-top: var(--space-xl);
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
