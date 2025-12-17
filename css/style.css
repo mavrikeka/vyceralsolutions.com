@@ -812,8 +812,8 @@ strong {
 
 /* CASE STUDY HEADER */
 .case-study-header {
-  padding: 140px 0 var(--space-2xl);
-  /* Top padding clears fixed nav */
+  padding: var(--space-2xl) 0;
+  /* Consistent with other sections - breadcrumbs already clear fixed nav */
   background: #0F172A;
   /* Match hero dark blue */
   text-align: center;
