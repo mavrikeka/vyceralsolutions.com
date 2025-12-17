@@ -242,28 +242,46 @@ Read the new file and update these sections (use Edit tool):
      <!-- ... -->
    </div>
 
-   <!-- TODO: Fill in Challenge section -->
-   <div class="challenge-box">
-     <h3>The Problem</h3>
-     <h4>[Challenge Title]</h4>
-     <ul>
-       <li>[Pain point 1]</li>
-       <li>[Pain point 2]</li>
-       <li>[Pain point 3]</li>
-     </ul>
-     <p style="margin-top: 1rem;"><em>The Opportunity: [Strategic insight]</em></p>
+   <!-- TODO: Fill in "The Context" section (Challenge & Solution) -->
+   <!-- Note: Section header "The Context" should already be present from template -->
+   <div class="section-header">
+     <h2>The Context</h2>
    </div>
 
-   <!-- TODO: Fill in Solution section -->
-   <div class="solution-box">
-     <h3>Our Solution</h3>
-     <h4>[Solution Title]</h4>
-     <ul>
-       <li>[Outcome 1]</li>
-       <li>[Outcome 2]</li>
-       <li>[Outcome 3]</li>
-     </ul>
-     <p style="margin-top: 1rem;"><em>The Learning: [Key takeaway]</em></p>
+   <div class="challenge-solution">
+     <!-- TODO: Fill in Challenge section -->
+     <div class="challenge-box">
+       <h3>The Challenge</h3>
+       <p style="margin-top: 1rem; color: var(--color-dark);">[Challenge description - 2-3 sentences]</p>
+       <ul style="color: var(--color-dark); line-height: 1.8; margin-top: 1rem;">
+         <li><strong>[Pain point 1 title]:</strong> [Description]</li>
+         <li><strong>[Pain point 2 title]:</strong> [Description]</li>
+         <li><strong>[Pain point 3 title]:</strong> [Description]</li>
+       </ul>
+       <p style="margin-top: 1.5rem; color: var(--color-gray); font-style: italic;"><strong>The Opportunity:</strong> [Strategic insight]</p>
+     </div>
+
+     <!-- TODO: Fill in Solution section -->
+     <div class="solution-box">
+       <h3>The Solution</h3>
+       <p style="margin-top: 1rem; color: var(--color-dark);">[Solution description - 2-3 sentences]</p>
+
+       <h4 style="margin-top: 1.5rem;">Business Outcomes:</h4>
+       <ul style="color: var(--color-dark); line-height: 1.8; margin-top: 1rem;">
+         <li><strong>[Outcome 1]</strong> — [Description]</li>
+         <li><strong>[Outcome 2]</strong> — [Description]</li>
+         <li><strong>[Outcome 3]</strong> — [Description]</li>
+       </ul>
+
+       <h4 style="margin-top: 1.5rem;">Strategic Approach:</h4>
+       <ul style="color: var(--color-gray); line-height: 1.8; margin-top: 1rem;">
+         <li>[Approach detail 1]</li>
+         <li>[Approach detail 2]</li>
+         <li>[Approach detail 3]</li>
+       </ul>
+
+       <p style="margin-top: 1.5rem; color: var(--color-gray); font-style: italic;"><strong>The Learning:</strong> [Key takeaway]</p>
+     </div>
    </div>
 
    <!-- TODO: Fill in 4 Impact & Results cards -->
@@ -385,13 +403,14 @@ Show the user a checklist:
 📝 Next Steps - Complete These Sections:
 
 1. Open: case-studies/{slug}.html
-2. Search for "TODO" comments (8 sections to complete):
+2. Search for "TODO" comments (sections to complete):
 
    Required sections:
    ✏️ Results at a Glance (3 metrics)
-   ✏️ Challenge section (problem description + pain points)
-   ✏️ Solution section (approach + outcomes)
-   ✏️ Impact & Results (4 detailed result cards)
+   ✏️ The Context section:
+      - Challenge (problem description + pain points)
+      - Solution (approach + outcomes + learning)
+   ✏️ Measurable Business Impact (4 detailed result cards)
 
    Optional sections:
    ✏️ Technology Stack details (if needed)
