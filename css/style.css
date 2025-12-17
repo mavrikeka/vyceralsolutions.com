@@ -313,8 +313,8 @@ strong {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 6rem 0 var(--space-2xl);
-  /* Top padding clears fixed nav, bottom padding matches sections */
+  padding: var(--space-2xl) 0;
+  /* Default padding for pages with breadcrumbs */
   position: relative;
   overflow: hidden;
   margin-top: 0;
