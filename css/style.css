@@ -315,7 +315,8 @@ strong {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: var(--space-3xl) 0;
+  padding: var(--space-2xl) 0;
+  /* Reduced from 6rem to 4rem to match section spacing */
   position: relative;
   overflow: hidden;
   margin-top: 0;
