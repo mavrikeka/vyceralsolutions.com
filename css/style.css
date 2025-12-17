@@ -309,14 +309,12 @@ strong {
 
 /* HERO SECTION - MODERNIZED */
 .hero {
-  min-height: 90vh;
-  /* Taller hero */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: var(--space-2xl) 0;
-  /* Reduced from 6rem to 4rem to match section spacing */
+  /* Content-driven height - no min-height for consistent spacing */
   position: relative;
   overflow: hidden;
   margin-top: 0;
