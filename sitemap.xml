@@ -357,7 +357,17 @@
 
   <!-- Industry Research Blog Posts -->
   <url>
+    <loc>https://vyceralsolutions.com/blog/industry-research/accidental-aeo-what-i-learned-rebuilding-my-websit.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://vyceralsolutions.com/blog/industry-research/aeo-s-dirty-secret-the-self-ranking-listicle-game.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://vyceralsolutions.com/blog/industry-research/can-you-win-aeo-by-creating-the-content-that-doesn.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
