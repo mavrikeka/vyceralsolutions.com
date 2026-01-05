@@ -39,6 +39,7 @@ TEMPLATE = '''<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="{{DESCRIPTION}}">
   <title>{{CATEGORY_NAME}} | Vyceral Solutions Blog</title>
+  <link rel="canonical" href="https://vyceralsolutions.com/blog/{{CATEGORY_SLUG}}/index.html">
   <link rel="stylesheet" href="../../css/style.css">
   <script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://b2bjsstore.s3.us-west-2.amazonaws.com/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("1N5W0HM2RYO5");</script>
 </head>
@@ -189,6 +190,7 @@ for cat_slug, cat_info in CATEGORIES.items():
 
     # Generate full HTML
     html = TEMPLATE.replace('{{CATEGORY_NAME}}', cat_info['name'])
+    html = html.replace('{{CATEGORY_SLUG}}', cat_slug)
     html = html.replace('{{ICON}}', cat_info['icon'])
     html = html.replace('{{DESCRIPTION}}', cat_info['description'])
     html = html.replace('{{ARTICLE_COUNT}}', str(len(cat_articles)))
