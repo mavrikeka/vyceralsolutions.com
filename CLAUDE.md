@@ -1,16 +1,19 @@
 # CLAUDE.md - Vyceral Solutions Website
 
-> **Last Updated**: December 4, 2025
+> **Last Updated**: October 26, 2026
+
+> **IMPORTANT**: GitHub Pages deploys from the `main` branch. Always push production changes to `main`.
 
 ## Project Overview
 
-**Vyceral Solutions LLC** is a GenAI consulting firm specializing in go-to-market automation for B2B software companies and AI-powered transformation for strategy consulting firms.
+**Vyceral Solutions LLC** is a GenAI consulting firm specializing in AI transformation planning for enterprise leaders, go-to-market automation for B2B software companies, and AI-powered transformation for strategy consulting firms.
 
 ### What This App Does
 
 This is a **static marketing website** with the following capabilities:
 
-1. **Dual-Market Positioning**
+1. **Three-Market Positioning**
+   - **AI Transformation**: Evidence-based multi-year planning for enterprise leaders (manufacturing, equipment dealers, industrial companies)
    - **GTM Automation Services**: Clay, Agent.ai, MindStudio implementations for B2B software sales teams
    - **Consulting Transformation**: AnyQuest.ai deployments for strategy consulting firms (internal efficiency + client delivery)
 
@@ -43,7 +46,7 @@ Content Flow:
 Static Site Architecture (No Build Process)
 ┌─────────────────────────────────────────────────────┐
 │                     GitHub Pages                     │
-│              (Automatic deployment from main)        │
+│          (Automatic deployment from main)            │
 └─────────────────────────────────────────────────────┘
                           ↑
                     Git Push (main)
@@ -527,10 +530,8 @@ element.addEventListener('click', function() {
 ### Branch Strategy
 
 **Main Branches**:
-- `main`: Production branch (auto-deploys to GitHub Pages)
-- `design-refresh`: Experimental branch for design updates
-
-**Current Branch**: `design-refresh` (per git status)
+- `main`: Production branch (auto-deploys to GitHub Pages via https://vyceralsolutions.com)
+- `design-refresh`: Development/staging branch for testing changes before merging to main
 
 ### Branching Convention (Inferred from History)
 
