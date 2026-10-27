@@ -243,6 +243,71 @@ strong {
   width: 100%;
 }
 
+/* Dropdown Navigation */
+.nav-item {
+  position: relative;
+}
+
+.nav-item.has-dropdown {
+  position: relative;
+}
+
+.nav-link.dropdown-toggle::after {
+  content: '▼';
+  font-size: 0.7em;
+  margin-left: 0.3em;
+  opacity: 0.6;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 0.5rem;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  padding: 0.5rem 0;
+  min-width: 220px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-fast);
+  z-index: 1000;
+  border: 1px solid var(--color-border);
+}
+
+.nav-item.has-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  margin-top: 0.75rem;
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu .nav-link {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  color: var(--color-dark);
+  font-size: var(--font-size-sm);
+  white-space: nowrap;
+  opacity: 0.8;
+  transition: all var(--transition-fast);
+}
+
+.dropdown-menu .nav-link::after {
+  display: none;
+}
+
+.dropdown-menu .nav-link:hover {
+  opacity: 1;
+  background: rgba(59, 130, 246, 0.05);
+  color: var(--color-accent);
+  padding-left: 1.5rem;
+}
+
 .mobile-menu-toggle {
   display: none;
   background: none;
@@ -910,6 +975,36 @@ strong {
 
   .mobile-menu-toggle {
     display: block;
+  }
+
+  /* Mobile Dropdown Handling */
+  .dropdown-menu {
+    position: static;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    border-top: 1px solid var(--color-border);
+    border-radius: 0;
+    margin-top: 0;
+    opacity: 1;
+    visibility: visible;
+    padding-left: 1rem;
+    background: rgba(59, 130, 246, 0.02);
+  }
+
+  .nav-item.has-dropdown .dropdown-menu {
+    display: none;
+  }
+
+  .nav-item.has-dropdown.active .dropdown-menu {
+    display: block;
+  }
+
+  .nav-link.dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
   }
 
   .grid-2,
